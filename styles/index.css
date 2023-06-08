@@ -1,5 +1,5 @@
-@import url('/vars.css');
-@import url('/global.css');
+@import url('./vars.css');
+@import url('./global.css');
 @import url('../pages/company/admin/stylesAdmin/styleAdminMenu.css');
 @import url('../pages/company/admin/stylesAdmin/styleAdminUser.css');
 @import url('../pages/company/admin/stylesAdmin/styleCreateApart.css');

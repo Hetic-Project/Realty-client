@@ -1,5 +1,7 @@
 .global-userHeader {
-
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
 }
 
 .global-sider {

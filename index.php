@@ -8,5 +8,10 @@
     <title>Realty</title>
 </head>
 <body>
+    <?php 
+        include "./pages/partials/userHeader.php";
+        include "./pages/partials/sider.php";
+        include "./pages/partials/locationContainer.php"; 
+    ?>
 </body>
 </html>
