@@ -1,11 +1,3 @@
-*,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .bodyLogin {
     width: 100%;
     height: 100vh;
