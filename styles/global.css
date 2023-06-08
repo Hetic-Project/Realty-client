@@ -6,7 +6,12 @@
 .global-userHeader {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100vw; */
     background-color: #fff;
+    padding: 30px 90px;
+    box-shadow: var(--box-shadow);
 }
 
 .global-sider {
@@ -41,10 +46,46 @@
 .global-buttonIcone {
     background-color: transparent;
     border: none;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    box-shadow: var(--box-shadow);
 }
 
 .global-inputHeader {
-    padding: 15px 30px;
     border: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.global-formHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 230px;
+    padding: 5px 5px 5px 30px;
+    border: none;
+    border-radius: 50px;
     box-shadow: var(--box-shadow);
 }
+
+@media screen and (max-width: 580px) {
+    .global-userHeader {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .global-formHeader {
+        width: 50%;
+        min-width: 100px;
+    }
+}
+
+input:focus {
+    border: none;
+    box-shadow: none;
+    outline-offset: 0px;
+    outline: none;
+}
+
