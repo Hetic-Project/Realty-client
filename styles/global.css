@@ -6,7 +6,7 @@
 .global-userHeader {
     display: flex;
     flex-direction: row;
-    background-color: #000;
+    background-color: #fff;
 }
 
 .global-sider {
@@ -33,3 +33,18 @@
 
 }
 
+.global-icone {
+    width: 30px;
+    height: 30px;
+}
+
+.global-buttonIcone {
+    background-color: transparent;
+    border: none;
+}
+
+.global-inputHeader {
+    padding: 15px 30px;
+    border: none;
+    box-shadow: var(--box-shadow);
+}
