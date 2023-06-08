@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
 }
 
 .bodyLogin {
@@ -15,7 +14,6 @@
     align-items: center;
     background-color: #fff;
     /* background: var(--primary-color) -webkit-linear-gradient(top, #ffd90025, #ffffff); */
-    font-family: 'Nunito', sans-serif;
 }
 
 .inputLogin,

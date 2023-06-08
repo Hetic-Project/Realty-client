@@ -1,10 +1,11 @@
-*, html {
+*,
+html {
     margin: 0px;
     padding: 0px;
 
 }
 
-body{
+body {
     position: relative;
     background-color: #fff;
     overflow-x: hidden;
@@ -25,29 +26,17 @@ body{
     box-shadow: var(--box-shadow);
 }
 
-.global-sider {
+.global-sider {}
 
-}
+.global-receiveContent {}
 
-.global-receiveContent {
+.global-locationContainer {}
 
-}
+.global-sendContent {}
 
-.global-locationContainer {
+.global-saveButton {}
 
-}
-
-.global-sendContent {
-
-}
-
-.global-saveButton {
-
-}
-
-.global-reserveButton {
-
-}
+.global-reserveButton {}
 
 .global-icone {
     width: 30px;
