@@ -1,6 +1,7 @@
 *, html {
     margin: 0px;
     padding: 0px;
+
 }
 
 .global-userHeader {
@@ -8,13 +9,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: calc(100% - 180px);
     position: fixed;
     top: 0px;
-    width: 100%;
     background-color: #fff;
     padding: 30px 90px;
     box-shadow: var(--box-shadow);
-
 }
 
 .global-sider {
@@ -52,6 +52,7 @@
     border-radius: 15px;
     width: 30px;
     height: 30px;
+    background-color: aqua;
     box-shadow: var(--box-shadow);
 }
 

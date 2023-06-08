@@ -1,5 +1,5 @@
 <div class="global-userHeader">
-    <img src="../../images/RealtyIcon.svg" alt="Logo Realty">
+    <a href="./pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
     <form action="" method="get" class="global-formHeader">
         <input type="text" placeholder="Recherche" class="global-inputHeader">
         <button class="global-buttonIcone"><img src="../../images/IconSearch.svg" alt="Icone Search" class="global-icone"></button>
