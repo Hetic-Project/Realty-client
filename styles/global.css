@@ -4,12 +4,20 @@
 
 }
 
+body{
+    position: relative;
+    background-color: #fff;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
 .global-userHeader {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% - 180px);
+    width: 100%;
     position: fixed;
     top: 0px;
     background-color: #fff;
