@@ -2,7 +2,7 @@
     <a href="./pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
     <form action="" method="get" class="global-formHeader">
         <input type="text" placeholder="Recherche" class="global-inputHeader">
-        <button class="global-buttonIcone"><img src="../../images/IconSearch.svg" alt="Icone Search" class="global-icone"></button>
+        <button class="global-buttonIcon"><img src="../../images/IconSearch.svg" alt="Icon Search" class="global-icon"></button>
     </form>
-    <a class="global-buttonIcone" href="../../pages/userspace/profile.php"><img src="../../images/iconeProfile.svg" alt="Icone Profile" class="global-icone"></a>
+    <a class="global-buttonIcon" href="../../pages/userspace/profile.php"><img src="../../images/iconProfile.svg" alt="Icon Profile" class="global-icon"></a>
 </div>
