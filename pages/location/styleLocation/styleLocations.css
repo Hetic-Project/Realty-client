@@ -5,6 +5,7 @@ video {
 
 .dateContainer {
     display: flex;
+    margin-top: 94px;
 }
 
 .dateSelectContainer {
