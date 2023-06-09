@@ -1,0 +1,119 @@
+.containerImageAndReservation {
+    display: flex;
+    justify-content: center;
+    margin-top: 134px;
+    gap: 80px;
+}
+
+.containerImageDetailLocation {
+    display: flex;
+    gap: 20px;
+}
+
+.containerMoreImage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.firstImage {
+    border-radius: 15px 0px 0px 15px;
+    width: 460px;
+    height: 530px;
+}
+
+.secondImage {
+    border-radius: 0px 15px 0px 0px;
+    width: 220px;
+    height: 255px;
+}
+
+.thirdImage {
+    border-radius: 0px 0px 15px 0px;
+    width: 220px;
+    height: 255px;
+}
+
+.containerReservation {
+    box-shadow: var(--box-shadow);
+    padding: 40px 35px;
+    border-radius: 15px;
+    width: 400px;
+    height: 530px;
+}
+
+.reservationHr {
+    margin: 20px 0px;
+    border: none;
+    border-top: 1px #989898 solid;
+    width: 100%;
+}
+
+.containerCostReservation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.costReservation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerdetails {
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.listEquipment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 60%;
+    row-gap: 15px;
+}
+
+.oneEquipment {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    width: 50%;
+}
+
+.reviewsNameAndDate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dateReviews {
+    color: var(--text-color);
+}
+
+.grayTextLocation {
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.rulesHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.interiorSecurityLocation {
+    display: flex;
+    gap: 60px;
+    margin-left: 20%;
+}
+
+.conditionLocation {
+    margin: 25px 0px 0px 20% ;
+}
+
+.bottomLocation {
+    margin-bottom: 60px;
+}

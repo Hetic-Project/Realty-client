@@ -141,7 +141,6 @@ body {
     border-radius: 15px;
     width: 30px;
     height: 30px;
-    background-color: aqua;
     box-shadow: var(--box-shadow);
 }
 
@@ -164,7 +163,7 @@ body {
 
 @media screen and (max-width: 580px) {
     .global-userHeader {
-        padding: 30px;
+        padding: 10px 30px;
     }
 }
 
