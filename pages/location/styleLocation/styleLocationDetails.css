@@ -1,13 +1,15 @@
 .containerImageAndReservation {
     display: flex;
     justify-content: center;
+    margin: auto;
     margin-top: 134px;
-    gap: 80px;
+    width: 90%;
 }
 
 .containerImageDetailLocation {
     display: flex;
     gap: 20px;
+    width: 70%;
 }
 
 .containerMoreImage {
@@ -18,28 +20,28 @@
 
 .firstImage {
     border-radius: 15px 0px 0px 15px;
-    width: 460px;
-    height: 530px;
+    width: 50%;
+    height: 100%;
 }
 
 .secondImage {
     border-radius: 0px 15px 0px 0px;
-    width: 220px;
-    height: 255px;
+    width: 100%;
+    height: calc(50% - 10xp);
 }
 
 .thirdImage {
     border-radius: 0px 0px 15px 0px;
-    width: 220px;
-    height: 255px;
+    width: 100%;
+    height: calc(50% - 10xp);
 }
 
 .containerReservation {
     box-shadow: var(--box-shadow);
     padding: 40px 35px;
     border-radius: 15px;
-    width: 400px;
-    height: 530px;
+    width: 30%;
+    height: auto;
 }
 
 .reservationHr {
@@ -74,6 +76,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
+    margin-top: 20px;
     width: 60%;
     row-gap: 15px;
 }
@@ -117,3 +120,79 @@
 .bottomLocation {
     margin-bottom: 60px;
 }
+
+@media screen and (max-width: 900px) {
+    .containerImageAndReservation {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .firstImage {
+        border-radius: 15px 15px 0px 0px;
+        width: calc(100% + 20px);
+        height: 50%;
+    }
+
+    .secondImage {
+        border-radius: 0px 0px 0px 15px;
+        width: 50%;
+        height: calc(50% - 10px);
+    }
+
+    .thirdImage {
+        border-radius: 0px 0px 15px 0px;
+        width: 50%;
+        height: calc(50% - 10px);
+    }
+
+    .containerImageDetailLocation {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+
+    .containerMoreImage {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .containerReservation {
+        width: 40%;
+        margin-top: 30px;
+    }
+
+    .rulesHeader {
+        margin-bottom: 20px;
+    }
+
+    .listEquipment {
+        width: 90%;
+    }
+
+    .detailsresponsive {
+        /* width: calc(50% - 10px); */
+        
+    }
+
+    .responsiveDetailsLocation {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .containerImageAndReservation {
+        align-items: center;
+    }
+
+    .containerReservation {
+        width: 90%;
+    }
+
+    .oneEquipment p{
+        font-size: 12px;
+    }
+}
+

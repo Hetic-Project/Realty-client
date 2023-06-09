@@ -10,58 +10,61 @@
 <body>
     <?php include "../partials/userHeader.php" ?>
 
-    <div class="containerImageAndReservation">
-        <div class="containerImageDetailLocation">
-            <img src="../../images/500x500.gif" alt="" class="firstImage">
-            <div class="containerMoreImage">
-                <img src="../../images/500x500.gif" alt="" class="secondImage">
-                <img src="../../images/500x500.gif" alt="" class="thirdImage">
+    <div class="responsiveDetailsLocation">
+        <div class="containerImageAndReservation">
+            <div class="containerImageDetailLocation">
+                <img src="../../images/500x500.gif" alt="" class="firstImage">
+                <div class="containerMoreImage">
+                    <img src="../../images/500x500.gif" alt="" class="secondImage">
+                    <img src="../../images/500x500.gif" alt="" class="thirdImage">
+                </div>
+            </div>
+            <div class="containerReservation">
+                <h3>249 €<span> par nuit</span></h3>
+                <hr class="reservationHr">
+    
+                <fieldset>
+                    <div>
+                        <input type="checkbox" id="privateDriver" name="privateDriver" checked>
+                        <label for="privateDriver">Chauffeur Privé</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="restoration" name="restoration">
+                        <label for="restoration">Restauration</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="roofAccess" name="roofAccess">
+                        <label for="roofAccess">Accès aux toits</label>
+                    </div>
+                </fieldset>
+                <hr class="reservationHr">
+                
+                <div class="containerCostReservation">
+                    <div class="costReservation">
+                        <p> 249 € x 13 nuits</p>
+                        <p>3 233 €</p>
+                    </div>
+                    <div class="costReservation">
+                        <p>Frais & Options</p>
+                        <p>70 €</p>
+                    </div>
+                    <div class="costReservation">
+                        <p>Taxes</p>
+                        <p>65 €</p>
+                    </div>
+                </div> 
+                <hr class="reservationHr">
+                <div class="costReservation">
+                        <h3>Total</h3>
+                        <p>3 368 €</p>
+                    </div>
+                <button class="global-reserveButton">Réserver</button>
             </div>
         </div>
-        <div class="containerReservation">
-            <h3>249 €<span> par nuit</span></h3>
-            <hr class="reservationHr">
 
-            <fieldset>
-                <div>
-                    <input type="checkbox" id="privateDriver" name="privateDriver" checked>
-                    <label for="privateDriver">Chauffeur Privé</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="restoration" name="restoration">
-                    <label for="restoration">Restauration</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="roofAccess" name="roofAccess">
-                    <label for="roofAccess">Accès aux toits</label>
-                </div>
-            </fieldset>
-            <hr class="reservationHr">
-            
-            <div class="containerCostReservation">
-                <div class="costReservation">
-                    <p> 249 € x 13 nuits</p>
-                    <p>3 233 €</p>
-                </div>
-                <div class="costReservation">
-                    <p>Frais & Options</p>
-                    <p>70 €</p>
-                </div>
-                <div class="costReservation">
-                    <p>Taxes</p>
-                    <p>65 €</p>
-                </div>
-            </div> 
-            <hr class="reservationHr">
-            <div class="costReservation">
-                    <h3>Total</h3>
-                    <p>3 368 €</p>
-                </div>
-            <button class="global-reserveButton">Réserver</button>
-        </div>
     </div>
 
-    <div class="containerdetails">
+    <div class="containerdetails detailsresponsive">
         <h3>Logement entier : appartement</h3>
         <p class="grayTextLocation">Capacité (ou "Descriptif") : 5 voyageurs · 2 chambres · 2 lits · 2 salles de bain</p>
         <hr class="reservationHr">
