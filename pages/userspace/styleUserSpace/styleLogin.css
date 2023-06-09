@@ -15,7 +15,7 @@
     background: none;
 }
 
-.cont {
+.containerLogin {
     overflow: hidden;
     position: relative;
     margin-top: 5%;
@@ -29,7 +29,7 @@
     position: relative;
     width: 640px;
     height: 100%;
-    padding: 50px 30px;
+    padding: 30px 10px;
     -webkit-transition: -webkit-transform 1.2s ease-in-out;
     transition: -webkit-transform 1.2s ease-in-out;
     transition: transform 1.2s ease-in-out;
@@ -125,7 +125,7 @@
     height: 40px;
 }
 
-.sub-cont {
+.sub-containerLogin {
     overflow: hidden;
     position: absolute;
     left: 640px;
@@ -139,7 +139,7 @@
     transition: transform 1.2s ease-in-out;
 }
 
-.cont.s-signup .sub-cont {
+.containerLogin.s-signup .sub-containerLogin {
     -webkit-transform: translate3d(-640px, 0, 0);
     transform: translate3d(-640px, 0, 0);
 }
@@ -178,7 +178,7 @@
     background: rgba(0, 0, 0, 0.3);
 }
 
-.cont.s-signup .img:before {
+.containerLogin.s-signup .img:before {
     -webkit-transform: translate3d(640px, 0, 0);
     transform: translate3d(640px, 0, 0);
 }
@@ -207,7 +207,7 @@
     line-height: 1.5;
 }
 
-.cont.s-signup .img-text.m-up {
+.containerLogin.s-signup .img-text.m-up {
     -webkit-transform: translateX(520px);
     transform: translateX(520px);
 }
@@ -217,7 +217,7 @@
     transform: translateX(-520px);
 }
 
-.cont.s-signup .img-text.m-in {
+.containerLogin.s-signup .img-text.m-in {
     -webkit-transform: translateX(0);
     transform: translateX(0);
 }
@@ -229,7 +229,7 @@
     transition-timing-function: ease-out;
 }
 
-.cont.s-signup .sign-in {
+.containerLogin.s-signup .sign-in {
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
     -webkit-transition-duration: 1.2s;
@@ -287,12 +287,12 @@
     transform: translateY(-72px);
 }
 
-.cont.s-signup .img-btn .spanLogin.m-in {
+.containerLogin.s-signup .img-btn .spanLogin.m-in {
     -webkit-transform: translateY(0);
     transform: translateY(0);
 }
 
-.cont.s-signup .img-btn .spanLogin.m-up {
+.containerLogin.s-signup .img-btn .spanLogin.m-up {
     -webkit-transform: translateY(72px);
     transform: translateY(72px);
 }
@@ -302,7 +302,7 @@
     transform: translate3d(-900px, 0, 0);
 }
 
-.cont.s-signup .sign-up {
+.containerLogin.s-signup .sign-up {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
