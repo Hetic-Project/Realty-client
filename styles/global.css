@@ -6,18 +6,53 @@
     font-family: 'Inter';
 }
 
+*,
+*:before,
+*:after,
+html {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: #fff;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
 .global-userHeader {
     display: flex;
     flex-direction: row;
-    background-color: #000;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: #fff;
+    padding: 30px 90px;
+    box-shadow: var(--box-shadow);
 }
 
 .global-sider {
-
+    width: 15%;
+    height: 100vh;
+    background-color: aqua;
 }
 
-.global-receiveContent {
+.global-locationContainer {}
 
+.global-sendContent {}
+
+.global-saveButton {}
+
+.global-reserveButton {}
+
+.global-icone {
+    width: 30px;
+    height: 30px;
 }
 
 .global-mainContainer {
@@ -56,16 +91,37 @@
     font-size: 18px;
 }
 
-.global-sendContent {
-
+.global-buttonIcone {
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    box-shadow: var(--box-shadow);
 }
 
-.global-saveButton {
-
+.global-inputHeader {
+    border: none;
+    background-color: transparent;
+    width: 100%;
 }
 
-.global-reserveButton {
+.global-formHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    min-width: 230px;
+    padding: 5px 5px 5px 30px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+}
 
+@media screen and (max-width: 580px) {
+    .global-userHeader {
+        padding: 30px;
+    }
 }
 
 
@@ -118,4 +174,17 @@
     .global-description {
         display: none;
     }
+}
+@media screen and (max-width: 450px) {
+    .global-formHeader {
+        width: 50%;
+        min-width: 100px;
+    }
+}
+
+.global-inputHeader:focus {
+    border: none;
+    box-shadow: none;
+    outline-offset: 0px;
+    outline: none;
 }

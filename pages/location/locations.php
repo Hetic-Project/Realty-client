@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="global-mainContainer">
-    <a class="global-locationContainer" href="./pages/location/locationdetails.php">
+    <a class="global-locationContainer" href="./locationdetails.php">
             <img class="global-imgLocation" src="../../images/apartment1.svg" alt="appartement">
                 <div>
                     <div class="global-textposition">
@@ -20,7 +20,7 @@
                 </div>
         </a>
 
-        <a class="global-locationContainer" href="./pages/location/locationdetails.php">
+        <a class="global-locationContainer" href="./locationdetails.php">
             <img class="global-imgLocation" src="../../images/apartment1.svg" alt="appartement">
                 <div>
                     <div class="global-textposition">

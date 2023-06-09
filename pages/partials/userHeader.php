@@ -1,8 +1,8 @@
 <div class="global-userHeader">
-    <img src="../../images/RealtyIcon.svg" alt="Logo Realty">
-    <form action="" method="get">
-        <input type="text" placeholder="Recherche">
-        <button></button>
+    <a href="./pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
+    <form action="" method="get" class="global-formHeader">
+        <input type="text" placeholder="Recherche" class="global-inputHeader">
+        <button class="global-buttonIcone"><img src="../../images/IconSearch.svg" alt="Icone Search" class="global-icone"></button>
     </form>
-    <button><img src="" alt=""></button>
+    <a class="global-buttonIcone" href="../../pages/userspace/profile.php"><img src="../../images/iconeProfile.svg" alt="Icone Profile" class="global-icone"></a>
 </div>

@@ -11,7 +11,7 @@
     <?php 
         // include "./pages/partials/userHeader.php";
         include "./pages/partials/sider.php";
-        include "./pages/partials/locationContainer.php"; 
+        // include "./pages/partials/locationContainer.php"; 
     ?>
 </body>
 </html>
