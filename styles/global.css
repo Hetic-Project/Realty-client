@@ -29,7 +29,7 @@ body {
     position: fixed;
     top: 0px;
     background-color: #fff;
-    padding: 30px 90px;
+    padding: 10px 90px;
     box-shadow: var(--box-shadow);
 }
 
@@ -85,6 +85,13 @@ body {
     width: 30px;
     height: 30px;
 }   
+
+.global-iconProfile {
+    width: 40px;
+    height: 40px;
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+}
 
 .global-mainContainer {
     display: flex;

@@ -8,6 +8,9 @@
     <title>Locations - Realty</title>
 </head>
 <body>
+    <?php 
+        include "../partials/userHeader.php";
+    ?>
     <div class="dateContainer">
         <div class="dateSelectContainer departureDate">
             <img src="../../images/departSVG.svg" class="global-icon"></img>
