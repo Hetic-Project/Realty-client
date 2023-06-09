@@ -129,6 +129,12 @@ body {
     font-size: 18px;
 }
 
+.global-imgLocation {
+    width: 30%;
+    height: 100%;
+    border-radius: 15px;
+}
+
 .global-buttonIcon {
     background-color: transparent;
     border: none;
@@ -173,7 +179,7 @@ body {
 
     .global-imgLocation {
         width: 200px;
-        height: 200px;
+        height: 170px;
     }
 
     .global-textposition {
