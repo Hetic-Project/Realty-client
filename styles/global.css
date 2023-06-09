@@ -163,7 +163,7 @@ body {
 
 @media screen and (max-width: 580px) {
     .global-userHeader {
-        padding: 30px;
+        padding: 10px 30px;
     }
 }
 
