@@ -141,7 +141,6 @@ body {
     border-radius: 15px;
     width: 30px;
     height: 30px;
-    background-color: aqua;
     box-shadow: var(--box-shadow);
 }
 
