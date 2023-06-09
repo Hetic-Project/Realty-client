@@ -84,6 +84,9 @@ body {
 .global-icon {
     width: 30px;
     height: 30px;
+    text-decoration: none;
+    border: none;
+    background-color: whitesmoke;
 }   
 
 .global-iconProfile {

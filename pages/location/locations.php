@@ -29,13 +29,13 @@ $apartments = json_decode($json, true);
         </div>
 
         <div class="dateSelectContainer secondaryElement">
-            <button data-page="1">
+            <button data-page="1" class="global-icon">
                 <img src="../../images/leftArrow.svg" class="global-icon"></img>
             </button>
-            <p>
+            <p class="global-title">
                 1
             </p>
-            <button data-page="2">
+            <button data-page="2" class="global-icon">
                 <img src="../../images/rightArrow.svg" class="global-icon"></img>
             </button>
         </div>
@@ -52,7 +52,7 @@ $apartments = json_decode($json, true);
             <a class="global-locationContainer" href="http://localhost:3000/pages/location/locationdetails.php?id=<?=$apartment['apartment_id']?>" >
                 <img class="global-imgLocation" src="<?= $apartment['apartment_main_picture'] ?>" alt="appartement">
                 <div>
-                    <div class="global-textposition">
+                    <div class="global-textposition">   
                         <p class="global-title"><?= $apartment['apartment_adress'] ?> </p>
                         <p class="global-description" display="grid"><?= $apartment['apartment_description'] ?></p>
                         <p class="global-subtitle"><?= $apartment['apartment_price'] ?>€ la nuit </p>
