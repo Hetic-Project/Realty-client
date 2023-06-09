@@ -8,6 +8,22 @@
     <title>Locations - Realty</title>
 </head>
 <body>
+    <div class="dateContainer">
+        <div class="dateSelectContainer departureDate">
+            <img src="../../images/departSVG.svg" class="global-icon"></img>
+            <input type="date" class="inputDate" id="departureDate">
+        </div>
+        <div class="dateSelectContainer returnDate">
+            <img src="../../images/returnSVG.svg" class="global-icon"></img>
+            <input type="date" class="inputDate">
+        </div>
+    </div>
+
+    <script>
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('departureDate').value = today;
+    </script>
+
     <div class="global-mainContainer">
     <a class="global-locationContainer" href="./locationdetails.php">
             <img class="global-imgLocation" src="../../images/apartment1.svg" alt="appartement">
