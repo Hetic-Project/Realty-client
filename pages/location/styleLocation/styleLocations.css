@@ -3,7 +3,7 @@ video {
     height: 100%;
 }
 
-.dateContainer {
+.filterContainer {
     display: flex;
     margin-top: 94px;
 }
@@ -24,7 +24,7 @@ video {
     margin-left: 118px;
 }
 
-.returnDate {
+.secondaryElement {
     margin-left: 2%;
 }
 

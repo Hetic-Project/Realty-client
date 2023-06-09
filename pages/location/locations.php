@@ -18,15 +18,28 @@ $apartments = json_decode($json, true);
     <?php 
         include "../partials/userHeader.php";
     ?>
-    <div class="dateContainer">
+    <div class="filterContainer">
         <div class="dateSelectContainer departureDate">
             <img src="../../images/departSVG.svg" class="global-icon"></img>
             <input type="date" class="inputDate" id="departureDate">
         </div>
-        <div class="dateSelectContainer returnDate">
+        <div class="dateSelectContainer secondaryElement">
             <img src="../../images/returnSVG.svg" class="global-icon"></img>
             <input type="date" class="inputDate">
         </div>
+
+        <div class="dateSelectContainer secondaryElement">
+            <button data-page="1">
+                <img src="../../images/leftArrow.svg" class="global-icon"></img>
+            </button>
+            <p>
+                1
+            </p>
+            <button data-page="2">
+                <img src="../../images/rightArrow.svg" class="global-icon"></img>
+            </button>
+        </div>
+
     </div>
 
     <script>
@@ -34,7 +47,7 @@ $apartments = json_decode($json, true);
         document.getElementById('departureDate').value = today;
     </script>
     
-    <div class="global-mainContainer">
+    <div class="global-mainContainer" id="locationsContainer">
         <?php foreach($apartments as $apartment ): ?>
             <a class="global-locationContainer" href="http://localhost:3000/pages/location/locationdetails.php?id=<?=$apartment['apartment_id']?>" >
                 <img class="global-imgLocation" src="<?= $apartment['apartment_main_picture'] ?>" alt="appartement">
@@ -46,7 +59,11 @@ $apartments = json_decode($json, true);
                     </div>
                 </div>
             </a>
-        <?php endforeach; ?>    
+        <?php endforeach; ?>
     </div>
+    <script>
+        var totalLocationsPHP = <?= count($apartments) ?>;
+    </script>
+    <script src="../../javascript/locations.js"></script>
 </body>
 </html>

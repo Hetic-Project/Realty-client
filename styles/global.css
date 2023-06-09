@@ -208,17 +208,23 @@ body {
     
 }
 
-@media screen and (max-width: 521px) {
+@media screen and (max-width: 590px) {
     .global-locationContainer {
-        display: grid;
-        gap: 10px;
-        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .global-mainContainer {
+        align-content: center;
+        margin: 0px 10px 0px 10px;
     }
 
     .global-description {
         display: none;
     }
 }
+
 @media screen and (max-width: 450px) {
     .global-formHeader {
         width: 50%;
