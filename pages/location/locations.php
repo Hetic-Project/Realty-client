@@ -1,3 +1,10 @@
+<?php
+
+$url = "http://localhost:4000/apartment/get/allApartment";
+$json = file_get_contents($url);
+$apartments = json_decode($json, true);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/index.css">
-    <title>Locations - Realty</title>
+    <title>Prendre une location - Realty</title>
 </head>
 <body>
     <?php 
@@ -26,10 +33,20 @@
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('departureDate').value = today;
     </script>
-    <?php 
-        include "../partials/locationContainer.php";
-
-        include "../partials/locationContainer.php";
-    ?>
+    
+    <div class="global-mainContainer">
+        <?php foreach($apartments as $apartment ): ?>
+            <a class="global-locationContainer" href="http://localhost:3000/pages/location/locationdetails.php?id=<?=$apartment['apartment_id']?>" >
+                <img class="global-imgLocation" src="<?= $apartment['apartment_main_picture'] ?>" alt="appartement">
+                <div>
+                    <div class="global-textposition">
+                        <p class="global-title"><?= $apartment['apartment_adress'] ?> </p>
+                        <p class="global-description" display="grid"><?= $apartment['apartment_description'] ?></p>
+                        <p class="global-subtitle"><?= $apartment['apartment_price'] ?>€ la nuit </p>
+                    </div>
+                </div>
+            </a>
+        <?php endforeach; ?>    
+    </div>
 </body>
 </html>
