@@ -1,23 +1,14 @@
 <?php
 
+include "../partials/userHeader.php";
+
 $url = "http://localhost:4000/apartment/get/allApartment";
 $json = file_get_contents($url);
 $apartments = json_decode($json, true);
 
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../styles/index.css">
-    <title>Prendre une location - Realty</title>
-</head>
+
 <body>
-    <?php 
-        include "../partials/userHeader.php";
-    ?>
     <div class="filterContainer">
         <div class="dateSelectContainer departureDate">
             <img src="../../images/departSVG.svg" class="global-icon"></img>
