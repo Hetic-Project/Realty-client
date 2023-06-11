@@ -146,6 +146,7 @@ include "../partials/userHeader.php";
             <p class="grayTextLocation">Consultez les conditions d'annulation complètes de l'hôte, qui s'appliquent même si vous annulez pour cause de maladie ou de perturbations causées par le Covid-19.</p>
         </div>
     </div>
-
+    <div id='calendar-container'></div>
+    <script src="../../javascript/calandar.js"></script>
 </body>
 </html>
