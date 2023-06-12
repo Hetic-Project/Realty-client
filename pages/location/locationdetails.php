@@ -2,42 +2,34 @@
 
 include "../partials/userHeader.php";
 
+$apartment_id = $_GET['id'];
+$user_id = $_SESSION['id'];
+
+$url = "http://localhost:4000/apartment/get/oneApartment/" . $apartment_id;
+$json = file_get_contents($url);
+$apartment = json_decode($json, true);
+
 ?>
-<body>
-    <?php include "../partials/userHeader.php" ?>
+   
 
     <div class="responsiveDetailsLocation">
         <div class="containerImageAndReservation">
             <div class="containerImageDetailLocation">
-                <img src="../../images/500x500.gif" alt="" class="firstImage">
-                <div class="containerMoreImage">
-                    <img src="../../images/500x500.gif" alt="" class="secondImage">
-                    <img src="../../images/500x500.gif" alt="" class="thirdImage">
-                </div>
+                <img src="<?= $apartment['apartment_360_picture'] ?>" alt="" class="firstImage">
             </div>
-            <div class="containerReservation">
-                <h3>249 €<span> par nuit</span></h3>
+            <form class="containerReservation">
+                <div id='calendar-container'></div>
+                <h3><?= $apartment['apartment_price'] ?> €<span> par nuit</span></h3>
                 <hr class="reservationHr">
-    
-                <fieldset>
-                    <div>
-                        <input type="checkbox" id="privateDriver" name="privateDriver" checked>
-                        <label for="privateDriver">Chauffeur Privé</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="restoration" name="restoration">
-                        <label for="restoration">Restauration</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="roofAccess" name="roofAccess">
-                        <label for="roofAccess">Accès aux toits</label>
-                    </div>
-                </fieldset>
+                <input type="hidden" name="user_id" value="<?= $user_id ?>">
+                <input type="hidden" id='apartment_id' name="apartment_id" value="<?= $apartment_id ?>">
+                <input type="date" name="start_date">
+                <input type="date" name="end_date">
                 <hr class="reservationHr">
                 
                 <div class="containerCostReservation">
                     <div class="costReservation">
-                        <p> 249 € x 13 nuits</p>
+                        <p><?= $apartment['apartment_price'] ?> € x 13 nuits</p>
                         <p>3 233 €</p>
                     </div>
                     <div class="costReservation">
@@ -55,61 +47,28 @@ include "../partials/userHeader.php";
                         <p>3 368 €</p>
                     </div>
                 <button class="global-reserveButton">Réserver</button>
-            </div>
+            </form>
         </div>
 
     </div>
 
     <div class="containerdetails">
-        <h3>Logement entier : appartement</h3>
-        <p class="grayTextLocation">Capacité (ou "Descriptif") : 5 voyageurs · 2 chambres · 2 lits · 2 salles de bain</p>
+        <h3><?= $apartment['apartment_adress'] ?></h3>
+        <p class="grayTextLocation">Capacité: <?=$apartment['apartment_capacity']?> voyageurs · <?=$apartment['apartment_bedroom']?> chambres · <?=$apartment['apartment_size']?> m²</p>
         <hr class="reservationHr">
-        <p>Appartement de 100m2, unique en son style. Magnifique baie vitrée offrant un bain de lumière extraordinaire. Unique à Paris. Situé à quelques dizaines de mètre de la Place Trocadéro et de la Tour Eiffel. Entièrement équipé, adapté aux familles</p>
+        <p><?=$apartment['apartment_description']?></p>
     </div>
 
     <div class="containerdetails">
         <h3>Équipements</h3>
         <div class="listEquipment">
-            <div class="oneEquipment">
-                <img src="../../images/Cuisine.svg" alt="" class="global-icon">
-                <p>Cuisine complète</p>
-            </div>
-            <div class="oneEquipment">
-                <img src="../../images/Camera.svg" alt="" class="global-icon">
-                <p>Caméra de surveillance (à l'extérieur)</p>
-            </div>
-            <div class="oneEquipment">
-                <img src="../../images/WorkSpace.svg" alt="" class="global-icon">
-                <p>Espace de travail</p>
-            </div>
-            <div class="oneEquipment">
-                <img src="../../images/Détecteur de fumée.svg" alt="" class="global-icon">
-                <p>Détecteur de fumée</p>
-            </div>
-            <div class="oneEquipment">
-                <img src="../../images/WIFI.svg" alt="" class="global-icon">
-                <p>Wifi (fibre)</p>
-            </div>
-            <div class="oneEquipment">
-                <img src="../../images/Kit de soin.svg" alt="" class="global-icon">
-                <p>Kit de premier secours</p>
-            </div>
-            <div class="oneEquipment">
-                <img src="../../images/Sèche Linge.svg" alt="" class="global-icon">
-                <p>sèche-linge</p>
-            </div>
-            <div class="oneEquipment">
-                <img src="../../images/Parking.svg" alt="" class="global-icon">
-                <p>Parking privé</p>
-            </div>
-            <div class="oneEquipment">
-                <img src="../../images/Climatiseur.svg" alt="" class="global-icon">
-                <p>Climatiseur</p>
-            </div>
-            <div class="oneEquipment">
-                <img src="../../images/Chauffage.svg" alt="" class="global-icon">
-                <p>Chauffage</p>
-            </div>
+            <?php $services = json_decode($apartment['services'], true); ?>
+            <?php foreach($services as $service): ?>
+                <div class="oneEquipment">
+                    <img src="../../images/Cuisine.svg" alt="" class="global-icon">
+                    <p><?= $service['service_name'] ?></p>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
     <div class="containerdetails">
@@ -149,7 +108,9 @@ include "../partials/userHeader.php";
             <p class="grayTextLocation">Consultez les conditions d'annulation complètes de l'hôte, qui s'appliquent même si vous annulez pour cause de maladie ou de perturbations causées par le Covid-19.</p>
         </div>
     </div>
-    <div id='calendar-container'></div>
     <script src="../../javascript/calandar.js"></script>
+    <canvas class="webgl"></canvas>
+    <script type="module" src="../../javascript/locationdetails.js"></script>
+
 </body>
 </html>
