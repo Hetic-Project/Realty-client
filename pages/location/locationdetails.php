@@ -54,7 +54,7 @@ include "../partials/userHeader.php";
                         <h3>Total</h3>
                         <p>3 368 €</p>
                     </div>
-                <button class="global-reserveButton">Réserver</button>
+                <button class="global-reserveButton marginReserveButton">Réserver</button>
             </div>
         </div>
 
