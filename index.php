@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../styles/index.css">
     <title>Realty</title>
 </head>
-    <body>
+    <body class="welcomePage">
         <video autoplay loop muted >
             <source src="../images/city.mp4" type="video/mp4" >
         </video>
