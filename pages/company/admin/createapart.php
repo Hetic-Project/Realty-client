@@ -12,7 +12,7 @@
         <section class="containerAddPicture">
             <div class="firstDragAndDrop">
                 <div class="addPicture">
-                    <img  class="iconePlusCreateApart" src="../../../images/iconePlus.svg">
+                    <img  class="iconPlusCreateApart" src="../../../images/iconPlus.svg">
                     <p id="textAddPicture">Ajouter image</p>
                 </div>
             </div>
@@ -21,6 +21,12 @@
             </div>
             <div class="capacity">
                 <input class="inputCapacity" type="text" placeholder="Capaciter: 2 Voyageurs, 1 Chambre..." id="name" name="name" required>
+            </div>
+            <div class="description">
+                <textarea class="descriptionCreateApart" name="description" rows="15" cols="36" placeholder="Description..."></textarea>
+            </div>
+            <div class="equipementCreateApart">
+                <input type="checkbox" id="" >
             </div>
         </section>
     </form>

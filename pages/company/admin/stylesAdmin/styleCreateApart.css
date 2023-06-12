@@ -26,7 +26,7 @@
     top: 0px;
 }
 
-.iconePlusCreateApart{
+.iconPlusCreateApart{
     margin-left: 140px;
     margin-top: 30px;
 }
@@ -38,7 +38,7 @@
     margin-top: 20px;
     border: none;
     box-shadow: var(--box-shadow);
-    text-align: center;
+    padding-left: 10px;
     border-radius: 8px;
 }
 
@@ -49,6 +49,25 @@
     margin-top: 20px;
     border: none;
     box-shadow: var(--box-shadow);
-    text-align: center;
+    padding-left: 10px;
     border-radius: 8px;
+}
+
+.descriptionCreateApart{
+    width: 330px;
+    height: 95px;
+    margin-left: 30px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.equipementCreateApart{
+    box-shadow: var(--box-shadow);
+    width: 330px;
+    height: 134px;
+    margin-left: 30px;
+    margin-top: 20px;
 }
