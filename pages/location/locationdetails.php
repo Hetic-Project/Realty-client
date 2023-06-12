@@ -60,7 +60,7 @@ include "../partials/userHeader.php";
 
     </div>
 
-    <div class="containerdetails detailsresponsive">
+    <div class="containerdetails">
         <h3>Logement entier : appartement</h3>
         <p class="grayTextLocation">Capacité (ou "Descriptif") : 5 voyageurs · 2 chambres · 2 lits · 2 salles de bain</p>
         <hr class="reservationHr">
