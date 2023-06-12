@@ -73,13 +73,24 @@ body {
     width: 185px;
 
 }
-.global-locationContainer {}
 
 .global-sendContent {}
 
 .global-saveButton {}
 
-.global-reserveButton {}
+.global-reserveButton {
+    border: none;
+    border-radius: 15px;
+    background-color: #000;
+    padding: 15px 0px;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.global-reserveButton:hover {
+    background-color: #777777
+}
 
 .global-icon {
     width: 30px;
@@ -163,6 +174,7 @@ body {
     border-radius: 50px;
     box-shadow: var(--box-shadow);
 }
+
 
 @media screen and (max-width: 580px) {
     .global-userHeader {
