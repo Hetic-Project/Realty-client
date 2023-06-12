@@ -84,6 +84,9 @@ body {
 .global-icon {
     width: 30px;
     height: 30px;
+    text-decoration: none;
+    border: none;
+    background-color: whitesmoke;
 }   
 
 .global-iconProfile {
@@ -141,7 +144,6 @@ body {
     border-radius: 15px;
     width: 30px;
     height: 30px;
-    background-color: aqua;
     box-shadow: var(--box-shadow);
 }
 
@@ -164,7 +166,7 @@ body {
 
 @media screen and (max-width: 580px) {
     .global-userHeader {
-        padding: 30px;
+        padding: 10px 30px;
     }
 }
 
@@ -208,17 +210,23 @@ body {
     
 }
 
-@media screen and (max-width: 521px) {
+@media screen and (max-width: 590px) {
     .global-locationContainer {
-        display: grid;
-        gap: 10px;
-        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .global-mainContainer {
+        align-content: center;
+        margin: 0px 10px 0px 10px;
     }
 
     .global-description {
         display: none;
     }
 }
+
 @media screen and (max-width: 450px) {
     .global-formHeader {
         width: 50%;
