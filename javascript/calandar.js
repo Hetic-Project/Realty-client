@@ -38,12 +38,18 @@ function generateCalendar() {
   container.appendChild(header);
 
   const previousBtn = document.createElement('button');
-  previousBtn.textContent = 'Mois précédent';
+  previousBtn.style.backgroundImage = "url(../../images/leftArrow.svg)";
+  previousBtn.style.backgroundRepeat = "no-repeat";
   previousBtn.addEventListener('click', showPreviousMonth);
   header.appendChild(previousBtn);
 
+  // On lui ajouter une class pour le css
+  previousBtn.classList.add("calandarBtn");
+
   // Créer un élément h2 pour afficher le mois courant
-  const currentMonth = document.createElement('h2');
+  const currentMonth = document.createElement('h3');
+  // Et lui ajouter une class pour le css
+  currentMonth.classList.add("calandarCurrentMonth");
 
   /*
 
@@ -59,13 +65,20 @@ function generateCalendar() {
   header.appendChild(currentMonth);
 
   const nextBtn = document.createElement('button');
-  nextBtn.textContent = 'Mois suivant';
+  nextBtn.style.backgroundImage = "url(../../images/rightArrow.svg)";
+  nextBtn.style.backgroundRepeat = "no-repeat";
   nextBtn.addEventListener('click', showNextMonth);
   header.appendChild(nextBtn);
+
+  // On lui ajouter une class pour le css
+  nextBtn.classList.add("calandarBtn");
 
   // Créer un élément div pour le calendrier
   const calendar = document.createElement('div');
   calendar.style.display = 'grid';
+
+  // On lui ajouter une class pour le css
+  calendar.classList.add("calandarNumberContainer");
 
   /*
     gridTemplateColumns : Cette propriété est utilisée pour spécifier le nombre et la largeur 
@@ -90,6 +103,8 @@ function generateCalendar() {
     // Créer un élément div pour chaque jour du mois
     const weekday = document.createElement('div');
     weekday.textContent = weekdays[i];
+    // Lui ajouter une class pour le css
+    weekday.classList.add("calandarWeekday");
     // Ajouter le jour de la semaine au calendrier
     calendar.appendChild(weekday);
   }
@@ -122,6 +137,8 @@ function generateCalendar() {
     // Créer un élément div pour chaque jour du mois
     const dayCell = document.createElement('div');
     calendar.appendChild(dayCell);
+    // Lui ajouter une class pour le css
+    dayCell.classList.add("calandarNumber");
 
     if (i >= startOffset && dayCounter <= daysInMonth) {
       dayCell.textContent = dayCounter;
