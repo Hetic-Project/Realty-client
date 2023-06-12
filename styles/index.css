@@ -18,3 +18,28 @@
 @import url('../pages/userspace/styleUserSpace/styleMessage.css');
 @import url('../pages/userspace/styleUserSpace/styleProfile.css');
 @import url('../pages/userspace/styleUserSpace/styleSignup.css');
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.welcomePageContainer {
+    color: white;
+    position: absolute;
+    top: 50%;
+}
+
+.welcomePageTitle {
+    font-size: 20px;
+}
+
+.welcomePageSubTitle {
+    font-size: 20px;
+}
+
+.welcomePageLink {
+    font-size: 20px;
+}
