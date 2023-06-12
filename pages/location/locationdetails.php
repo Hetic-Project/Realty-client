@@ -41,8 +41,8 @@ $apartment = json_decode($json, true);
                         <h3>Total</h3>
                         <div><p id='price-ttc'> </p> <span>€</span></div>
                     </div>
-                <button class="global-reserveButton">Réserver</button>
-            </form>
+                <button class="global-reserveButton marginReserveButton">Réserver</button>
+            </div>
         </div>
 
     </div>
