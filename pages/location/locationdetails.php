@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../styles/index.css">
-    <title>Achat - Realty</title>
-</head>
+<?php
+
+include "../partials/userHeader.php";
+
+?>
 <body>
     <?php include "../partials/userHeader.php" ?>
 
@@ -153,6 +149,7 @@
             <p class="grayTextLocation">Consultez les conditions d'annulation complètes de l'hôte, qui s'appliquent même si vous annulez pour cause de maladie ou de perturbations causées par le Covid-19.</p>
         </div>
     </div>
-
+    <div id='calendar-container'></div>
+    <script src="../../javascript/calandar.js"></script>
 </body>
 </html>

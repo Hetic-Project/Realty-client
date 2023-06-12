@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<head>
-    <title>Realty</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../styles/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
-</head>
+include "../partials/userHeader.php";
+
+?>
 
 <body class="bodyLogin">
 
