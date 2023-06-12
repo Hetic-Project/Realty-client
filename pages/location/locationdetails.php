@@ -10,7 +10,6 @@ $json = file_get_contents($url);
 $apartment = json_decode($json, true);
 
 ?>
-   
 
     <div class="responsiveDetailsLocation">
         <div class="containerImageAndReservation">
@@ -23,28 +22,24 @@ $apartment = json_decode($json, true);
                 <hr class="reservationHr">
                 <input type="hidden" name="user_id" value="<?= $user_id ?>">
                 <input type="hidden" id='apartment_id' name="apartment_id" value="<?= $apartment_id ?>">
-                <input type="date" name="start_date">
-                <input type="date" name="end_date">
+                <input type="date" id="start-date" name="start_date">
+                <input type="date" id="end-date" name="end_date">
                 <hr class="reservationHr">
                 
                 <div class="containerCostReservation">
                     <div class="costReservation">
-                        <p><?= $apartment['apartment_price'] ?> € x 13 nuits</p>
-                        <p>3 233 €</p>
-                    </div>
-                    <div class="costReservation">
-                        <p>Frais & Options</p>
-                        <p>70 €</p>
+                        <div><p id="unit-price"><?= $apartment['apartment_price'] ?></p> <span>€ x</span> <span id="nights"> <span></div> 
+                        <div><p id="total-price"></p> <span>€</span></div>
                     </div>
                     <div class="costReservation">
                         <p>Taxes</p>
-                        <p>65 €</p>
+                        <div><p id='tax'> </p> <span>€</span></div>
                     </div>
                 </div> 
                 <hr class="reservationHr">
                 <div class="costReservation">
                         <h3>Total</h3>
-                        <p>3 368 €</p>
+                        <div><p id='price-ttc'> </p> <span>€</span></div>
                     </div>
                 <button class="global-reserveButton">Réserver</button>
             </form>

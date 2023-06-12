@@ -1,3 +1,24 @@
+let rentalPeriods = [];
+const apartment_id = document.querySelector('#apartment_id').value;
+
+fetch(`http://localhost:4000/apartment/get/allApartmentRental/${apartment_id}`)
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+  })
+  .then(data => {
+    data.forEach(element => {
+      rentalPeriods.push(element)
+    });
+    console.log(rentalPeriods);
+    // Appeler la fonction pour générer le calendrier initial
+    generateCalendar();
+  })
+  .catch(error => {
+    console.error('Erreur:', error);
+  });
+
 // Variable globale pour stocker la date actuelle
 let currentDate = new Date(); 
 
@@ -108,6 +129,24 @@ function generateCalendar() {
         // Ajouter la classe 'today' pour mettre en évidence le jour actuel
         dayCell.classList.add('today');
       }
+
+      // Vérifier si le jour actuel fait partie d'une période de location
+
+      const isRentalPeriod = rentalPeriods.some(rental => {
+      const rentalStart = new Date(rental.apartment_rental_start);
+      const rentalEnd = new Date(rental.apartment_rental_end);
+      return currentYear === rentalStart.getFullYear() &&
+        currentDate.getMonth() === rentalStart.getMonth() &&
+        dayCounter >= rentalStart.getDate() &&
+        dayCounter <= rentalEnd.getDate();
+    });
+
+      if (isRentalPeriod) {
+        dayCell.style.color = 'yellow';
+        dayCell.style.fontSize = 'bold';
+        dayCell.style.backgroundColor = 'black';
+      }
+
       dayCounter++;
     }
   }
@@ -127,5 +166,39 @@ function showNextMonth() {
   generateCalendar();
 }
 
-// Appeler la fonction pour générer le calendrier initial
-generateCalendar();
+const startDate = document.querySelector('#start-date');
+const endDate = document.querySelector('#end-date');
+const nights = document.querySelector('#nights');
+const totalPrice = document.querySelector('#total-price');
+const unitPrice = document.querySelector('#unit-price').textContent;
+const tax = document.querySelector('#tax');
+const priceTtc = document.querySelector('#price-ttc');
+
+tax.textContent = 65;
+nights.textContent = 0;
+totalPrice.textContent = 0;
+let start = null;
+let end = null;
+priceTtc.textContent = 0;
+
+startDate.addEventListener('change', (e) => {
+  start = new Date(e.target.value);
+});
+
+endDate.addEventListener('change', (e) => {
+  end = new Date(e.target.value);
+  
+  if (start && end) {
+    const differenceInMilliseconds = end - start;
+    const differenceInDays = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
+    nights.textContent = differenceInDays;
+    const pricePerDay = parseInt(unitPrice) * parseInt(differenceInDays);
+    totalPrice.textContent = pricePerDay;
+    console.log( 'prix toute nuit :' + pricePerDay, 'Taxe:' + tax)
+    const finalPrice = parseInt(pricePerDay) + parseInt(tax.textContent)
+    priceTtc.textContent = finalPrice;
+
+  }
+});
+
+
