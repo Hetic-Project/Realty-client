@@ -1,6 +1,5 @@
 <?php
-
-include "../../partials/sider.php";
+include_once "../../partials/sider.php";
 
 ?>
 
