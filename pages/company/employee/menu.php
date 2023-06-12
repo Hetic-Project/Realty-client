@@ -1,8 +1,9 @@
 <?php
 
-include "../../partials/userHeader.php";
+include "../../partials/sider.php";
 
 ?>
-<body>
+
+<p>Apartment</p>
 </body>
 </html>
