@@ -217,5 +217,3 @@ endDate.addEventListener('change', (e) => {
 
   }
 });
-
-
