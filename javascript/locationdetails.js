@@ -32,10 +32,6 @@ function create3dView (apartment_id)
                 const sphere = new THREE.Mesh(geometry, material);
                 scene.add(sphere);
 
-                const light = new THREE.DirectionalLight(0xffffff, 1);
-                light.position.set(0, 1, 0);
-                scene.add(light);
-
                 
                 /**
                  * Sizes
