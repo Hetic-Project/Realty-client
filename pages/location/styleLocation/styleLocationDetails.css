@@ -18,7 +18,12 @@ canvas {
 }
 
 .canvasDescription {
-    margin-top: 20px;
+    position: absolute;
+    top: 89%;
+    font-weight: 700;
+    border: 1px;
+    color: white;
+    margin-left: 1%;
 }
 
 .containerImageAndReservation {

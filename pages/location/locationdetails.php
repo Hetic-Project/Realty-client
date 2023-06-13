@@ -17,7 +17,7 @@ $apartment = json_decode($json, true);
                 <div class="canvasContainer">
                     <canvas class="webgl" class="firstImage"></canvas>
                     <script type="module" src="../../javascript/locationdetails.js"></script>
-                    <p class="canvasDescription">Visitez votre futur bien dans l'espace 3D</p>
+                    <p class="canvasDescription">Visitez la location en maintenant le clic dans l'espace 3D</p>
                 </div>
             </div>
             <form class="containerReservation">
