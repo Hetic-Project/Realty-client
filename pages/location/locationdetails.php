@@ -14,8 +14,11 @@ $apartment = json_decode($json, true);
     <div class="responsiveDetailsLocation">
         <div class="containerImageAndReservation">
             <div class="containerImageDetailLocation">
-                <canvas class="webgl" class="firstImage"></canvas>
-                <script type="module" src="../../javascript/locationdetails.js"></script>
+                <div class="canvasContainer">
+                    <canvas class="webgl" class="firstImage"></canvas>
+                    <script type="module" src="../../javascript/locationdetails.js"></script>
+                    <p class="canvasDescription">Visitez votre futur bien dans l'espace 3D</p>
+                </div>
             </div>
             <form class="containerReservation">
                 <div id='calendar-container'></div>
@@ -88,7 +91,9 @@ $apartment = json_decode($json, true);
     <div class="containerdetails bottomLocation">
         <div class="rulesHeader">
             <h3>Règlement</h3>
-            <button>Contacter le support</button>
+            <div class="supportContact">
+                <button class="global-reserveButton">Contacter le support</button>
+            </div>
         </div>
         <div class="interiorSecurityLocation">
             <div>

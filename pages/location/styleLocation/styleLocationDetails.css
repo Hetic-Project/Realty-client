@@ -2,6 +2,10 @@ canvas {
     border-radius: 15px;
 }
 
+.supportContact {
+    width: 12%;
+}
+
 @media screen and (max-width: 1325px) {
     .webgl {
         width: 640px;
@@ -9,7 +13,16 @@ canvas {
     }
 }
 
+.canvasContainer {
+    display: grid;
+}
+
+.canvasDescription {
+    margin-top: 20px;
+}
+
 .containerImageAndReservation {
+    display: flex;
     margin: auto;
     margin-top: 134px;
     width: 90%;

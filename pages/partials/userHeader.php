@@ -28,5 +28,5 @@
             <input type="text" placeholder="Recherche" class="global-inputHeader">
             <button class="global-buttonIcon"><img src="../../images/IconSearch.svg" alt="Icon Search" class="global-icon"></button>
         </form>
-        <a class="" href="../../pages/userspace/profile.php"><img src="../../images/iconProfile.svg" alt="Icon Profile" class="global-iconProfile"></a>
+        <a class="" href="http://localhost:3000/"><img src="../../images/iconProfile.svg" alt="Icon Profile" class="global-iconProfile"></a>
     </header>

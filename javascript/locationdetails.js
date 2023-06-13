@@ -37,19 +37,20 @@ function create3dView (apartment_id)
                  * Sizes
                  */
                 const sizes = {
-                    width: 800,
-                    height: 600
+                    width: window.innerWidth /1.75,
+                    height: window.innerHeight /1.5
                 }
                 
-                screenSize();
-                let width = 800
-                let height = 600
+                // screenSize();
+                // let width = 800
+                // let height = 600
         
                 window.addEventListener('resize', () =>
                 {
-                    width = 800
-                    height = 600
-                    // update camera aspect
+                  const width = window.innerWidth /1.75
+                  const height = window.innerHeight /1.5
+
+                  // update camera aspect
                     camera.aspect = width / height
                     camera.updateProjectionMatrix()
                     // update renderer
@@ -70,6 +71,7 @@ function create3dView (apartment_id)
                 // Controls
                 const controls = new OrbitControls(camera, canvas)
                 controls.enableDamping = true
+                controls.enableZoom = false
         
                 /**
                  * Renderer
@@ -107,11 +109,3 @@ function create3dView (apartment_id)
 const apartement_id = document.querySelector('#apartment_id').value;
 console.log(apartement_id);
 create3dView(apartement_id);
-
-function screenSize () {
-  let w = window.innerWidth;
-  let h = window.innerHeight;
-
-  console.log("w=", w, "h=", h);
-
-}
