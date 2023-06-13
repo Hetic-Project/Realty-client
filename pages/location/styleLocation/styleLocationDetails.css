@@ -10,8 +10,6 @@ canvas {
 }
 
 .containerImageAndReservation {
-    display: flex;
-    justify-content: center;
     margin: auto;
     margin-top: 134px;
     width: 90%;
@@ -185,6 +183,7 @@ canvas {
     }
 
     .responsiveDetailsLocation {
+        width: 100vw;
         display: flex;
     }
 }
