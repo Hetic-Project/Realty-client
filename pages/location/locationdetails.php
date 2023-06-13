@@ -21,12 +21,16 @@ $apartment = json_decode($json, true);
                 </div>
             </div>
             <form class="containerReservation">
+                <h2>Disponibilitées</h2>
                 <div id='calendar-container'></div>
                 <h3><?= $apartment['apartment_price'] ?> €<span> par nuit</span></h3>
-                <hr class="reservationHr">
+
+                <h2>Choisir une période</h2>
                 <input type="hidden" name="user_id" value="<?= $user_id ?>">
                 <input type="hidden" id='apartment_id' name="apartment_id" value="<?= $apartment_id ?>">
+                <label for="start-date"> Départ</label>
                 <input type="date" id="start-date" name="start_date">
+                <label for="end-date"> Retour</label>
                 <input type="date" id="end-date" name="end_date">
                 <hr class="reservationHr">
                 
@@ -86,6 +90,10 @@ $apartment = json_decode($json, true);
                 </div>
             <?php endforeach; ?>
         <?php endif; ?>
+        <?php if (!$reviews) : ?>
+            <p>Aucun commentaire</p>
+        <?php endif; ?>
+
     </div>
 
     <div class="containerdetails bottomLocation">
