@@ -66,17 +66,23 @@ $apartment = json_decode($json, true);
             <?php endforeach; ?>
         </div>
     </div>
+
     <div class="containerdetails">
         <h3>Reviews</h3>
         <hr class="reservationHr">
-        <div class="reviewsNameAndDate">
-            <p>Julia, Trocadéro</p>
-            <p class="dateReviews">Jan 11</p>
-        </div>
-        <br>
-        <p>L'emplacement de l'appartement était idéal. Il était situé dans un quartier animé et vivant, avec de nombreux restaurants, boutiques et attractions à proximité. De plus, les transports en commun étaient facilement accessibles, ce qui m'a permis de me déplacer facilement dans la ville.
-        <br><br>
-        L'une des meilleures caractéristiques de cet appartement était la vue imprenable depuis le balcon. C'était un plaisir de se réveiller chaque matin et de profiter d'une tasse de café tout en admirant le paysage urbain. C'était vraiment une expérience unique et mémorable.</p>
+        <?php $reviews = json_decode($apartment['reviews'], true); ?>
+        <?php if ($reviews) : ?>
+            <?php foreach($reviews as $review): ?>
+                <div>
+                    <div class="reviewsNameAndDate">
+                        <p><?= $review['firstname'] ?>, <?= $review['lastname']?></p>
+                        <p class="dateReviews">Jan 11</p>
+                    </div>
+                    <br>
+                    <p><?= $review['comment'] ?></p>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
 
     <div class="containerdetails bottomLocation">
