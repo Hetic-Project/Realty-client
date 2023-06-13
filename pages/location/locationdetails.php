@@ -14,7 +14,8 @@ $apartment = json_decode($json, true);
     <div class="responsiveDetailsLocation">
         <div class="containerImageAndReservation">
             <div class="containerImageDetailLocation">
-                <img src="<?= $apartment['apartment_360_picture'] ?>" alt="" class="firstImage">
+                <canvas class="webgl" class="firstImage"></canvas>
+                <script type="module" src="../../javascript/locationdetails.js"></script>
             </div>
             <form class="containerReservation">
                 <div id='calendar-container'></div>
@@ -103,8 +104,7 @@ $apartment = json_decode($json, true);
         </div>
     </div>
     <script src="../../javascript/calandar.js"></script>
-    <canvas class="webgl"></canvas>
-    <script type="module" src="../../javascript/locationdetails.js"></script>
+
 
 </body>
 </html>

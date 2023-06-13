@@ -1,3 +1,14 @@
+canvas {
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 1325px) {
+    .webgl {
+        width: 640px;
+        height: 480px;
+    }
+}
+
 .containerImageAndReservation {
     display: flex;
     justify-content: center;
@@ -119,10 +130,11 @@
     margin-bottom: 60px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1280px) {
     .containerImageAndReservation {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: end;
     }
 
@@ -160,7 +172,7 @@
     }
 
     .containerReservation {
-        width: 40%;
+        width: 80%;
         margin-top: 30px;
     }
 

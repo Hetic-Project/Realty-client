@@ -44,16 +44,21 @@ function create3dView (apartment_id)
                     width: 800,
                     height: 600
                 }
+
+                let width = 800
+                let height = 600
         
                 window.addEventListener('resize', () =>
                 {
-                    // Update camera
-                    camera.aspect = sizes.width / sizes.height
+                    width = 800
+                    height = 600
+                    // update camera aspect
+                    camera.aspect = width / height
                     camera.updateProjectionMatrix()
-        
-                    // Update renderer
-                    renderer.setSize(sizes.width, sizes.height)
+                    // update renderer
+                    renderer.setSize(width, height)
                     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+                    renderer.render(scene, camera)
                 })
         
                 /**
