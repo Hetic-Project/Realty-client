@@ -44,7 +44,8 @@ function create3dView (apartment_id)
                     width: 800,
                     height: 600
                 }
-
+                
+                screenSize();
                 let width = 800
                 let height = 600
         
@@ -110,3 +111,11 @@ function create3dView (apartment_id)
 const apartement_id = document.querySelector('#apartment_id').value;
 console.log(apartement_id);
 create3dView(apartement_id);
+
+function screenSize () {
+  let w = window.innerWidth;
+  let h = window.innerHeight;
+
+  console.log("w=", w, "h=", h);
+
+}
