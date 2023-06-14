@@ -10,14 +10,20 @@ include "../partials/userHeader.php";
         <a href="#">Mes Informations Personelles</a>
         <a href="#">Mes locations</a>
         <a href="#">Mes Factures</a>
-        <a href="#">Messages</a>
+        <a href="http://localhost:3000/pages/userspace/message.php">Messages</a>
         <a href="#">Sécurités et Confidentialités</a>
         <a href="#" class>Deconnexion</a>
     </div>
+    <div id="texte"></div>
     <div class="containerModifProfile">
+
+
         <!-- <h1 class="titleProfile">Bonjour,</h1>
         <h2 class="nameProfile">Rubens Bonnin</h2>é
         <h3 class="titleProfile">Voyageur</h3> -->
+
+
+
         <div class="profile">
             <div class="profile-card">
                 <div class="frontProfile">
