@@ -1,3 +1,24 @@
+let rentalPeriods = [];
+const apartment_id = document.querySelector('#apartment_id').value;
+
+fetch(`http://localhost:4000/apartment/get/allApartmentRental/${apartment_id}`)
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+  })
+  .then(data => {
+    data.forEach(element => {
+      rentalPeriods.push(element)
+    });
+    console.log(rentalPeriods);
+    // Appeler la fonction pour générer le calendrier initial
+    generateCalendar();
+  })
+  .catch(error => {
+    console.error('Erreur:', error);
+  });
+
 // Variable globale pour stocker la date actuelle
 let currentDate = new Date(); 
 
@@ -17,12 +38,18 @@ function generateCalendar() {
   container.appendChild(header);
 
   const previousBtn = document.createElement('button');
-  previousBtn.textContent = 'Mois précédent';
+  previousBtn.style.backgroundImage = "url(../../images/leftArrow.svg)";
+  previousBtn.style.backgroundRepeat = "no-repeat";
   previousBtn.addEventListener('click', showPreviousMonth);
   header.appendChild(previousBtn);
 
+  // On lui ajouter une class pour le css
+  previousBtn.classList.add("calandarBtn");
+
   // Créer un élément h2 pour afficher le mois courant
-  const currentMonth = document.createElement('h2');
+  const currentMonth = document.createElement('h3');
+  // Et lui ajouter une class pour le css
+  currentMonth.classList.add("calandarCurrentMonth");
 
   /*
 
@@ -38,13 +65,20 @@ function generateCalendar() {
   header.appendChild(currentMonth);
 
   const nextBtn = document.createElement('button');
-  nextBtn.textContent = 'Mois suivant';
+  nextBtn.style.backgroundImage = "url(../../images/rightArrow.svg)";
+  nextBtn.style.backgroundRepeat = "no-repeat";
   nextBtn.addEventListener('click', showNextMonth);
   header.appendChild(nextBtn);
+
+  // On lui ajouter une class pour le css
+  nextBtn.classList.add("calandarBtn");
 
   // Créer un élément div pour le calendrier
   const calendar = document.createElement('div');
   calendar.style.display = 'grid';
+
+  // On lui ajouter une class pour le css
+  calendar.classList.add("calandarNumberContainer");
 
   /*
     gridTemplateColumns : Cette propriété est utilisée pour spécifier le nombre et la largeur 
@@ -69,6 +103,8 @@ function generateCalendar() {
     // Créer un élément div pour chaque jour du mois
     const weekday = document.createElement('div');
     weekday.textContent = weekdays[i];
+    // Lui ajouter une class pour le css
+    weekday.classList.add("calandarWeekday");
     // Ajouter le jour de la semaine au calendrier
     calendar.appendChild(weekday);
   }
@@ -100,7 +136,11 @@ function generateCalendar() {
   for (let i = 0; i < 42; i++) {
     // Créer un élément div pour chaque jour du mois
     const dayCell = document.createElement('div');
+    dayCell.style.fontWeight = 'bold';
+
     calendar.appendChild(dayCell);
+    // Lui ajouter une class pour le css
+    dayCell.classList.add("calandarNumber");
 
     if (i >= startOffset && dayCounter <= daysInMonth) {
       dayCell.textContent = dayCounter;
@@ -108,6 +148,25 @@ function generateCalendar() {
         // Ajouter la classe 'today' pour mettre en évidence le jour actuel
         dayCell.classList.add('today');
       }
+
+      // Vérifier si le jour actuel fait partie d'une période de location
+
+      const isRentalPeriod = rentalPeriods.some(rental => {
+      const rentalStart = new Date(rental.apartment_rental_start);
+      const rentalEnd = new Date(rental.apartment_rental_end);
+      return currentYear === rentalStart.getFullYear() &&
+        currentDate.getMonth() === rentalStart.getMonth() &&
+        dayCounter >= rentalStart.getDate() &&
+        dayCounter <= rentalEnd.getDate();
+    });
+
+      if (isRentalPeriod) {
+        dayCell.style.color = 'grey';
+        dayCell.style.fontStyle = 'italic';
+        dayCell.style.fontWeight = 'light';
+        
+      }
+
       dayCounter++;
     }
   }
@@ -127,5 +186,37 @@ function showNextMonth() {
   generateCalendar();
 }
 
-// Appeler la fonction pour générer le calendrier initial
-generateCalendar();
+const startDate = document.querySelector('#start-date');
+const endDate = document.querySelector('#end-date');
+const nights = document.querySelector('#nights');
+const totalPrice = document.querySelector('#total-price');
+const unitPrice = document.querySelector('#unit-price').textContent;
+const tax = document.querySelector('#tax');
+const priceTtc = document.querySelector('#price-ttc');
+
+tax.textContent = 65;
+nights.textContent = 0;
+totalPrice.textContent = 0;
+let start = null;
+let end = null;
+priceTtc.textContent = 0;
+
+startDate.addEventListener('change', (e) => {
+  start = new Date(e.target.value);
+});
+
+endDate.addEventListener('change', (e) => {
+  end = new Date(e.target.value);
+  
+  if (start && end) {
+    const differenceInMilliseconds = end - start;
+    const differenceInDays = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
+    nights.textContent = differenceInDays;
+    const pricePerDay = parseInt(unitPrice) * parseInt(differenceInDays);
+    totalPrice.textContent = pricePerDay;
+    console.log( 'prix toute nuit :' + pricePerDay, 'Taxe:' + tax)
+    const finalPrice = parseInt(pricePerDay) + parseInt(tax.textContent)
+    priceTtc.textContent = finalPrice;
+
+  }
+});

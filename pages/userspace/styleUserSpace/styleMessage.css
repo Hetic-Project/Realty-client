@@ -1,0 +1,97 @@
+.msgLocationContainer {
+    padding: 2% 2%;
+    position: fixed;
+    height: 100%;
+    width: 350px;
+    background-color: #F9F9F9;
+    overflow: hidden;
+}
+
+.messageContainer {
+    width: calc(100vw - 350px);
+    height: calc(100vh - 94px - 128px);
+    margin-left: 350px;
+    margin-top: 94px;
+}
+
+.msgMenuTitle {
+    padding-bottom: 8%;
+    font-size: 20px;
+}
+
+.msgApartmentName {
+    padding-bottom: 4%;
+}
+
+.msgApartmentDescription {
+    padding-bottom: 10%;
+}
+
+.msgInput {
+    font-size: 15px;
+    border: none;
+    background-color: #F9F9F9;
+    cursor: text;
+    width: 85%;
+    padding: 10px;
+    margin-left: 2%;
+}
+
+.msgInput:focus {
+    border: none;
+}
+
+.inputContainer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 15%;
+    width: 71.75%;
+    padding-top: 2%;
+    background-color: #F9F9F9;
+}
+
+.sendButton {
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    padding: 15px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.oneMessage {
+    display: flex;
+    align-items: flex-start;
+    /* margin: 0px 30px 0px 30px; */
+}
+
+.transmiter {
+    /* position: absolute; */
+    right: 0px;
+    background-color: red;
+    max-width: 50%;
+    margin: 10px 0px 10px 0px;
+}
+
+.receiver {
+    /* position: absolute; */
+    left: 0px;
+    background-color: lightgreen;
+    max-width: 50%;
+    margin: 10px 0px 10px 0px;
+}
+
+.userMessage {
+    margin: 0px 0px 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.allMessage {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+}

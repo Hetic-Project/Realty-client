@@ -1,6 +1,33 @@
+canvas {
+    border-radius: 15px;
+}
+
+.supportContact {
+    width: 12%;
+}
+
+@media screen and (max-width: 1325px) {
+    .webgl {
+        width: 640px;
+        height: 480px;
+    }
+}
+
+.canvasContainer {
+    display: grid;
+}
+
+.canvasDescription {
+    position: absolute;
+    top: 89%;
+    font-weight: 700;
+    border: 1px;
+    color: white;
+    margin-left: 1%;
+}
+
 .containerImageAndReservation {
     display: flex;
-    justify-content: center;
     margin: auto;
     margin-top: 134px;
     width: 90%;
@@ -12,15 +39,9 @@
     width: 70%;
 }
 
-.containerMoreImage {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .firstImage {
-    border-radius: 15px 0px 0px 15px;
-    width: 50%;
+    border-radius: 15px;
+    width: 90%;
     height: 100%;
 }
 
@@ -49,6 +70,10 @@
     border: none;
     border-top: 1px #989898 solid;
     width: 100%;
+}
+
+.marginReserveButton {
+    margin-top: 30px;
 }
 
 .containerCostReservation {
@@ -121,10 +146,11 @@
     margin-bottom: 60px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1280px) {
     .containerImageAndReservation {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: end;
     }
 
@@ -162,7 +188,7 @@
     }
 
     .containerReservation {
-        width: 40%;
+        width: 80%;
         margin-top: 30px;
     }
 
@@ -175,6 +201,7 @@
     }
 
     .responsiveDetailsLocation {
+        width: 100vw;
         display: flex;
     }
 }

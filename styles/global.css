@@ -73,13 +73,24 @@ body {
     width: 185px;
 
 }
-.global-locationContainer {}
 
 .global-sendContent {}
 
 .global-saveButton {}
 
-.global-reserveButton {}
+.global-reserveButton {
+    border: none;
+    border-radius: 15px;
+    background-color: #000;
+    padding: 15px 0px;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.global-reserveButton:hover {
+    background-color: #777777
+}
 
 .global-icon {
     width: 30px;
@@ -164,6 +175,7 @@ body {
     box-shadow: var(--box-shadow);
 }
 
+
 @media screen and (max-width: 580px) {
     .global-userHeader {
         padding: 10px 30px;
@@ -239,4 +251,60 @@ body {
     box-shadow: none;
     outline-offset: 0px;
     outline: none;
+}
+
+.calandar-container {
+    width: 100%;
+    height: 30%;
+}
+
+.calandarNumberContainer {
+    margin-top: 15px;
+    height: 200px;
+}
+
+.calandarNumber {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.calandarWeekday {
+    
+}
+
+.calandarBtn {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #fff;
+    height: 40px;
+}
+
+.calandarCurrentMonth {
+    text-align: center;
+    width: 120px;
+    height: 50px;
+}
+
+.calandarCurrentMonth:first-letter {
+    text-transform: capitalize;
+}
+
+.slider {
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+}
+
+.slider::-webkit-scrollbar {
+    width: 0.5em;
+}
+  
+.slider::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+  
+.slider::-webkit-scrollbar-track {
+    background-color: transparent;
 }

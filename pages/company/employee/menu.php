@@ -1,8 +1,8 @@
 <?php
-
-include "../../partials/userHeader.php";
+include_once "../../partials/sider.php";
 
 ?>
-<body>
+
+<p>Apartment</p>
 </body>
 </html>
