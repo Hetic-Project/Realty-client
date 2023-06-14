@@ -6,6 +6,15 @@ canvas {
     width: 12%;
 }
 
+.locationReservation {
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+
+.reservationDate {
+    font-size: 12px;
+}
+
 @media screen and (max-width: 1325px) {
     .webgl {
         width: 640px;
@@ -24,6 +33,12 @@ canvas {
     border: 1px;
     color: white;
     margin-left: 1%;
+}
+
+@media screen and (max-width: 820px) {
+    .canvasDescription {
+        visibility: hidden;
+    }
 }
 
 .containerImageAndReservation {

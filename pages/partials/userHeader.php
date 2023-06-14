@@ -24,7 +24,7 @@
 <body>
 
     <header class="global-userHeader">
-        <a href="./locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
+        <a href="http://localhost:3000/pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
         <form action="" method="get" class="global-formHeader">
             <input type="text" placeholder="Recherche" class="global-inputHeader">
             <button class="global-buttonIcon"><img src="../../images/IconSearch.svg" alt="Icon Search"
