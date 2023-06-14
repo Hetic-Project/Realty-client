@@ -1,20 +1,6 @@
-.msgLocationContainer {
-    padding: 2% 2%;
-    position: fixed;
-    height: 100%;
-    width: 350px;
-    background-color: #F9F9F9;
-    overflow: hidden;
-}
-
-.messageContainer {
-    width: calc(100vw - 350px);
-    height: calc(100vh - 94px - 128px);
-    margin-left: 350px;
-    margin-top: 94px;
-}
 
 .msgMenuTitle {
+    padding-top: 35%;
     padding-bottom: 8%;
     font-size: 20px;
 }
@@ -46,8 +32,9 @@
     bottom: 0;
     right: 0;
     height: 15%;
-    width: 71.75%;
+    width: 100%;
     padding-top: 2%;
+    padding-left: 33%;
     background-color: #F9F9F9;
 }
 
@@ -66,32 +53,52 @@
     /* margin: 0px 30px 0px 30px; */
 }
 
-.transmiter {
-    /* position: absolute; */
-    right: 0px;
-    background-color: red;
-    max-width: 50%;
-    margin: 10px 0px 10px 0px;
+.messageContainer {
+    width: 100vw;
+    margin-left: 375px;
+    margin-top: 94px;
+}
+
+.msgLocationContainer {
+    position: fixed;
+    padding: 2%;
+    z-index: -1;
+    height: 200%;
+    width: 500px;
+    background-color: #F9F9F9;
+}
+
+.messageSlider {
+    position: fixed;
+    top: 0%;
+    background-color: #F9F9F9;
+    z-index: -1;
+}
+
+.conversation {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    bottom: -15%;
+    padding-bottom: 10%;
+    z-index: -1;
+}
+
+.transmitter {
+    background-color: #F9E4CB;
+    margin-left: auto;
+    text-align: right;
+    border-radius: 10px 10px 0px 10px;
+    padding: 10px;  
 }
 
 .receiver {
-    /* position: absolute; */
     left: 0px;
-    background-color: lightgreen;
-    max-width: 50%;
-    margin: 10px 0px 10px 0px;
-}
-
-.userMessage {
-    margin: 0px 0px 30px 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.allMessage {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: end;
+    background-color: #F1F1F1;
+    margin: 10px 50% 10px 32%;
+    border-radius: 10px 10px 10px 0px;
+    padding: 10px;
 }
