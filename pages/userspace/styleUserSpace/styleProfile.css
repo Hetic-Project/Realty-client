@@ -176,24 +176,24 @@
     color: white;
 }
 
-.wrapper {
+.wrapperProfile {
     display: flex;
 }
 
-.wrapper .static-txt {
+.wrapperProfile .static-txtProfile {
     color: #000000;
     font-size: 10px;
     font-weight: 400;
 }
 
-.wrapper .dynamic-txts {
+.wrapperProfile .dynamic-txtsProfile {
     margin-left: 15px;
     height: 90px;
     line-height: 90px;
     overflow: hidden;
 }
 
-.dynamic-txts li {
+.dynamic-txtsProfile .liProfile {
     list-style: none;
     color: #000000;
     font-size: 60px;
@@ -209,13 +209,13 @@
     }
 }
 
-.dynamic-txts li span {
+.dynamic-txtsProfile .liProfile .spanProfile {
     position: relative;
     margin: 5px 0;
     line-height: 90px;
 }
 
-.dynamic-txts li span::after {
+.dynamic-txts .liProfile .spanProfile::after {
     content: "";
     position: absolute;
     left: 0;

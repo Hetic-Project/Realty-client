@@ -29,12 +29,12 @@ include "../partials/userHeader.php";
                     <img class="" src="../../images/RealtyIcon.svg"></img>
                     <h2 class="nameProfile">Rubens Bonnin</h2>
                     <h3 class="titleProfileBot">Voyageur</h3>
-                    <div class="wrapper">
-                        <div class="static-txt">Bonjour,</div>
-                        <ul class="dynamic-txts">
-                            <li><span>Rubens</span></li>
-                            <li><span>Bonnin</span></li>
-                            <li><span>Rubens Bonnin</span></li>
+                    <div class="wrapperProfile">
+                        <div class="static-txtProfile">Bonjour,</div>
+                        <ul class="dynamic-txtsProfile">
+                            <li class="liProfile"><span class="spanProfile">Rubens</span></li>
+                            <li class=" liProfile"><span class="spanProfile">Bonnin</span></li>
+                            <li class="liProfile"><span class="spanProfile">Rubens Bonnin</span></li>
                         </ul>
                     </div>
                 </div>
