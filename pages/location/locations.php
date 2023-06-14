@@ -57,4 +57,3 @@ $apartments = json_decode($json, true);
     </script>
     <script src="../../javascript/locations.js"></script>
 </body>
-</html>

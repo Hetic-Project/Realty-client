@@ -136,6 +136,8 @@ function generateCalendar() {
   for (let i = 0; i < 42; i++) {
     // Créer un élément div pour chaque jour du mois
     const dayCell = document.createElement('div');
+    dayCell.style.fontWeight = 'bold';
+
     calendar.appendChild(dayCell);
     // Lui ajouter une class pour le css
     dayCell.classList.add("calandarNumber");
@@ -159,9 +161,10 @@ function generateCalendar() {
     });
 
       if (isRentalPeriod) {
-        dayCell.style.color = 'yellow';
-        dayCell.style.fontSize = 'bold';
-        dayCell.style.backgroundColor = 'black';
+        dayCell.style.color = 'grey';
+        dayCell.style.fontStyle = 'italic';
+        dayCell.style.fontWeight = 'light';
+        
       }
 
       dayCounter++;
@@ -217,5 +220,3 @@ endDate.addEventListener('change', (e) => {
 
   }
 });
-
-

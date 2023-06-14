@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 function create3dView (apartment_id)
 {
-    fetch(`http://localhost:4000/apartment/get/oneApartment/${apartment_id}`)
+    fetch(`http://localhost:4000/get/image/${apartment_id}`)
       .then(response => {
         // Vérifier si la requête a réussi (code de statut HTTP 200-299)
         if (response.ok) {
@@ -14,49 +14,49 @@ function create3dView (apartment_id)
         }
       })
       .then(data => {
-        
+                console.log(data)
                 // Canvas
                 const canvas = document.querySelector('canvas.webgl')
-                const cubeTextureLoader = new THREE.CubeTextureLoader();
-        
-                // Scene
-                const scene = new THREE.Scene()
-                scene.background = new THREE.Color(0xff0000)
-        
-                const envMap = cubeTextureLoader.load([
-                  data.apartment_360_picture,
-                  console.log(data)
-                ]);
-                console.log(envMap)
-                scene.background = envMap
+                const textureLoader = new THREE.TextureLoader();
+                
+                const image = data.apartment_360_picture;
 
-                const geometry = new THREE.SphereGeometry( 2, 32, 16 ); 
-                const material = new THREE.MeshStandardMaterial({ envMap: envMap });
+                const texture = textureLoader.load(image);
+                texture.mapping = THREE.UVMapping;
+          
+                const scene = new THREE.Scene();
+                scene.background = texture;
+          
+                const geometry = new THREE.SphereGeometry(2, 32, 16);
+                const material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.DoubleSide });
                 const sphere = new THREE.Mesh(geometry, material);
                 scene.add(sphere);
-
-                const light = new THREE.DirectionalLight(0xffffff, 1);
-                light.position.set(0, 1, 0); // Position de la lumière
-                scene.add(light);
 
                 
                 /**
                  * Sizes
                  */
                 const sizes = {
-                    width: 800,
-                    height: 600
+                    width: window.innerWidth /1.75,
+                    height: window.innerHeight /1.5
                 }
+                
+                // screenSize();
+                // let width = 800
+                // let height = 600
         
                 window.addEventListener('resize', () =>
                 {
-                    // Update camera
-                    camera.aspect = sizes.width / sizes.height
+                  const width = window.innerWidth /1.75
+                  const height = window.innerHeight /1.5
+
+                  // update camera aspect
+                    camera.aspect = width / height
                     camera.updateProjectionMatrix()
-        
-                    // Update renderer
-                    renderer.setSize(sizes.width, sizes.height)
+                    // update renderer
+                    renderer.setSize(width, height)
                     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+                    renderer.render(scene, camera)
                 })
         
                 /**
@@ -64,12 +64,14 @@ function create3dView (apartment_id)
                  */
                 // Base camera
                 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-                camera.position.set(0,0,20)
+                camera.position.set(0,0,0.2)
+                console.log(camera.position.z)
                 scene.add(camera)
         
                 // Controls
                 const controls = new OrbitControls(camera, canvas)
                 controls.enableDamping = true
+                controls.enableZoom = false
         
                 /**
                  * Renderer
@@ -81,9 +83,10 @@ function create3dView (apartment_id)
                 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
         
                 /**
-                 * Animate
+                 * Animation
                  */
                 const clock = new THREE.Clock()
+                
         
                 const tick = () =>
                 {
@@ -100,7 +103,6 @@ function create3dView (apartment_id)
                 tick()
       })
       .catch(error => {
-        // Gestion des erreurs
         console.error(error);
       });
 }

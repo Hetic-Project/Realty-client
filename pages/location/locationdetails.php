@@ -14,15 +14,23 @@ $apartment = json_decode($json, true);
     <div class="responsiveDetailsLocation">
         <div class="containerImageAndReservation">
             <div class="containerImageDetailLocation">
-                <img src="<?= $apartment['apartment_360_picture'] ?>" alt="" class="firstImage">
+                <div class="canvasContainer">
+                    <canvas class="webgl" class="firstImage"></canvas>
+                    <script type="module" src="../../javascript/locationdetails.js"></script>
+                    <p class="canvasDescription">Visitez la location en maintenant le clic dans l'espace 3D</p>
+                </div>
             </div>
             <form class="containerReservation">
+                <h2>Disponibilitées</h2>
                 <div id='calendar-container'></div>
                 <h3><?= $apartment['apartment_price'] ?> €<span> par nuit</span></h3>
-                <hr class="reservationHr">
+
+                <h2>Choisir une période</h2>
                 <input type="hidden" name="user_id" value="<?= $user_id ?>">
                 <input type="hidden" id='apartment_id' name="apartment_id" value="<?= $apartment_id ?>">
+                <label for="start-date"> Départ</label>
                 <input type="date" id="start-date" name="start_date">
+                <label for="end-date"> Retour</label>
                 <input type="date" id="end-date" name="end_date">
                 <hr class="reservationHr">
                 
@@ -65,23 +73,35 @@ $apartment = json_decode($json, true);
             <?php endforeach; ?>
         </div>
     </div>
+
     <div class="containerdetails">
         <h3>Reviews</h3>
         <hr class="reservationHr">
-        <div class="reviewsNameAndDate">
-            <p>Julia, Trocadéro</p>
-            <p class="dateReviews">Jan 11</p>
-        </div>
-        <br>
-        <p>L'emplacement de l'appartement était idéal. Il était situé dans un quartier animé et vivant, avec de nombreux restaurants, boutiques et attractions à proximité. De plus, les transports en commun étaient facilement accessibles, ce qui m'a permis de me déplacer facilement dans la ville.
-        <br><br>
-        L'une des meilleures caractéristiques de cet appartement était la vue imprenable depuis le balcon. C'était un plaisir de se réveiller chaque matin et de profiter d'une tasse de café tout en admirant le paysage urbain. C'était vraiment une expérience unique et mémorable.</p>
+        <?php $reviews = json_decode($apartment['reviews'], true); ?>
+        <?php if ($reviews) : ?>
+            <?php foreach($reviews as $review): ?>
+                <div>
+                    <div class="reviewsNameAndDate">
+                        <p><?= $review['firstname'] ?>, <?= $review['lastname']?></p>
+                        <p class="dateReviews">Jan 11</p>
+                    </div>
+                    <br>
+                    <p><?= $review['comment'] ?></p>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
+        <?php if (!$reviews) : ?>
+            <p>Aucun commentaire</p>
+        <?php endif; ?>
+
     </div>
 
     <div class="containerdetails bottomLocation">
         <div class="rulesHeader">
             <h3>Règlement</h3>
-            <button>Contacter le support</button>
+            <div class="supportContact">
+                <button class="global-reserveButton">Contacter le support</button>
+            </div>
         </div>
         <div class="interiorSecurityLocation">
             <div>
@@ -103,8 +123,7 @@ $apartment = json_decode($json, true);
         </div>
     </div>
     <script src="../../javascript/calandar.js"></script>
-    <canvas class="webgl"></canvas>
-    <script type="module" src="../../javascript/locationdetails.js"></script>
+
 
 </body>
 </html>
