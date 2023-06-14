@@ -2,8 +2,16 @@
     padding: 2% 2%;
     position: fixed;
     height: 100%;
-    margin-top: 95px;
+    width: 350px;
     background-color: #F9F9F9;
+    overflow: hidden;
+}
+
+.messageContainer {
+    width: calc(100vw - 350px);
+    height: calc(100vh - 94px - 128px);
+    margin-left: 350px;
+    margin-top: 94px;
 }
 
 .msgMenuTitle {
@@ -52,11 +60,38 @@
     cursor: pointer;
 }
 
-.backgroundMessage {
-    position: absolute;
-    right: 0;
-    bottom: 200px;
-    padding: 15px;
-    background: #F9E4CB;
-    border-radius: 15px 15px 0px 15px;
+.oneMessage {
+    display: flex;
+    align-items: flex-start;
+    /* margin: 0px 30px 0px 30px; */
+}
+
+.transmiter {
+    /* position: absolute; */
+    right: 0px;
+    background-color: red;
+    max-width: 50%;
+    margin: 10px 0px 10px 0px;
+}
+
+.receiver {
+    /* position: absolute; */
+    left: 0px;
+    background-color: lightgreen;
+    max-width: 50%;
+    margin: 10px 0px 10px 0px;
+}
+
+.userMessage {
+    margin: 0px 0px 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.allMessage {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
 }
