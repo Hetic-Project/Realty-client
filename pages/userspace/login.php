@@ -10,9 +10,9 @@ include "../partials/userHeader.php";
 
     <div class="containerLogin">
         <div class="form sign-in">
-            <h2 class="h2Login">Sign In</h2>
+            <h2 class="h2Login">Connexion</h2>
 
-            <form action="http://localhost:4000/user/loginAccount"  method="POST">
+            <form action="http://localhost:4000/user/loginAccount" method="POST">
 
                 <label class="labelLogin">
                     <span class="spanLogin">Email</span>
@@ -20,7 +20,7 @@ include "../partials/userHeader.php";
                 </label>
 
                 <label class="labelLogin">
-                    <span class="spanLogin">Password</span>
+                    <span class="spanLogin">Mot de Passe</span>
                     <input class="inputLogin" type="password" name="password" id="password" required>
                 </label>
 
@@ -35,7 +35,7 @@ include "../partials/userHeader.php";
             <div class="img">
                 <div class="img-text m-up">
                     <h2 class="h2Login">Nouveau ici?</h2>
-                    <p class="pLogin">Sign up et découvre de nouvelle opportunitées!</p>
+                    <p class="pLogin">Inscrit-toi et découvre de nouvelle opportunitées!</p>
                 </div>
                 <div class="img-text m-in">
                     <h2 class="h2Login">Déjà parmis nous ? </h2>
@@ -47,7 +47,7 @@ include "../partials/userHeader.php";
                 </div>
             </div>
             <div class="form sign-up">
-                <h2 class="h2Login">Sign Up</h2>
+                <h2 class="h2Login">Inscription</h2>
 
                 <form action="http://localhost:4000/user/createAccount" method="post">
                     <label class="labelLogin">
@@ -70,9 +70,9 @@ include "../partials/userHeader.php";
                         <span class="spanLogin">Mot de Passe</span>
                         <input class="inputLogin" type="password" name="password" id="Password" required>
                     </label>
-                
-                    <button type="submit" name="formsend" id="formsend" class="submit buttonLogin" value="OK">Sign Up
-                        Now</button>
+
+                    <button type="submit" name="formsend" id="formsend" class="submit buttonLogin" value="OK">Inscrit
+                        toi maintenant</button>
                 </form>
             </div>
         </div>
