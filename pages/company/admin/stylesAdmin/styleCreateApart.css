@@ -347,3 +347,58 @@
     cursor: pointer;
     margin: auto;
 }
+
+@media screen and (orientation:landscape) {
+    
+    #image-container {
+        position: relative;
+        width: auto;
+        height: auto;
+        border-radius: 15px;
+        background-color: #c4c4c4;
+        margin: 10px auto 20px auto;
+        display: flex;
+        height: 30%;
+        width: 60%;
+        justify-content: center;
+        border-style: dashed;
+        border-color: #989898;
+        border-width: 5px;
+        background-repeat: no-repeat;
+        max-height: 300px;
+        min-width: 80%;
+        min-height: 180px;
+      }
+
+      .imageCreateLocation{
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        width: 30vw;
+        height: 30vw;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin: auto;
+    }
+
+    .buttonInput-FileCreateApart{
+        text-align: right;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-right: 90px;
+    }
+
+    .inputTypeOfAccommodation{
+    width: 330px;
+    height: 31px;
+    margin-top: 20px;
+    border: none;
+    box-shadow: var(--box-shadow);
+    padding-left: 10px;
+    border-radius: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+}
