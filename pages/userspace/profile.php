@@ -1,34 +1,36 @@
 <?php
-
-    include_once "../partials/userHeader.php";
     include_once "../partials/navBarreProfile.php";
 ?>
 
 <body class="bodyProfile">
     <div class="containerModifProfile">
-        <div class="containerinputProfile">
+        <form action='http://localhost:4000/user/updateAccount' method='POST' class="containerinputProfile">
             <h2 class="titleProfile">Profile</h2>
+            <?php if (isset($_GET['message'])): ?>
+                <span> <?= $_GET['message'] ?></span>
+            <?php endif ?>    
             <div class="containerTwoInput" >
-                <input type="text" placeholder="Prénom" class="inputProfile">
-                <input type="text" placeholder="Nom de famille" class="inputProfile">
+                <input type='hidden' value='<?= $user['user_id'] ?>' name='userId'/>
+                <input type="text" placeholder="Prénom" value='<?= $user['user_firstname'] ?>' class="inputProfile" name='firstname'>
+                <input type="text" placeholder="Nom de famille" value='<?= $user['user_lastname'] ?>' class="inputProfile" name='lastname'>
             </div>
     
             <div class="containerTwoInput">
-                <input type="date" class="inputProfile">
-                <input type="number" placeholder="Numéro de téléphone" class="inputProfile">
+                <input type="date" value='<?= $user['user_birth'] ?>' class="inputProfile" name='birthday'>
+                <input type="text" value='<?= $user['user_phone'] ?>' placeholder="Numéro de téléphone" class="inputProfile" name='phone'>
             </div>
 
             <div class="containerTwoInput">
-                <input type="text" placeholder="Ville" class="inputProfile">
-                <input type="number" placeholder="Code postal" class="inputProfile">
+                <input type="text" placeholder="Ville" value='<?= $user['user_city'] ?>' class="inputProfile" name='city'>
+                <input type="text" value='<?= $user['user_zip_code'] ?>' placeholder="Code postal" class="inputProfile" name='zipCode'>
             </div>
 
-            <input type="text" placeholder="Addresse personnel" class="inputProfile">
-            <input type="email" placeholder="Addresse mail" class="inputProfile">
-            <input type="password" placeholder="Mot de passe" class="inputProfile">
+            <input type="text" placeholder="Addresse personnel" value='<?= $user['user_address'] ?>' class="inputProfile" name='address'>
+            <input type="mail" placeholder="Addresse mail" value='<?= $user['user_mail'] ?>' class="inputProfile" name='mail'>
+            <a href='#'> Changez mon mot de passe </a>
 
             <button class="global-saveButton">Sauvegarder</button>
-        </div>
+        </form>
 
 
         

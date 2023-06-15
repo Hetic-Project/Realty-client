@@ -9,6 +9,8 @@
     $url='http://localhost:4000/user/getAccount/' . $user_id;
     $json = file_get_contents($url);
     $user = json_decode($json, true);
+    // var_dump($user);
+
 ?>
 
 <div class="navbarProfile">

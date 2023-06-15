@@ -1,27 +1,69 @@
 <?php
 
-include "../partials/userHeader.php";
 include_once "../partials/navBarreProfile.php";
-
+$currentDate = date('Y-m-d');
 ?>
 
 <body class="bodyProfile">
 
     <div class="containerAllProfile">
         <h2 class="titleProfile">Historique de vos locations :</h2>
-        <div class="global-mainContainer" id="locationsContainer">
-        <?php foreach($apartments as $apartment ): ?>
-            <a class="global-locationContainer" href="http://localhost:3000/pages/location/locationdetails.php?id=<?=$apartment['apartment_id']?>" >
-                <img class="global-imgLocation" src="<?= $apartment['apartment_main_picture'] ?>" alt="appartement">
-                <div>
-                    <div class="global-textposition">   
-                        <p class="global-title"><?= $apartment['apartment_adress'] ?> </p>
-                        <p class="global-description" display="grid"><?= $apartment['apartment_description'] ?></p>
-                        <p class="global-subtitle"><?= $apartment['apartment_price'] ?>€ la nuit </p>
+        <div>
+            <?php $rentals = json_decode($user['rentals'], true); ?>
+
+            <h2> Location passée</h2>
+
+            <?php foreach($rentals as $rental ): ?>
+                <?php if ($currentDate > $rental['end-date']): ?>
+                    <div >
+                        <div>   
+                            <p class="global-title"><?= $rental['apartment-name'] ?> </p>
+                            <p class="global-subtitle" display="grid"><?= $rental['apartment-zipCode'] ?></p>
+                            <p class="global-subtitle"><?= $rental['apartment-city'] ?></p>
+                            <p class="global-subtitle"><?= $rental['start-date'] ?></p>
+                            <p class="global-subtitle"><?= $rental['end-date'] ?></p>
+                        </div>
                     </div>
-                </div>
-            </a>
-        <?php endforeach; ?>
+                <?php endif ?>
+            <?php endforeach; ?>
+        </div>
+
+        <div>
+        
+            <h2> Location en cours</h2>
+
+            <?php foreach($rentals as $rental ): ?>
+                <?php if ($currentDate > $rental['start-date'] && $currentDate < $rental['end-date']): ?>
+                    <div >
+                        <div>   
+                            <p class="global-title"><?= $rental['apartment-name'] ?> </p>
+                            <p class="global-subtitle" display="grid"><?= $rental['apartment-zipCode'] ?></p>
+                            <p class="global-subtitle"><?= $rental['apartment-city'] ?></p>
+                            <p class="global-subtitle"><?= $rental['start-date'] ?></p>
+                            <p class="global-subtitle"><?= $rental['end-date'] ?></p>
+                        </div>
+                    </div>
+                <?php endif ?>
+            <?php endforeach; ?>
+        </div>
+
+        <div>
+        
+            <h2> Location Future</h2>
+
+            <?php foreach($rentals as $rental ): ?>
+                <?php if ($currentDate < $rental['start-date']): ?>
+                    <div>
+                        <div>   
+                            <p class="global-title"><?= $rental['apartment-name'] ?> </p>
+                            <p class="global-subtitle" display="grid"><?= $rental['apartment-zipCode'] ?></p>
+                            <p class="global-subtitle"><?= $rental['apartment-city'] ?></p>
+                            <p class="global-subtitle"><?= $rental['start-date'] ?></p>
+                            <p class="global-subtitle"><?= $rental['end-date'] ?></p>
+                        </div>
+                    </div>
+                <?php endif ?>
+            <?php endforeach; ?>
         </div>
     </div>
 
