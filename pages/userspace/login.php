@@ -10,23 +10,29 @@ include "../partials/userHeader.php";
 
     <div class="containerLogin">
         <div class="form sign-in">
+            
             <h2 class="h2Login">Connexion</h2>
 
             <form action="http://localhost:4000/user/loginAccount" method="POST">
 
-                <label class="labelLogin">
-                    <span class="spanLogin">Email</span>
-                    <input class="inputLogin" type="text" name="mail" id="email" required>
-                </label>
+                <div class="labelLogin">
+                    <label for='email' class="spanLogin">Email</label>
+                    <input class="inputLogin" type="mail" name="mail" id="email" required>
+                </div>
 
-                <label class="labelLogin">
-                    <span class="spanLogin">Mot de Passe</span>
+                <div class="labelLogin">
+                    <label for='password' class="spanLogin">Mot de Passe</label>
                     <input class="inputLogin" type="password" name="password" id="password" required>
-                </label>
+                </div>
 
-                <button type="submit" name="fformsend" id="fformsend" class="submit buttonLogin" required>Sign
-                    In</button>
+                <?php if(isset($_GET['message'])):?>
+                <span><?= $_GET['message'] ?></span>
+                <?php endif; ?>
+
+                <button type="submit" name="fformsend" id="fformsend" class="submit buttonLogin" required>se connecter</button>
             </form>
+
+           
 
             <p class="forgot-pass">Mot de passe oublié ?</p>
         </div>
@@ -42,37 +48,36 @@ include "../partials/userHeader.php";
                     <p class="pLogin">Si tu as déjà un compte, Connecte toi !</p>
                 </div>
                 <div class="img-btn">
-                    <span class="m-up spanLogin">Sign Up</span>
-                    <span class="m-in spanLogin">Sign In</span>
+                    <span class="m-up spanLogin">Inscription</span>
+                    <span class="m-in spanLogin">Connexion</span>
                 </div>
             </div>
             <div class="form sign-up">
                 <h2 class="h2Login">Inscription</h2>
 
                 <form action="http://localhost:4000/user/createAccount" method="post">
-                    <label class="labelLogin">
-                        <span class="spanLogin">Prénom</span>
-                        <input class="inputLogin" type="text" name="firstname" id="name" required>
-                    </label>
-                    <label class="labelLogin">
-                        <span class="spanLogin">Nom</span>
+                    <div class="labelLogin">
+                        <label for='firstname' class="spanLogin">Prénom</label>
+                        <input class="inputLogin" type="text" name="firstname" id="firstname" required>
+                    </div>
+                    <div class="labelLogin">
+                        <label for='name' class="spanLogin">Nom</label>
                         <input class="inputLogin" type="text" name="lastname" id="name" required>
-                    </label>
-                    <label class="labelLogin">
-                        <span class="spanLogin">Date de naissance</span>
-                        <input class="inputLogin" type="date" name="birthday" id="name" required>
-                    </label>
-                    <label class="labelLogin">
-                        <span class="spanLogin">Email</span>
-                        <input class="inputLogin" type="email" name="mail" id="Email" required>
-                    </label>
-                    <label class="labelLogin">
-                        <span class="spanLogin">Mot de Passe</span>
-                        <input class="inputLogin" type="password" name="password" id="Password" required>
-                    </label>
+                    </div>
+                    <div class="labelLogin">
+                        <label for='birthday' class="spanLogin">Date de naissance</label>
+                        <input class="inputLogin" type="date" name="birthday" id="birthday" required>
+                    </div>
+                    <div class="labelLogin">
+                        <label for='Email' class="spanLogin">Email</label>
+                        <input class="inputLogin" type="mail" name="mail" id="Email" required>
+                    </div>
+                    <div class="labelLogin">
+                        <label for='password' class="spanLogin">Mot de Passe</label>
+                        <input class="inputLogin" type="password" name="password" id="password" required>
+                    </div>
 
-                    <button type="submit" name="formsend" id="formsend" class="submit buttonLogin" value="OK">Inscrit
-                        toi maintenant</button>
+                    <button type="submit" name="formsend" id="formsend" class="submit buttonLogin" value="OK">S'inscrire</button>
                 </form>
             </div>
         </div>

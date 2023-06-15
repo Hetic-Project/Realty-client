@@ -1,7 +1,14 @@
 <?php
 
-include "../partials/userHeader.php";
-
+    include "../partials/userHeader.php";
+    session_start();
+    if(!$_SESSION['id']){
+        header('Location:http://localhost:3000/pages/userspace/login.php');
+    }
+    $user_id = $_SESSION['id'];
+    $url='http://localhost:4000/user/getAccount/' . $user_id;
+    $json = file_get_contents($url);
+    $user = json_decode($json, true);
 ?>
 
 <body class="bodyProfile">
