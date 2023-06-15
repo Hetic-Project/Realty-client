@@ -15,7 +15,7 @@
     <div class="navbarProfile">
         <a href="#" class="active">Profil</a>
         <a href="http://localhost:3000/pages/userspace/historyLocations.php">Mes locations</a>
-        <a href="#">Mes Factures</a>
+        <a href="http://localhost:3000/pages/userspace/billings.php">Mes Factures</a>
         <a href="http://localhost:3000/pages/userspace/message.php">Messages</a>
         <a href="#">Sécurités et Confidentialités</a>
         <a href="#">Déconnexion</a>
