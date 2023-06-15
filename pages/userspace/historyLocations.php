@@ -6,7 +6,7 @@ include "../partials/userHeader.php";
 
 <body class="bodyProfile">
     <div class="navbarProfile">
-        <a href="http://localhost:3000/pages/userspace/historyLocatiions.php">Profil</a>
+        <a href="http://localhost:3000/pages/userspace/profile.php">Profil</a>
         <a href="#" class="active">Mes locations</a>
         <a href="http://localhost:3000/pages/userspace/billings.php">Mes Factures</a>
         <a href="http://localhost:3000/pages/userspace/message.php">Messages</a>
