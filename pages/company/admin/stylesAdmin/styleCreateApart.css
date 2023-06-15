@@ -1,10 +1,9 @@
-.firstDragAndDrop{
-    display: flex;
-    height: 30%;
-    width: 100%;
-    justify-content: center;
+.iconRealityCreateApart{
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    margin-top: 10px;
 }
-
 
 #preview {
     display: none;
@@ -18,9 +17,11 @@
     height: auto;
     border-radius: 15px;
     background-color: #c4c4c4;
-    margin: 20px 0px 30px 0px;
-    
-
+    margin: 10px auto 20px auto;
+    display: flex;
+    height: 30%;
+    width: 80%;
+    justify-content: center;
     border-style: dashed;
     border-color: #989898;
     border-width: 5px;
@@ -39,6 +40,8 @@
     width: 70vw;
     height: 70vw;
     margin-top: 10px;
+    margin-bottom: 20px;
+    margin: auto;
 }
 
 #file-input{
@@ -49,6 +52,8 @@
 
 .buttonInput-FileCreateApart{
     text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .buttonInput-File{
@@ -59,9 +64,10 @@
     border-radius: 5px;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
-input.buttonInput-File:hover{
+.buttonInput-File:hover{
     background-color:#CCAD00;
     cursor: pointer;
 }
@@ -72,18 +78,16 @@ input.buttonInput-File:hover{
 }
 
 .formCreateApart{
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     /* top: 0px; */
+    text-align: center;
 }
 
 .iconPlusCreateApart{
     margin-top: 30px;
 }
 
-.typeOfAccommodation{
-    text-align: center;
-}
 
 .inputTypeOfAccommodation{
     width: 330px;
@@ -94,11 +98,10 @@ input.buttonInput-File:hover{
     padding-left: 10px;
     border-radius: 8px;
     justify-content: center;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
-.capacity{
-    text-align: center;
-}
 
 .inputCapacity{
     width: 330px;
@@ -108,11 +111,10 @@ input.buttonInput-File:hover{
     box-shadow: var(--box-shadow);
     padding-left: 10px;
     border-radius: 8px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
-.description{
-    text-align: center;
-}
 
 .descriptionCreateApart{
     width: 330px;
@@ -122,18 +124,23 @@ input.buttonInput-File:hover{
     box-shadow: var(--box-shadow);
     border-radius: 8px;
     padding: 10px;
+    margin-bottom: 20px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
-.equipement{
-    text-align: center;
-}
 
 .equipementCreateApart{
+    /* position: relative;
+    left: 12%; */
+    margin: auto;
     box-shadow: var(--box-shadow);
     width: 330px;
-    height: 185px;
+    height: 140px;
     border-radius: 15px;
-    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    
 }
 
 #textEquipement{
@@ -142,9 +149,17 @@ input.buttonInput-File:hover{
     padding-top: 10px;
 }
 
-#kitchen{
-    margin-top: 20px;
+.equipementList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
 
+.listEquipement{
+    display: flex;
+    align-items: center;
+    width: 45%;
+    margin: auto;
 }
 
 .kitchenPicture{
@@ -155,10 +170,6 @@ input.buttonInput-File:hover{
 .textKitchen{
     font-size: small;
     margin-top: 4px;
-}
-
-#camera{
-
 }
 
 .cameraPicture{
@@ -175,10 +186,6 @@ input.buttonInput-File:hover{
     margin-top: 7px;
 }
 
-#workspace{
-    
-}
-
 .workspacePicture{
     height: 13px;
     width: 18px;
@@ -187,10 +194,6 @@ input.buttonInput-File:hover{
 
 .textWorkspace{
     font-size: small;
-}
-
-#smokeAlarm{
-    
 }
 
 .smokeAlarmPicture{
@@ -207,9 +210,6 @@ input.buttonInput-File:hover{
     margin-top: 7px;
 }
 
-#wifi{
-    
-}
 
 .wifiPicture{
     height: 13px;
@@ -219,10 +219,6 @@ input.buttonInput-File:hover{
 
 .textWifi{
     font-size: small;
-}
-
-#firstKit{
-    
 }
 
 
@@ -240,9 +236,6 @@ input.buttonInput-File:hover{
     margin-top: 7px;
 }
 
-#dryer{
-    
-}
 
 .dryerPicture{
     height: 13px;
@@ -254,9 +247,6 @@ input.buttonInput-File:hover{
     font-size: small;
 }
 
-#privateParking{
-    
-}
 
 .privateParkingPicture{
     height: 13px;
@@ -272,9 +262,6 @@ input.buttonInput-File:hover{
     margin-top: 7px;
 }
 
-#climateControl{
-    
-}
 
 .climateControlPicture{
     height: 13px;
@@ -286,9 +273,6 @@ input.buttonInput-File:hover{
     font-size: small;
 }
 
-#heating{
-    
-}
 
 .heatingPicture{
     height: 13px;
@@ -312,6 +296,8 @@ input.buttonInput-File:hover{
     box-shadow: var(--box-shadow);
     padding-left: 10px;
     border-radius: 8px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .security{
@@ -326,6 +312,8 @@ input.buttonInput-File:hover{
     box-shadow: var(--box-shadow);
     padding-left: 10px;
     border-radius: 8px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .cancellationCondition{
@@ -340,6 +328,8 @@ input.buttonInput-File:hover{
     box-shadow: var(--box-shadow);
     border-radius: 8px;
     padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
 }
 
 .buttonSaveCreateApart{
@@ -355,4 +345,5 @@ input.buttonInput-File:hover{
     width: 198px;
     height: 32px;
     cursor: pointer;
+    margin: auto;
 }
