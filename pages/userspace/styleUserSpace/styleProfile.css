@@ -275,7 +275,7 @@
 }
 
 .containerAllProfile {
-    overflow: hidden;
+    overflow-y: hidden;
     position: relative;
     margin-top: 5%;
     width: 900px;
