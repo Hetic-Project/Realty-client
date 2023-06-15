@@ -85,12 +85,9 @@
     margin-left: 15%;
 }
 
-/* .titleProfile {
-    font-size: 16px;
-    color: #888;
-    margin-left: 30%;
-    top: 50px;
-} */
+.titleProfile {
+    margin: 30px;
+}
 
 .titleProfileBot {
     font-size: 16px;
@@ -124,17 +121,6 @@
     font-weight: 600;
     color: #505f75;
     text-transform: uppercase;
-}
-
-.inputProfile {
-    display: block;
-    width: 100%;
-    margin-top: 5px;
-    font-size: 16px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba(109, 93, 93, 0.4);
-    text-align: center;
-    font-family: 'Nunito', sans-serif;
 }
 
 .ticket {
@@ -172,8 +158,9 @@
 }
 
 .navbarProfile .active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--primary-color);
+    color: #000;
+    border-radius: 5px;
 }
 
 .wrapperProfile {
@@ -236,4 +223,41 @@
     100% {
         left: 0;
     }
+}
+
+.containerinputProfile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.inputProfile {
+    /* display: block;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+    text-align: center;
+    font-family: 'Nunito', sans-serif; */
+    width: auto;
+    min-width: 48%;
+    padding: 10px;
+    margin: 0px 30px;
+    border: rgba(127, 127, 127, 0.3) solid 1px;
+    box-shadow: var(--box-shadow);
+    /* border: none; */
+    border-radius: 5px;
+    
+}
+
+.containerTwoInput {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 30px;
+}
+
+.containerTwoInput input{
+    margin: 0px;
 }
