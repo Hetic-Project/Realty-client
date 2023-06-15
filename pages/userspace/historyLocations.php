@@ -29,7 +29,7 @@ include "../partials/userHeader.php";
                 </div>
             </a>
         <?php endforeach; ?>
-    </div>
+        </div>
     </div>
 
 </body>
