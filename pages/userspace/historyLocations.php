@@ -1,18 +1,11 @@
 <?php
 
 include "../partials/userHeader.php";
+include_once "../partials/navBarreProfile.php";
 
 ?>
 
 <body class="bodyProfile">
-    <div class="navbarProfile">
-        <a href="http://localhost:3000/pages/userspace/profile.php">Profil</a>
-        <a href="#" class="active">Mes locations</a>
-        <a href="http://localhost:3000/pages/userspace/billings.php">Mes Factures</a>
-        <a href="http://localhost:3000/pages/userspace/message.php">Messages</a>
-        <a href="#">Déconnexion</a>
-        <a href="#">Désactiver le compte</a>
-    </div>
 
     <div class="containerAllProfile">
         <h2 class="titleProfile">Historique de vos locations :</h2>

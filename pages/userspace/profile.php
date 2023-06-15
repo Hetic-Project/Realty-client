@@ -1,27 +1,10 @@
 <?php
 
-    include "../partials/userHeader.php";
-    session_start();
-    if(!$_SESSION['id']){
-        header('Location:http://localhost:3000/pages/userspace/login.php');
-    }
-    $user_id = $_SESSION['id'];
-    $url='http://localhost:4000/user/getAccount/' . $user_id;
-    $json = file_get_contents($url);
-    $user = json_decode($json, true);
+    include_once "../partials/userHeader.php";
+    include_once "../partials/navBarreProfile.php";
 ?>
 
 <body class="bodyProfile">
-    <div class="navbarProfile">
-        <a href="#" class="active">Profil</a>
-        <a href="http://localhost:3000/pages/userspace/historyLocations.php">Mes locations</a>
-        <a href="http://localhost:3000/pages/userspace/billings.php">Mes Factures</a>
-        <a href="http://localhost:3000/pages/userspace/message.php">Messages</a>
-        <a href="#">Sécurités et Confidentialités</a>
-        <a href="#">Déconnexion</a>
-        <a href="#">Désactiver le compte</a>
-    </div>
-
     <div class="containerModifProfile">
         <div class="containerinputProfile">
             <h2 class="titleProfile">Profile</h2>
