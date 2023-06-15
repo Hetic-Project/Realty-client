@@ -1,10 +1,15 @@
 <?php
-include_once "../../partials/sider.php";
+
+include "../partials/userHeader.php";
+include_once "../partials/navBarreProfile.php";
 
 ?>
 
-    <div class="global-containerCompany">
-    <div class="global-mainContainer" id="locationsContainer">
+<body class="bodyProfile">
+
+    <div class="containerAllProfile">
+        <h2 class="titleProfile">Historique de vos locations :</h2>
+        <div class="global-mainContainer" id="locationsContainer">
         <?php foreach($apartments as $apartment ): ?>
             <a class="global-locationContainer" href="http://localhost:3000/pages/location/locationdetails.php?id=<?=$apartment['apartment_id']?>" >
                 <img class="global-imgLocation" src="<?= $apartment['apartment_main_picture'] ?>" alt="appartement">
@@ -17,7 +22,8 @@ include_once "../../partials/sider.php";
                 </div>
             </a>
         <?php endforeach; ?>
+        </div>
     </div>
-    </div>
+
 </body>
-</html> 
+</html>

@@ -6,6 +6,7 @@
 @import url('../pages/company/admin/stylesAdmin/styleUpdateApart.css');
 @import url('../pages/company/admin/stylesAdmin/styleUserSearch.css');
 @import url('../pages/company/admin/stylesAdmin/styleSelectUser.css');
+@import url('../pages/company/employee/styleEmployee/styleMenu.css');
 @import url('../pages/company/employee/styleEmployee/styleChecklist.css');
 @import url('../pages/company/employee/styleEmployee/styleDashboard.css');
 @import url('../pages/company/employee/styleEmployee/styleEmployeemessage.css');
@@ -14,7 +15,7 @@
 @import url('../pages/location/styleLocation/styleLocationDetails.css');
 @import url('../pages/location/styleLocation/styleLocations.css');
 @import url('../pages/location/styleLocation/stylePayment.css');
-@import url('../pages/userspace/styleUserSpace/styleLogin.css');
+@import url('../pages/userspace/styleUserSpace/styleLogin.css');@import url('../pages/userspace/styleUserSpace/stylebillings.css');
 @import url('../pages/userspace/styleUserSpace/styleMessage.css');
 @import url('../pages/userspace/styleUserSpace/styleProfile.css');
 
