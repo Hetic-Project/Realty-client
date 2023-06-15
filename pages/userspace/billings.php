@@ -1,6 +1,7 @@
 <?php
 
 include_once "../partials/navBarreProfile.php";
+$invoices = json_decode($user['invoices'], true); 
 
 ?>
 
@@ -11,197 +12,27 @@ include_once "../partials/navBarreProfile.php";
         
         <div class="allBillings">
             <!-- <div class="ser"> -->
-                <div class="srollbillings"></div>
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> test 1</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
+                <?php if (!$invoices): ?>
+                    <p style="margin-top: 100px;"> Aucune facture </p>
+                <?php endif ?>
+                <?php if ($invoices): ?>
+                    <div class="srollbillings"></div>
+                    <?php foreach($invoices as $invoice ): ?>
+                        <div class="oneBilling">
+                            <hr class="reservationHr">
+                            <div class="contentBilling">
+                                <p><strong>Location :</strong><br><?= $invoice['apartment-name'] ?>, <?= $invoice['apartment-zipCode'] ?></p>
+                                    <div class="containerDate">
+                                        <div class="dateBillings">
+                                            <p><?= $invoice['payment-date'] ?></p>
+                                        </div>
+                                    </div>
+                                <h4><?= $invoice['amount'] ?>€</h4>
                             </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> rue aznjji dnazj dn najzdi zejna z jan jan a</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
-                            </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> rue aznjji dnazj dn najzdi</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
-                            </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> rue aznjji dnazj dn najzdi</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
-                            </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> rue aznjji dnazj dn najzdi</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
-                            </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> rue aznjji dnazj dn najzdi</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
-                            </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> rue aznjji dnazj dn najzdi</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
-                            </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> rue aznjji dnazj dn najzdi</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
-                            </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> rue aznjji dnazj dn najzdi</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
-                            </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
-                <div class="oneBilling">
-                    <hr class="reservationHr">
-                    <div class="contentBilling">
-                        <p><strong>Location :</strong><br> rue aznjji dnazj dn najzdi</p>
-                            <div class="containerDate">
-                                <div class="dateBillings">
-                                    <img src="../../images/returnSVG.svg" class="global-icon">
-                                    <p>15/02/2023</p>
-                                </div>
-                                <div class="dateBillings">
-                                    <img src="../../images/departSVG.svg" class="global-icon">
-                                    <p>17/02/2023</p>
-                                </div>
-                            </div>
-                        <h4>890€</h4>
-                    </div>
-                    <hr class="reservationHr">
-                </div>
-
+                            <hr class="reservationHr">
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif ?>    
             <!-- </div> -->
         </div>
         

@@ -2,6 +2,7 @@
 
 include_once "../partials/navBarreProfile.php";
 $currentDate = date('Y-m-d');
+$rentals = json_decode($user['rentals'], true); 
 ?>
 
 <body class="bodyProfile">
@@ -9,8 +10,7 @@ $currentDate = date('Y-m-d');
     <div class="containerAllProfile">
         <h2 class="titleProfile">Historique de vos locations :</h2>
         <div>
-            <?php $rentals = json_decode($user['rentals'], true); ?>
-
+            
             <h2> Location passée</h2>
 
             <?php foreach($rentals as $rental ): ?>
