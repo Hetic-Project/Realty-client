@@ -12,9 +12,9 @@
     overflow: hidden;
     position: relative;
     margin-top: 5%;
-    background: #fff;
     width: 900px;
     height: 550px;
+    background: #fff;
     border-radius: 10px;
     /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22); */
     box-shadow: var(--box-shadow);
@@ -34,11 +34,12 @@
 
 .profile-card {
     position: relative;
-    width: 900px;
-    height: 550px;
-    border-radius: 10px;
+    width: 300px;
+    height: 400px;
     transform-style: preserve-3d;
     transition: transform 0.5s;
+    margin-top: 8%;
+    margin-left: 30%;
 }
 
 
@@ -260,7 +261,7 @@
     border: rgba(127, 127, 127, 0.3) solid 1px;
     box-shadow: var(--box-shadow);
     border-radius: 5px;
-
+    
 }
 
 .containerTwoInput {
@@ -269,7 +270,7 @@
     margin: 0px 30px;
 }
 
-.containerTwoInput input {
+.containerTwoInput input{
     margin: 0px;
 }
 
