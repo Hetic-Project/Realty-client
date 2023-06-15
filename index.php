@@ -16,7 +16,7 @@
                 Realty
             </p>
             <p class="welcomePageSubTitle">
-                Une agence de gestion immobilière de qualité supérieure.
+                Vivez une expérience de location exceptionnel a paris 
             </p>
             <a class="welcomePageLink" href="http://localhost:3000/pages/location/locations.php">
                 Trouver une location
