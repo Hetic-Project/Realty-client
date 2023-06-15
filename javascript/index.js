@@ -4,6 +4,7 @@ document.querySelector(".img-btn").addEventListener("click", function () {
 });
 
 // Profile
-document.querySelector(".profile-card").addEventListener("click", function () {
-  this.classList.toggle("flipped");
+const container = document.querySelector("#editProfileButton");
+container.addEventListener("click", () => {
+  container.classList.toggle("active");
 });

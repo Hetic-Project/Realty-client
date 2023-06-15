@@ -17,73 +17,7 @@ include "../partials/userHeader.php";
 
     <div class="containerModifProfile">
         <div class="containerinputProfile">
-            <h2 class="titleProfile">Profile</h2>
-            <div class="containerTwoInput" >
-                <input type="text" placeholder="Prénom" class="inputProfile">
-                <input type="text" placeholder="Nom de famille" class="inputProfile">
-            </div>
-    
-            <div class="containerTwoInput">
-                <input type="date" class="inputProfile">
-                <input type="number" placeholder="Numéro de téléphone" class="inputProfile">
-            </div>
-
-            <div class="containerTwoInput">
-                <input type="text" placeholder="Ville" class="inputProfile">
-                <input type="number" placeholder="Code postal" class="inputProfile">
-            </div>
-
-            <input type="text" placeholder="Addresse personnel" class="inputProfile">
-            <input type="email" placeholder="Addresse mail" class="inputProfile">
-            <input type="password" placeholder="Mot de passe" class="inputProfile">
-
-            <button class="global-saveButton">Sauvegarder</button>
-        </div>
-
-
-        
-    </div>
-        
-        <!-- <h1 class="titleProfile">Bonjour,</h1>
-        <h2 class="nameProfile">Rubens Bonnin</h2>é
-        <h3 class="titleProfile">Voyageur</h3> -->
-
-
-
-        
-        
-
-
-
-
-        
-
-
-
-        
-        
-
-
-
-
-
-
-        
-        
-
-        
-
-
-        
-
-
-        
-
-        
-        
-        
-        
-        <!-- <div class="profile">
+        <div class="profile">
             <div class="profile-card">
                 <div class="frontProfile">
                     <img class="" src="../../images/RealtyIcon.svg"></img>
@@ -121,7 +55,7 @@ include "../partials/userHeader.php";
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
         <!-- <div class="containeProfile">
             <div class="divlabelProfile">
@@ -158,6 +92,70 @@ include "../partials/userHeader.php";
                     value="OK">Modifier</button>
             </div>
         </div>  -->
+        </div>
+
+
+        
+    </div>
+        
+        
+
+
+
+        
+        
+
+
+
+
+        
+
+
+
+        
+        
+
+
+<!-- <h2 class="titleProfile">Profile</h2>
+            <div class="containerTwoInput" >
+                <input type="text" placeholder="Prénom" class="inputProfile">
+                <input type="text" placeholder="Nom de famille" class="inputProfile">
+            </div>
+    
+            <div class="containerTwoInput">
+                <input type="date" class="inputProfile">
+                <input type="number" placeholder="Numéro de téléphone" class="inputProfile">
+            </div>
+
+            <div class="containerTwoInput">
+                <input type="text" placeholder="Ville" class="inputProfile">
+                <input type="number" placeholder="Code postal" class="inputProfile">
+            </div>
+
+            <input type="text" placeholder="Addresse personnel" class="inputProfile">
+            <input type="email" placeholder="Addresse mail" class="inputProfile">
+            <input type="password" placeholder="Mot de passe" class="inputProfile">
+
+            <button class="global-saveButton">Sauvegarder</button> -->
+
+
+
+        
+        
+
+        
+
+
+        
+
+
+        
+
+        
+        
+        
+        
+        
         <script src="../../javascript/index.js"></script>
 </body>
 
