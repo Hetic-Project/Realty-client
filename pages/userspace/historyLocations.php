@@ -14,7 +14,7 @@ include "../partials/userHeader.php";
         <a href="#">Désactiver le compte</a>
     </div>
 
-    <div class="containerModifProfile">
+    <div class="containerAllProfile">
         <h2 class="titleProfile">Historique de vos locations :</h2>
         <div class="global-mainContainer" id="locationsContainer">
         <?php foreach($apartments as $apartment ): ?>

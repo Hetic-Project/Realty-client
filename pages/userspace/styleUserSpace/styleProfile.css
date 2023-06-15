@@ -88,7 +88,8 @@
 }
 
 .titleProfile {
-    margin: 30px;
+    padding: 30px;
+    background-color: #fff;
 }
 
 .titleProfileBot {
@@ -271,4 +272,15 @@
 
 .containerTwoInput input{
     margin: 0px;
+}
+
+.containerAllProfile {
+    overflow: hidden;
+    position: relative;
+    margin-top: 5%;
+    width: 900px;
+    height: 550px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
 }
