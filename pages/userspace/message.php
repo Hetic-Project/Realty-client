@@ -18,8 +18,7 @@ session_start();
 <body>
     <div class="msgLocationContainer">
         <div class="messageSlider">
-            <p class="msgMenuTitle">Message</p>
-            
+            <p class="msgMenuTitle">Message</p> 
             <p class="msgApartmentName"><?=$apartment['apartment_adress']?></p>
             <p class="msgApartmentDescription"><?=$apartment['apartment_zip_code']?>, <?=$apartment['apartment_city']?></p>
     
@@ -30,13 +29,16 @@ session_start();
 
                     <?php if ($user_id == $message['user_id']): ?>   
                         <div class="transmitter">
-                            <p><?= $message['user_id'] ?></p>
+                            <p><?= $message['user_problem_created_at'] ?></p>
+                            <p><?= $message['user_problem_description'] ?></p>
                         </div>
                     <?php endif; ?>
 
                     <?php if ($user_id != $message['user_id'] && $message['user_statut'] == 'Logistique'): ?>    
                         <div class="receiver">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            <p><?= $message['user_problem_created_at'] ?></p>
+                            <p><?= $message['user_firstname'] ?>-<?= $message['user_lastname'] ?>:</p>
+                            <p><?= $message['user_problem_description'] ?></p>
                         </div>
                     <?php endif; ?>
 
