@@ -1,71 +1,29 @@
 <?php
-include_once "../partials/navBarreProfile.php";
+
+    include_once "../partials/userHeader.php";
+    include_once "../partials/navBarreProfile.php";
 ?>
 
 <body class="bodyProfile">
-    <div class="containerModifProfile">
-        <div class="containerinputProfile">
-            <div class="profile">
-                <div class="profile-card">
-                    <div class="frontProfile">
-                        <img class="" src="../../images/RealtyIcon.svg"></img>
-                        <h2 class="nameProfile">Rubens Bonnin</h2>
-                        <h3 class="titleProfileBot">Voyageur</h3>
-                        <div class="wrapperProfile">
-                            <div class="static-txtProfile">Bonjour,</div>
-                            <ul class="dynamic-txtsProfile">
-                                <li class="liProfile"><span class="spanProfile">Rubens</span></li>
-                                <li class=" liProfile"><span class="spanProfile">Bonnin</span></li>
-                                <li class="liProfile"><span class="spanProfile">Rubens Bonnin</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="backProfile">
-                        <div class="detailsProfile">
-                            <p class="pProfile"><strong>Prénom:</strong> Rubens</p>
-                            </br>
-                            <p class="pProfile"><strong>Nom:</strong> Bonnin</p>
-                            </br>
-                            <p class="pProfile"><strong>Date de Naissance:</strong> 21/06/2004</p>
-                            </br>
-                            <p class="pProfile"><strong>Téléphone:</strong> 0987654323</p>
-                            </br>
-                            <p class="pProfile"><strong>Ville:</strong> La Courneuve, Inde</p>
-                            </br>
-                            <p class="pProfile"><strong>Code Postal:</strong> 12678</p>
-                            </br>
-                            <p class="pProfile"><strong>Mot de Passe:</strong> 0é"'(§è!çà</p>
-                            </br>
-                            <p class="pProfile"><strong>Adresse Mail:</strong> exemple@gmail.com</p>
-                            </br>
-                            <p class="pProfile"><strong>Adresse:</strong> 10 rue Dunk</p>
-                            </br>
-                        </div>
+    
+    <div class="profile">
+            <div class="profile-card">
+                <div class="frontProfile">
+                    <img class="" src="../../images/RealtyIcon.svg"></img>
+                    <h2 class="nameProfile">Rubens Bonnin</h2>
+                    <h3 class="titleProfileBot">Voyageur</h3>
+                    <div class="wrapperProfile">
+                        <div class="static-txtProfile">Bonjour,</div>
+                        <ul class="dynamic-txtsProfile">
+                            <li class="liProfile"><span class="spanProfile">Rubens</span></li>
+                            <li class=" liProfile"><span class="spanProfile">Bonnin</span></li>
+                            <li class="liProfile"><span class="spanProfile">Rubens Bonnin</span></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-
-
-
-    </div>
-
-    <!-- <h1 class="titleProfile">Bonjour,</h1>
-        <h2 class="nameProfile">Rubens Bonnin</h2>é
-        <h3 class="titleProfile">Voyageur</h3> -->
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <h2 class="titleProfile">Profile</h2>
+                <div class="backProfile">
+                <div class="containerinputProfile">
+            <h2 class="titleProfile">Profile</h2>
             <div class="containerTwoInput" >
                 <input type="text" placeholder="Prénom" class="inputProfile">
                 <input type="text" placeholder="Nom de famille" class="inputProfile">
@@ -85,33 +43,54 @@ include_once "../partials/navBarreProfile.php";
             <input type="email" placeholder="Addresse mail" class="inputProfile">
             <input type="password" placeholder="Mot de passe" class="inputProfile">
 
-            <button class="global-saveButton">Sauvegarder</button> -->
+            <button class="global-saveButton">Sauvegarder</button>
+        </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <h1 class="titleProfile">Bonjour,</h1>
+        <h2 class="nameProfile">Rubens Bonnin</h2>é
+        <h3 class="titleProfile">Voyageur</h3> -->
+
+
+
+        
+        
+
+
+
+
+        
+
+
+
+        
+        
 
 
 
 
 
 
+        
+        
+
+        
 
 
+        
 
 
+        
 
+        
+        
+        
+        
+        
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="containeProfile">
+        <!-- <div class="containeProfile">
             <div class="divlabelProfile">
                 <label class="labelProfile FirstNameProfile">
                     <span class="spanProfile">Prénom</span>
@@ -146,7 +125,7 @@ include_once "../partials/navBarreProfile.php";
                     value="OK">Modifier</button>
             </div>
         </div>  -->
-    <script src="../../javascript/index.js"></script>
+        <script src="../../javascript/index.js"></script>
 </body>
 
 </html>
