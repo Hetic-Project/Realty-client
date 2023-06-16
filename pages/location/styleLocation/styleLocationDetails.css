@@ -4,15 +4,11 @@ canvas {
 
 .supportContact {
     width: 12%;
-}
+}       ²
 
 .locationReservation {
     font-size: 20px;
     margin-bottom: 5%;
-}
-
-.reservationDate {
-    font-size: 12px;
 }
 
 @media screen and (max-width: 1325px) {
@@ -100,6 +96,16 @@ canvas {
 .costReservation {
     display: flex;
     justify-content: space-between;
+}
+
+.contentCostReservation {
+    display: flex;
+}
+
+.containerDateLocationDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .containerdetails {

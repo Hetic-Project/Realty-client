@@ -4,6 +4,8 @@ document.querySelector(".img-btn").addEventListener("click", function () {
 });
 
 // Profile
-document.querySelector(".profile-card").addEventListener("click", function () {
-  this.classList.toggle("flipped");
+document.querySelector(".profile-card").addEventListener("click", function (event) {
+  if (event.type === "click") {
+    this.classList.toggle("flipped");
+  }
 });
