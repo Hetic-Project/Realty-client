@@ -4,7 +4,6 @@ include "../partials/userHeader.php";
 
 $url = "http://localhost:4000/apartment/get/allApartment";
 $json = file_get_contents($url);
-var_dump($json);
 $apartments = json_decode($json, true);
 
 ?>
