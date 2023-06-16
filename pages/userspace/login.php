@@ -10,7 +10,7 @@ include "../partials/userHeader.php";
 
     <div class="containerLogin">
         <div class="form sign-in">
-            
+
             <h2 class="h2Login">Connexion</h2>
 
             <form action="http://localhost:4000/user/loginAccount" method="POST">
@@ -25,14 +25,17 @@ include "../partials/userHeader.php";
                     <input class="inputLogin" type="password" name="password" id="password" required>
                 </div>
 
-                <?php if(isset($_GET['message'])):?>
-                <span><?= $_GET['message'] ?></span>
+                <?php if (isset($_GET['message'])): ?>
+                    <span>
+                        <?= $_GET['message'] ?>
+                    </span>
                 <?php endif; ?>
 
-                <button type="submit" name="fformsend" id="fformsend" class="submit buttonLogin" required>se connecter</button>
+                <button type="submit" name="fformsend" id="fformsend" class="submit buttonLogin" required>se
+                    connecter</button>
             </form>
 
-           
+
 
             <p class="forgot-pass">Mot de passe oublié ?</p>
         </div>
@@ -77,12 +80,13 @@ include "../partials/userHeader.php";
                         <input class="inputLogin" type="password" name="password" id="password" required>
                     </div>
 
-                    <button type="submit" name="formsend" id="formsend" class="submit buttonLogin" value="OK">S'inscrire</button>
+                    <button type="submit" name="formsend" id="formsend" class="submit buttonLogin"
+                        value="OK">S'inscrire</button>
                 </form>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="../../javascript/index.js"></script>
+    <script type="text/javascript" src="../../javascript/login.js"></script>
 </body>
 
 </html>
