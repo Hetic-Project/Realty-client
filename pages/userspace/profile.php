@@ -1,6 +1,5 @@
 <?php
 
-include_once "../partials/userHeader.php";
 include_once "../partials/navBarreProfile.php";
 ?>
 
@@ -10,53 +9,43 @@ include_once "../partials/navBarreProfile.php";
         <div class="profile-card">
             <div class="frontProfile">
                 <img class="" src="../../images/RealtyIcon.svg"></img>
-                <!-- <h2 class="nameProfile">Rubens Bonnin</h2>
-                <h3 class="titleProfileBot">Voyageur</h3> -->
                 <div class="detailsProfile">
-                    <p class="pProfile"><strong>Prénom:</strong> Rubens</p>
-                    <p class="pProfile"><strong>Nom:</strong> Bonnin</p>
-                    <p class="pProfile"><strong>Date de Naissance:</strong> 21/06/2004</p>
-                    <p class="pProfile"><strong>Téléphone:</strong> 0987654323</p>
-                    <p class="pProfile"><strong>Ville:</strong> La Courneuve, Inde</p>
-                    <p class="pProfile"><strong>Code Postal:</strong> 12678</p>
-                    <p class="pProfile"><strong>Mot de Passe:</strong> 0é"'(§è!çà</p>
-                    <p class="pProfile"><strong>Adresse Mail:</strong> exemple@gmail.com</p>
-                    <p class="pProfile"><strong>Adresse:</strong> 10 rue Dunk</p>
+                    <p class="pProfile"><strong>Prénom:</strong> <?= $user['user_firstname'] ?></p>
+                    <p class="pProfile"><strong>Nom:</strong> <?= $user['user_lastname'] ?></p>
+                    <p class="pProfile"><strong>Date de Naissance:</strong> <?= $user['user_birth'] ?></p>
+                    <p class="pProfile"><strong>Téléphone:</strong> <?= $user['user_phone'] ?></p>
+                    <p class="pProfile"><strong>Ville:</strong> <?= $user['user_city'] ?></p>
+                    <p class="pProfile"><strong>Code Postal:</strong> <?= $user['user_zip_code'] ?></p>
+                    <p class="pProfile"><strong>Adresse Mail:</strong> <?= $user['user_mail'] ?></p>
+                    <p class="pProfile"><strong>Adresse:</strong> <?= $user['user_address'] ?></p>
                 </div>
-                <!-- <div class="wrapperProfile">
-                    <div class="static-txtProfile">Bonjour,</div>
-                    <ul class="dynamic-txtsProfile">
-                        <li class="liProfile"><span class="spanProfile">Rubens</span></li>
-                        <li class=" liProfile"><span class="spanProfile">Bonnin</span></li>
-                        <li class="liProfile"><span class="spanProfile">Rubens Bonnin</span></li>
-                    </ul>
-                </div> -->
                 <button class="global-saveButton">Modifier le Profile</button>
             </div>
-            <div class="backProfile">
+            <form action='http://localhost:4000/user/updateAccount' method='POST' class="backProfile">
+
                 <div class="containerinputProfile">
                     <h2 class="titleProfile">Profile</h2>
                     <div class="containerTwoInput">
-                        <input type="text" placeholder="Prénom" class="inputProfile">
-                        <input type="text" placeholder="Nom de famille" class="inputProfile">
+                        <input type="hidden" value="<?= $user['user_id'] ?>" name="userId">
+                        <input type="text" placeholder="Prénom" class="inputProfile" value=" <?= $user['user_firstname'] ?>" name="firstname">
+                        <input type="text" placeholder="Nom de famille" class="inputProfile" value=" <?= $user['user_lastname'] ?>" name="lastname">
                     </div>
 
                     <div class="containerTwoInput">
-                        <input type="date" class="inputProfile">
-                        <input type="number" placeholder="Numéro de téléphone" class="inputProfile">
+                        <input type="date" class="inputProfile" value="<?= $user['user_birth'] ?>" name="birthday">
+                        <input type="text" placeholder="Numéro de téléphone" class="inputProfile" value=" <?= $user['user_phone'] ?>" name="phone">
                     </div>
                     <div class="containerTwoInput">
-                        <input type="text" placeholder="Ville" class="inputProfile">
-                        <input type="number" placeholder="Code postal" class="inputProfile">
+                        <input type="text" placeholder="Ville" class="inputProfile" value=" <?= $user['user_city'] ?>" name="city">
+                        <input type="text" placeholder="Code postal" class="inputProfile" value=" <?= $user['user_zip_code'] ?>" name="zipCode">
                     </div>
 
-                    <input type="text" placeholder="Addresse personnel" class="inputProfile">
-                    <input type="email" placeholder="Addresse mail" class="inputProfile">
-                    <input type="password" placeholder="Mot de passe" class="inputProfile">
+                    <input type="text" placeholder="Addresse personnel" class="inputProfile" value=" <?= $user['user_address'] ?>" name="address">
+                    <input type="mail" placeholder="Addresse mail" class="inputProfile" value=" <?= $user['user_mail'] ?>" name="mail">
 
-                    <button class="global-saveButton" id="saveProfile">Sauvegarder</button>
+                    <button class="global-saveButton">Sauvegarder</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <script src="../../javascript/profile.js"></script>
