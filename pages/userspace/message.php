@@ -45,8 +45,10 @@ session_start();
                 <?php endforeach; ?> 
 
             </div>
-        <form class="inputContainer">
-            <input class="msgInput" placeholder="Écrire un message..." minlength="1" maxlength="500">
+        <form action="http://localhost:4000/user/problemUserAdd" method="POST" class="inputContainer">
+            <input type="hidden" value="<?= $apartment['apartment_id'] ?>" name="apartment_id"/>
+            <input type="hidden" value="<?= $user_id ?>" name="user_id"/>
+            <input class="msgInput" placeholder="Écrire un message..." name="problem_description">
             <button class="sendButton">
                 Envoyer
             </button>
