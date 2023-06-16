@@ -3,7 +3,6 @@
 include "../partials/userHeader.php";
 
 $apartment_id = $_GET['id'];
-$user_id = $_SESSION['id'];
 
 $url = "http://localhost:4000/apartment/get/oneApartment/" . $apartment_id;
 $json = file_get_contents($url);

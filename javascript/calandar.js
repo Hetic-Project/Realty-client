@@ -146,7 +146,8 @@ function generateCalendar() {
       dayCell.textContent = dayCounter;
       if (currentDate.getMonth() === firstDayOfMonth.getMonth() && dayCounter === currentDate.getDate()) {
         // Ajouter la classe 'today' pour mettre en évidence le jour actuel
-        dayCell.classList.add('today');
+        dayCell.style.backgroundColor= 'yellow';
+        dayCell.style.borderRadius= '5px';
       }
 
       // Vérifier si le jour actuel fait partie d'une période de location
