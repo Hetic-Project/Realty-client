@@ -29,11 +29,11 @@ $apartment = json_decode($json, true);
                 <div class="containerDateLocationDetails">
                     <div class="dateSelectContainer">
                         <img src="../../images/departSVG.svg" class="global-icon"></img>
-                        <input type="date" class="inputDate" id="departureDate">
+                        <input type="date" class="inputDate" id="start-date">
                     </div>      
                     <div class="dateSelectContainer">
                         <img src="../../images/returnSVG.svg" class="global-icon"></img>
-                        <input type="date" class="inputDate">
+                        <input type="date" class="inputDate" id="end-date">
                     </div>
                 </div>
                 <hr class="reservationHr">
