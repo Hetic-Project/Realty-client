@@ -1,37 +1,22 @@
-let buttonprofile = document.getElementById("buttonProfile");
-let buttonlocation = document.getElementById("buttonLocation");
-let buttonbillings = document.getElementById("buttonBillings");
-let buttonmessage = document.getElementById("buttonMessage");
-
-buttonprofile.addEventListener("click" , function(){
-    profile.classList.add("active");
-    location.classList.remove("active");
-    billings.classList.remove("active");
-    message.classList.remove("active");
-    console.log("profile");
-});
-
-buttonlocation.addEventListener("click" , function(){
-    profile.classList.remove("active");
-    location.classList.add("active");
-    billings.classList.remove("active");
-    message.classList.remove("active");
-    console.log("location");
-});
-
-buttonbillings.addEventListener("click" , function(){
-    profile.classList.remove("active");
-    location.classList.remove("active");
-    billings.classList.add("active");
-    message.classList.remove("active");
-    console.log("billings");
-});
-
-buttonmessage.addEventListener("click" , function(){
-    profile.classList.remove("active");
-    location.classList.remove("active");
-    billings.classList.remove("active");
-    message.classList.add("active");
-    console.log("message");
-});
-console.log("ça marche")
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll(".navbarProfile a");
+  
+    for (let i = 0; i < links.length; i++) {
+      const link = links[i];
+      const href = link.getAttribute("href");
+      const currentPagePath = window.location.pathname;
+  
+      if (currentPagePath.endsWith("profile.php") && href.endsWith("profile.php")) {
+        link.classList.add("active");
+      } else if (currentPagePath.endsWith("historyLocations.php") && href.endsWith("historyLocations.php")) {
+        link.classList.add("active");
+      } else if (currentPagePath.endsWith("billings.php") && href.endsWith("billings.php")) {
+        link.classList.add("active");
+      } else if (currentPagePath.endsWith("message.php") && href.endsWith("message.php")) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    }
+  });
+  

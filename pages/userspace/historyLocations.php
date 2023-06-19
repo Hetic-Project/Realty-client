@@ -67,5 +67,6 @@ $rentals = json_decode($user['rentals'], true);
         </div>
     </div>
 
+    <script src="../../javascript/navBarreProfile.js"></script>
 </body>
 </html>
