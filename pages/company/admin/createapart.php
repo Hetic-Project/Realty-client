@@ -80,7 +80,7 @@
         <input class="inputInterior" type="text" placeholder="Intérieur" id="interior" name="interior" required>
         <input class="inputSecurity" type="text" placeholder="Sécuriter" id="security" name="interior" required>
         <textarea class="cancellationConditionCreateApart" name="description" rows="15" cols="36" placeholder="Condition d'annulation"></textarea>
-        <button class="buttonSave" type="button">Enregistrer</button>  
+        <a href="../../location/locations.php"><button class="buttonSave" type="button">Enregistrer</button></a>
         </section>
     </form>
 </body>
