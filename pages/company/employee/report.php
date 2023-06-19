@@ -25,13 +25,17 @@ include "../../partials/sider.php";
                 </p>
             </div>
             <form action="" class="">
-                <div class="global-reservationHR"></div>
+                <div class="reservationHr"></div>
                 <div class="sendMessageReport">
-
+                    <input type="text" class="inputMessageReport" placeholder="Écrire un message...">
+                    <div class="buttonsReport">
+                        <button class="redButtonReport" type="button"></button>
+                        <button class="greenButtonReport" type="button"></button>
+                        <button class="buttonSendReport" type="button">Envoyer</button>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
-    
 </body>
 </html>

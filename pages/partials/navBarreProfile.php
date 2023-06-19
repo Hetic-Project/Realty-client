@@ -16,7 +16,7 @@
 <div class="navbarProfile">
     <a href="http://localhost:3000/pages/userspace/profile.php">Profil</a>
     <a href="http://localhost:3000/pages/userspace/historyLocations.php">Mes locations</a>
-    <a href="http://localhost:3000/pages/userspace/billings.php">Mes Factures</a>
+    <a href="http://localhost:3000/pages/userspace/billings.php">Mes factures</a>
     <?php if ($rentals): ?>
     <a href="http://localhost:3000/pages/userspace/message.php">Messages</a>
     <?php endif ?>
