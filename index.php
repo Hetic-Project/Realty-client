@@ -15,9 +15,11 @@
             <p class="welcomePageTitle">
                 Realty
             </p>
+            <div class="subTitleContainer">
             <p class="welcomePageSubTitle">
                 Vivez une expérience de location exceptionnel a paris 
             </p>
+            </div>
             <a class="welcomePageLink" href="http://localhost:3000/pages/location/locations.php">
                 Trouver une location
             </a>
