@@ -4,7 +4,7 @@ canvas {
 
 .supportContact {
     width: 12%;
-}       ²
+}
 
 .locationReservation {
     font-size: 20px;
@@ -103,9 +103,14 @@ canvas {
 }
 
 .containerDateLocationDetails {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    width: 200px;
+}
+
+.dateSelectContainer {
+    margin: 15px auto 0px auto;
 }
 
 .containerdetails {
