@@ -48,11 +48,15 @@
 }
 
 .inputMessageReport{
-    border: none;
+     border: none;
     color: var(--text-color);
     margin-bottom: 15px;
     font-size: 20px;
-    width: 93%;
+    width: 93%; 
+}
+
+.buttonsReport{
+    display: flex;
 }
 
 .redButtonReport{
@@ -75,11 +79,9 @@
 .buttonSendReport{
     border: none;
     background-color: black;
-    height: 50px;
+    height: 45px;
     width: 128px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-left: 900px;
-    padding: 20px;
     color: #fff;
-    
 }
