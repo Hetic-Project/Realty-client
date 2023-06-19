@@ -27,21 +27,48 @@ include_once "../partials/navBarreProfile.php";
                     <h2 class="titleProfile">Profile</h2>
                     <div class="containerTwoInput">
                         <input type="hidden" value="<?= $user['user_id'] ?>" name="userId">
-                        <input type="text" placeholder="Prénom" class="inputProfile" value=" <?= $user['user_firstname'] ?>" name="firstname">
-                        <input type="text" placeholder="Nom de famille" class="inputProfile" value=" <?= $user['user_lastname'] ?>" name="lastname">
+
+                        <div class="field">
+                            <input type="text" value=" <?= $user['user_firstname'] ?>" name="firstname">
+                            <label for="firsname">Prénom</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" class="inputProfile" value=" <?= $user['user_lastname'] ?>" name="lastname">
+                            <label for="lastname">Nom de famille</label>
+                        </div>
+
                     </div>
 
                     <div class="containerTwoInput">
-                        <input type="date" class="inputProfile" value="<?= $user['user_birth'] ?>" name="birthday">
-                        <input type="text" placeholder="Numéro de téléphone" class="inputProfile" value=" <?= $user['user_phone'] ?>" name="phone">
+                        <div class="field">
+                            <input type="date" 			id="username">
+		                    <label for="username">Date de naissance</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value=" <?= $user['user_phone'] ?>" name="phone">
+		                    <label for="username">Numéro</label>
+                        </div>
                     </div>
                     <div class="containerTwoInput">
-                        <input type="text" placeholder="Ville" class="inputProfile" value=" <?= $user['user_city'] ?>" name="city">
-                        <input type="text" placeholder="Code postal" class="inputProfile" value=" <?= $user['user_zip_code'] ?>" name="zipCode">
+                        <div class="field">
+                            <input type="text"value=" <?= $user['user_city'] ?>" name="city">
+                            <label for="city">Ville</label>
+                        </div>
+                        <div class="field">
+                            <input type="text" value=" <?= $user['user_zip_code'] ?>" name="zipCode">
+		                    <label for="username">Code Postal</label>
+                        </div>
                     </div>
 
-                    <input type="text" placeholder="Addresse personnel" class="inputProfile" value=" <?= $user['user_address'] ?>" name="address">
-                    <input type="mail" placeholder="Addresse mail" class="inputProfile" value=" <?= $user['user_mail'] ?>" name="mail">
+                    <div class="field">
+                        <input type="text" value=" <?= $user['user_address'] ?>" name="address">
+		                <label for="address">Addresse personnel</label>
+                    </div>
+                    <div class="field">
+                        <input type="mail" value=" <?= $user['user_mail'] ?>" name="mail">
+		                <label for="address">Addresse mail</label>
+                    </div>
+                    
 
                     <button class="global-saveButton">Sauvegarder</button>
                 </div>
