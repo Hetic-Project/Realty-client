@@ -15,7 +15,9 @@
 @import url('../pages/location/styleLocation/styleLocationDetails.css');
 @import url('../pages/location/styleLocation/styleLocations.css');
 @import url('../pages/location/styleLocation/stylePayment.css');
-@import url('../pages/userspace/styleUserSpace/styleLogin.css');@import url('../pages/userspace/styleUserSpace/stylebillings.css');
+@import url('../pages/userspace/styleUserSpace/styleLogin.css');
+@import url('../pages/userspace/styleUserSpace/styleHistoryLocation.css');
+@import url('../pages/userspace/styleUserSpace/stylebillings.css');
 @import url('../pages/userspace/styleUserSpace/styleMessage.css');
 @import url('../pages/userspace/styleUserSpace/styleProfile.css');
 @import url('../pages/partials/partialStyles/navBarreProfile.css');

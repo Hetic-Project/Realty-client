@@ -13,7 +13,7 @@
 
     <div class="global-sider">
             <a href="#"><img src="../../../images/RealtyIcon.svg" alt="Logo Realty" class="global-logoSider"></a>
-            <a href="#"><img src="../../../images/iconProfile.svg" alt="Photo Apartment" class="global-imgApart"></a>
+            <a href="../../company/employee/menu.php"><img src="../../../images/iconProfile.svg" alt="Photo Apartment" class="global-imgApart"></a>
             <h3 class="global-titleSider">Apartment Title</h3>
 
             <a href="../../company/employee/dashboard.php" class="global-buttonHref"><img src="../../../images/iconDashboard.svg" alt="Icone Dashboard" class="global-icone">Dashboard</a>

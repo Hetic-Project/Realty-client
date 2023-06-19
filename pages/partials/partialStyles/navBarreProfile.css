@@ -37,3 +37,13 @@
 .hidden{
     display: none;
 }
+
+@media screen and (max-width: 722px) {
+    .burgerMenu {
+        display: flex;
+    }
+}
+
+.burgerMenu {
+     display: none;
+}

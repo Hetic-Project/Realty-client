@@ -22,8 +22,6 @@ if($zipCode && $startDate == null && $endDate == null){
     $results = null;
 }
 
-
-
 ?>
 
 <body>
