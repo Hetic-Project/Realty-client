@@ -32,5 +32,6 @@ include "../../partials/sider.php";
             </form>
         </div>
     </div>
+    
 </body>
 </html>

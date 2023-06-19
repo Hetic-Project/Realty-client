@@ -46,12 +46,15 @@ body {
     gap: 20%;
     width: 185px;
     height: 60px;
-    background-color: var(--primary-color);
     padding: 15px;
     border-radius: 20px;
     margin-top: 20px;
     text-decoration: none;
     color: #000;
+}
+
+.global-activeButton {
+    background-color: var(--primary-color);
 }
 
 .global-logoSider {

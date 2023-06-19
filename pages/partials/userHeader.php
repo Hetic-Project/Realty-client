@@ -32,7 +32,6 @@
 <body>
 
     <header class="global-userHeader">
-        <!-- <p>zip: <?= $zipCode ?></p> -->
         <a href="http://localhost:3000/pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
         <form action="http://localhost:3000/pages/location/locations.php" method="POST" class="search_form">
             <div>
@@ -48,7 +47,7 @@
                     <img src="../../images/departSVG.svg" class="global-icon"></img>
                     <input type="date" class="inputDate" name='start-date'>
                 </div>
-                <div class="dateSelectContainer secondaryElement">
+                <div class="dateSelectContainer">
                     <img src="../../images/returnSVG.svg" class="global-icon"></img>
                     <input type="date" class="inputDate" name='end-date'>
                 </div>
