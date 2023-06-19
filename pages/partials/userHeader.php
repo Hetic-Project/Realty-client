@@ -32,7 +32,6 @@
 <body>
 
     <header class="global-userHeader">
-        <p>zip: <?= $zipCode ?></p>
         <a href="http://localhost:3000/pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
         <form action="http://localhost:3000/pages/location/locations.php" method="POST" class="search_form">
             <div>
