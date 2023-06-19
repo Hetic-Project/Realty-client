@@ -47,7 +47,7 @@
                     <img src="../../images/departSVG.svg" class="global-icon"></img>
                     <input type="date" class="inputDate" name='start-date'>
                 </div>
-                <div class="dateSelectContainer secondaryElement">
+                <div class="dateSelectContainer">
                     <img src="../../images/returnSVG.svg" class="global-icon"></img>
                     <input type="date" class="inputDate" name='end-date'>
                 </div>
