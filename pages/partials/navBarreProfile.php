@@ -9,7 +9,11 @@
     $url='http://localhost:4000/user/getAccount/' . $user_id;
     $json = file_get_contents($url);
     $user = json_decode($json, true);
-    $rentals = json_decode($user['rentals'], true); 
+   
+    $user_id = $_SESSION['id'];
+    $url='http://localhost:4000/apartment/get/rentalInProgress/' . $user_id;
+    $json = file_get_contents($url);
+    $apartment = json_decode($json, true);
 
 ?>
 
@@ -17,7 +21,7 @@
     <a href="http://localhost:3000/pages/userspace/profile.php">Profil</a>
     <a href="http://localhost:3000/pages/userspace/historyLocations.php">Mes locations</a>
     <a href="http://localhost:3000/pages/userspace/billings.php">Mes Factures</a>
-    <?php if ($rentals): ?>
+    <?php if ($apartment): ?>
     <a href="http://localhost:3000/pages/userspace/message.php">Messages</a>
     <?php endif ?>
     <a href="http://localhost:4000/user/logout">Déconnexion</a>
