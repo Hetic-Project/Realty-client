@@ -1,4 +1,8 @@
-<?php ini_set('display_errors', 1); ?>
+<?php 
+
+    ini_set('display_errors', 1); 
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -25,11 +29,27 @@
 
     <header class="global-userHeader">
         <a href="http://localhost:3000/pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
-        <form action="" method="get" class="global-formHeader">
-            <input type="text" placeholder="Recherche" class="global-inputHeader">
-            <button class="global-buttonIcon"><img src="../../images/IconSearch.svg" alt="Icon Search"
-                    class="global-icon"></button>
+        <form action="http://localhost:3000/pages/location/locations.php" method="POST" class="search_form">
+            <div>
+                <div class="dateSelectContainer">
+                    <label class="search_label" for="search_input">Code postal</label>
+                    <input type="text" placeholder="75015" class="search_input" id='search_input' name='zip-code'>
+                    <!-- <button class="global-buttonIcon"><img src="../../images/IconSearch.svg" alt="Icon Search" class="global-icon"></button> -->
+                </div>
+            </div>
+            <div class="search_date hidden">
+                <p class="search_option"> ET / OU </p>
+                <div class="dateSelectContainer">
+                    <img src="../../images/departSVG.svg" class="global-icon"></img>
+                    <input type="date" class="inputDate" name='start-date'>
+                </div>
+                <div class="dateSelectContainer secondaryElement">
+                    <img src="../../images/returnSVG.svg" class="global-icon"></img>
+                    <input type="date" class="inputDate" name='end-date'>
+                </div>
+                <button class="serch_button">Rechercher</button>
+            </div>
         </form>
-        <a class="" href="http://localhost:3000/pages/userspace/profile.php"><img src="../../images/iconProfile.svg"
-                alt="Icon Profile" class="global-iconProfile"></a>
+        <a class="" href="http://localhost:3000/pages/userspace/profile.php"><img src="../../images/iconProfile.svg" alt="Icon Profile" class="global-iconProfile"></a>
+        <script src='../../javascript/search.js'></script>
     </header>

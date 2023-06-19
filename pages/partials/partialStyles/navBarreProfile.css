@@ -1,0 +1,38 @@
+.search_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.search_label{
+    align-self: center;
+    font-weight: bold;
+}
+
+.search_input{
+    width: 300px;
+    padding: 5px;
+}
+
+.search_date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.serch_button{
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 10px 15px 10px 15px;
+    height: 50px;
+}
+
+.search_option{
+    width: 100px;
+}
+.hidden{
+    display: none;
+}
