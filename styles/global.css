@@ -30,6 +30,7 @@ body {
     background-color: #fff;
     padding: 10px 90px;
     box-shadow: var(--box-shadow);
+    z-index: 2;
 }
 
 .global-sider {
