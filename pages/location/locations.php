@@ -6,13 +6,22 @@ $url = "http://localhost:4000/apartment/get/allApartment";
 $json = file_get_contents($url);
 $apartments = json_decode($json, true);
 
-$zipCode = $_POST["zip-code"];
-$startDate = $_POST["start-date"];
-$endDate = $_POST["end-date"];
+if($zipCode && $startDate == null && $endDate == null){
+    $url_search = "http://localhost:4000/apartment/search/" . $zipCode;
+    $json_search = file_get_contents($url_search);
+    $results = json_decode($json_search, true);
+}else if ($zipCode == null && $startDate && $endDate){
+    $url_search = "http://localhost:4000/apartment/search/" . $startDate . '/' . $endDate;
+    $json_search = file_get_contents($url_search);
+    $results = json_decode($json_search, true);
+}else if ($zipCode && $startDate && $endDate) {
+    $url_search = "http://localhost:4000/apartment/search/" . $zipCode . '/' . $startDate . '/' . $endDate;
+    $json_search = file_get_contents($url_search);
+    $results = json_decode($json_search, true);
+}else{
+    $results = null;
+}
 
-$url_search = "http://localhost:4000/apartment/search/" . $zipCode . '/' . $startDate . '/' . $endDate;
-$json_search = file_get_contents($url_search);
-$results = json_decode($json_search, true);
 
 
 ?>
@@ -39,7 +48,7 @@ $results = json_decode($json_search, true);
         document.getElementById('departureDate').value = today;
     </script>
 
-    <?php if(!$results): ?>
+    <?php if($results == null): ?>
         <div class="global-mainContainer" id="locationsContainer">
         <p><?= $results ?></p>
             <?php foreach ($apartments as $apartment): ?>
