@@ -31,7 +31,6 @@ $results = json_decode($json_search, true);
                 <img src="../../images/rightArrow.svg" class="global-icon"></img>
             </button>
         </div>
-
     </div>
 
     <script>

@@ -1,9 +1,13 @@
 .filterContainer {
-    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
 .dateSelectContainer {
     display: flex;
+    justify-content: center;
     gap: 10px;
     background-color: whitesmoke;
     border-radius: 15px;
@@ -15,7 +19,7 @@
 
 
 .secondaryElement {
-    margin-left: 2%;
+    width: 10%;
 }
 
 .inputDate {
