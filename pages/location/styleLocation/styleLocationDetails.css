@@ -124,6 +124,18 @@ canvas {
     margin: 15px auto 0px auto;
 }
 
+.locationSelectContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    color: black;
+    box-shadow: var(--box-shadow);
+}
+
 .containerdetails {
     margin: auto;
     margin-top: 50px;
