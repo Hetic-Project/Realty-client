@@ -2,6 +2,10 @@
 
     ini_set('display_errors', 1); 
 
+    $zipCode = isset($_POST["zip-code"]) ? urlencode($_POST["zip-code"]) : null;
+    $startDate = isset($_POST["start-date"]) ? urlencode($_POST["start-date"]) : null;
+    $endDate = isset($_POST["end-date"]) ? urlencode($_POST["end-date"]) : null;
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -28,6 +32,7 @@
 <body>
 
     <header class="global-userHeader">
+        <p>zip: <?= $zipCode ?></p>
         <a href="http://localhost:3000/pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
         <form action="http://localhost:3000/pages/location/locations.php" method="POST" class="search_form">
             <div>
