@@ -40,10 +40,6 @@ function create3dView (apartment_id)
                     width: window.innerWidth /1.75,
                     height: window.innerHeight /1.5
                 }
-                
-                // screenSize();
-                // let width = 800
-                // let height = 600
         
                 window.addEventListener('resize', () =>
                 {

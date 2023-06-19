@@ -19,15 +19,17 @@ canvas {
 }
 
 .canvasContainer {
+    position: relative;
     display: grid;
+    z-index: -1;
 }
 
 .canvasDescription {
     position: absolute;
-    top: 89%;
     font-weight: 700;
+    top: 20px;
     border: 1px;
-    color: white;
+    color: black;
     margin-left: 1%;
 }
 
