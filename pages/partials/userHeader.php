@@ -36,19 +36,18 @@
         <a href="http://localhost:3000/pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
         <form action="http://localhost:3000/pages/location/locations.php" method="POST" class="search_form">
             <div>
-                <div class="dateSelectContainer">
+                <div class="locationSelectContainer">
                     <label class="search_label" for="search_input">Code postal</label>
                     <input type="text" placeholder="75015" class="search_input" id='search_input' name='zip-code'>
-                    <!-- <button class="global-buttonIcon"><img src="../../images/IconSearch.svg" alt="Icon Search" class="global-icon"></button> -->
                 </div>
             </div>
             <div class="search_date hidden">
                 <p class="search_option"> ET / OU </p>
-                <div class="dateSelectContainer">
+                <div class="locationSelectContainer">
                     <img src="../../images/departSVG.svg" class="global-icon"></img>
                     <input type="date" class="inputDate" name='start-date'>
                 </div>
-                <div class="dateSelectContainer">
+                <div class="locationSelectContainer">
                     <img src="../../images/returnSVG.svg" class="global-icon"></img>
                     <input type="date" class="inputDate" name='end-date'>
                 </div>

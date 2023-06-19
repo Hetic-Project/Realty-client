@@ -31,8 +31,9 @@
 }
 
 .search_option{
-    width: 100px;
+    margin: 0px 15px 0px 5px;
 }
+
 .hidden{
     display: none;
 }
