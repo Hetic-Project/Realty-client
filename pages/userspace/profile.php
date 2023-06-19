@@ -62,11 +62,11 @@ include_once "../partials/navBarreProfile.php";
 
                     <div class="field">
                         <input type="text" value=" <?= $user['user_address'] ?>" name="address">
-		                <label for="address">Addresse personnel</label>
+		                <label for="address">Adresse personnel</label>
                     </div>
                     <div class="field">
                         <input type="mail" value=" <?= $user['user_mail'] ?>" name="mail">
-		                <label for="address">Addresse mail</label>
+		                <label for="address">Adresse mail</label>
                     </div>
                     
 
