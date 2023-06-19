@@ -55,5 +55,6 @@
             </div>
         </form>
         <a class="" href="http://localhost:3000/pages/userspace/profile.php"><img src="../../images/iconProfile.svg" alt="Icon Profile" class="global-iconProfile"></a>
+        <img src="../../images/burgerSVG.svg" class="burgerMenu"></img>
         <script src='../../javascript/search.js'></script>
     </header>
