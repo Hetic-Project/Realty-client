@@ -1,6 +1,6 @@
 <?php
 
-include "../../partials/userHeader.php";
+include "../../../partials/userHeader.php";
 
 ?>
 <body>

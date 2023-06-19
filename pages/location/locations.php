@@ -40,7 +40,6 @@ if($zipCode && $startDate == null && $endDate == null){
                 <img src="../../images/rightArrow.svg" class="global-icon"></img>
             </button>
         </div>
-
     </div>
 
     <script>
