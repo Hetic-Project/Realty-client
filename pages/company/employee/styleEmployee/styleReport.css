@@ -24,6 +24,7 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    font-weight: bold;
 
 }
 
@@ -38,5 +39,47 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
+    font-weight: bold;
 }
 
+.sendMessageReport{
+    margin-left: 60px;
+    flex-wrap: nowrap;
+}
+
+.inputMessageReport{
+    border: none;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 20px;
+    width: 93%;
+}
+
+.redButtonReport{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    background-color: #E52937;
+    border: none;
+}
+
+.greenButtonReport{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    background-color: #009E2F;
+    border: none;
+    margin-left: 35px;
+}
+
+.buttonSendReport{
+    border: none;
+    background-color: black;
+    height: 50px;
+    width: 128px;
+    border-radius: 15px;
+    margin-left: 900px;
+    padding: 20px;
+    color: #fff;
+    
+}
