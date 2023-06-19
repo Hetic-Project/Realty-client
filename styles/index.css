@@ -197,3 +197,20 @@ video {
   }
   
 }
+
+/* Styles pour les écrans de petite taille */
+@media (max-width: 365px) {
+  .welcomePageTitle {
+    font-size: 80px;
+    padding-top: 100px;
+  }
+
+  .welcomePageSubTitle {
+    font-size: 20px;
+  }
+
+  .welcomePageLink {
+    font-size: 10px;
+    padding: 10px 0px;
+  }
+}
