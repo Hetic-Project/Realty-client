@@ -39,5 +39,6 @@ $invoices = json_decode($user['invoices'], true);
         
 
     </div>
+    <script src="../../javascript/navBarreProfile.js"></script>
 </body>
 </html>

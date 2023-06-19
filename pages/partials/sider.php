@@ -22,6 +22,7 @@
             <a href="../../company/employee/planning.php" class="global-buttonHref"><img src="../../../images/iconPlanning.svg" alt="Icone Planning" class="global-icone">Planning</a>
             <a href="../../company/employee/report.php" class="global-buttonHref"><img src="../../../images/iconReport.svg" alt="Icone Report" class="global-icone">Report</a>
             <br>
+            <script type="module" src="../../../javascript/sider.js"></script>
         <div>
             <h3>Welcome Back</h3> 
             <strong>Tom Cardonnel</strong>

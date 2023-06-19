@@ -109,7 +109,6 @@
 
 .profile-card.flipped {
     transform: rotateY(180deg);
-    cursor: pointer;
 }
 
 .profile-card.reverseflipped {

@@ -194,6 +194,7 @@ const totalPrice = document.querySelector('#total-price');
 const unitPrice = document.querySelector('#unit-price').textContent;
 const tax = document.querySelector('#tax');
 const priceTtc = document.querySelector('#price-ttc');
+const input_total = document.querySelector('#total_price');
 
 tax.textContent = 65;
 nights.textContent = 0;
@@ -215,9 +216,10 @@ endDate.addEventListener('change', (e) => {
     nights.textContent = differenceInDays;
     const pricePerDay = parseInt(unitPrice) * parseInt(differenceInDays);
     totalPrice.textContent = pricePerDay;
-    console.log( 'prix toute nuit :' + pricePerDay, 'Taxe:' + tax)
     const finalPrice = parseInt(pricePerDay) + parseInt(tax.textContent)
     priceTtc.textContent = finalPrice;
+    input_total.value = finalPrice;
+    console.log(input_total.value)
 
   }
 });

@@ -1,7 +1,8 @@
 <?php
 
 include "../partials/userHeader.php";
-
+session_start();
+$user_id = $_SESSION['id'];
 $apartment_id = $_GET['id'];
 
 $url = "http://localhost:4000/apartment/get/oneApartment/" . $apartment_id;
@@ -19,27 +20,28 @@ $apartment = json_decode($json, true);
                     <p class="canvasDescription">Visitez la location en maintenant le clic dans l'espace 3D</p>
                 </div>
             </div>
-            <form class="containerReservation">
-                <h2 class="locationReservation">Disponibilitées</h2>
+            <form action='http://localhost:4000/apartment/add/apartmentRental' method='POST' class="containerReservation">
+                <h2 class="locationReservation">Disponibilitées </h2>
                 <div id='calendar-container'></div>
 
                 <h2 class="locationReservation">Choisir une période</h2>
                 <input type="hidden" name="user_id" value="<?= $user_id ?>">
                 <input type="hidden" id='apartment_id' name="apartment_id" value="<?= $apartment_id ?>">
+                <input type="text" id='total_price' name='amount'>
                 <div class="containerDateLocationDetails">
                     <div class="dateSelectContainer">
                         <img src="../../images/departSVG.svg" class="global-icon"></img>
-                        <input type="date" class="inputDate" id="start-date">
+                        <input type="date" class="inputDate" id="start-date" name='start_date'>
                     </div>      
                     <div class="dateSelectContainer">
                         <img src="../../images/returnSVG.svg" class="global-icon"></img>
-                        <input type="date" class="inputDate" id="end-date">
+                        <input type="date" class="inputDate" id="end-date" name='end_date'>
                     </div>
                 </div>
                 <hr class="reservationHr">
                 
                 <div class="containerCostReservation">
-                <h3 class="locationReservation"><?= $apartment['apartment_price'] ?> €<span> par nuit</span></h3>
+                    <h3 class="locationReservation"><?= $apartment['apartment_price'] ?> €<span> par nuit</span></h3>
                     <div class="costReservation">
                         <div class="contentCostReservation"><p id="unit-price"><?= $apartment['apartment_price'] ?></p> <span> € x </span> <span id="nights"> <span></div> 
                         <div class="contentCostReservation"><p id="total-price"></p> <span> €</span></div>
@@ -54,8 +56,8 @@ $apartment = json_decode($json, true);
                     <h3>Total</h3>
                     <div class="contentCostReservation"><p id='price-ttc'> </p> <span> €</span></div>
                 </div>
-                <button class="global-reserveButton marginReserveButton">Réserver</button>
-            </div>
+                    <button class="global-reserveButton marginReserveButton">Réserver</button>
+            </form>
         </div>
     </div>
 
