@@ -1,0 +1,42 @@
+.titleReport{
+    padding-left: 25px;
+    margin-bottom: 10px;
+    padding-top: 40px;
+    box-shadow: var(--box-shadow);
+    height: 110px;
+    width: auto;
+    border-top-left-radius: 55px;
+}
+
+.messageReport{
+    text-align: end ;
+    margin-left: 60%;
+}
+
+.greenMessage{
+    background-color: #009E2F;
+    text-align: start;
+    margin-top: 25px;
+    width: 60vh;
+    height: 10vh;
+    padding: 15px;
+    right: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+
+.redMessage{
+    background-color: #E52937;
+    text-align: start;
+    margin-top: 25px;
+    width: 60vh;
+    height: 10vh;
+    padding: 15px;
+    right: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
