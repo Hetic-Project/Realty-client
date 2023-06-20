@@ -25,11 +25,6 @@ include "../partials/userHeader.php";
                     <input class="inputLogin" type="password" name="password" id="password" required>
                 </div>
 
-                <?php if (isset($_GET['message'])): ?>
-                    <span>
-                        <?= $_GET['message'] ?>
-                    </span>
-                <?php endif; ?>
 
                 <button type="submit" name="fformsend" id="fformsend" class="submit buttonLogin" required>se
                     connecter</button>

@@ -1,3 +1,15 @@
+<?php 
+    ini_set('display_errors', 1);
+    session_start();
+    $user_id = $_SESSION['id'];
+    $user_statut = $_SESSION['statut'];
+
+    $url = "http://localhost:4000/user/get/apartmentEmployee/" . $user_id . '/' . $user_statut;
+    $json = file_get_contents($url);
+    $result = json_decode($json, true);
+
+    $apartments = json_decode($result['apartments'], true);
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,17 +26,17 @@
     <div class="global-sider">
             <a href="#"><img src="../../../images/RealtyIcon.svg" alt="Logo Realty" class="global-logoSider"></a>
             <a href="../../company/employee/menu.php"><img src="../../../images/iconProfile.svg" alt="Photo Apartment" class="global-imgApart"></a>
-            <h3 class="global-titleSider">Apartment Title</h3>
+            <div>
+                <h3><?= $user_statut?></h3> 
+                <strong><?= $result['user_firstname'] ?> <?= $result['user_lastname'] ?></strong>
+            </div>
 
-            <a href="../../company/employee/dashboard.php" class="global-buttonHref"><img src="../../../images/iconDashboard.svg" alt="Icone Dashboard" class="global-icone">Dashboard</a>
+            <a href="../../company/employee/dashboard.php" class="global-buttonHref"><img src="../../../images/iconDashboard.svg" alt="Icone Dashboard" class="global-icone">Appartements</a>
             <a href="../../company/employee/employeemessage.php" class="global-buttonHref"><img src="../../../images/iconMessage.svg" alt="Icone Message" class="global-icone">Message</a>
-            <a href="../../company/employee/checklist.php" class="global-buttonHref"><img src="../../../images/iconChecklist.svg" alt="Icone Checklist" class="global-icone">Checklist</a>
+            <a href="../../company/employee/checklist.php" class="global-buttonHref"><img src="../../../images/iconChecklist.svg" alt="Icone Checklist" class="global-icone">Equipes</a>
             <a href="../../company/employee/planning.php" class="global-buttonHref"><img src="../../../images/iconPlanning.svg" alt="Icone Planning" class="global-icone">Planning</a>
             <a href="../../company/employee/report.php" class="global-buttonHref"><img src="../../../images/iconReport.svg" alt="Icone Report" class="global-icone">Report</a>
             <br>
             <script type="module" src="../../../javascript/sider.js"></script>
-        <div>
-            <h3>Welcome Back</h3> 
-            <strong>Tom Cardonnel</strong>
-        </div>
+        
     </div>

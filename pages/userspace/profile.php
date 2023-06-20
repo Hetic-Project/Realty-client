@@ -41,7 +41,7 @@ include_once "../partials/navBarreProfile.php";
 
                     <div class="containerTwoInput">
                         <div class="field">
-                            <input type="date" 			id="username">
+                            <input type="date" 	id="username" name='birthday' value='<?= $user['user_birth'] ?>'>
 		                    <label for="username">Date de naissance</label>
                         </div>
                         <div class="field">

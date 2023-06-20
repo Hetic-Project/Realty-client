@@ -21,6 +21,7 @@
 @import url('../pages/userspace/styleUserSpace/styleMessage.css');
 @import url('../pages/userspace/styleUserSpace/styleProfile.css');
 @import url('../pages/partials/partialStyles/navBarreProfile.css');
+@import url('../pages/partials/partialStyles/userHeader.css');
 
 video {
     position: absolute;

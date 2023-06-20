@@ -19,11 +19,20 @@
 
 <div class="navbarProfile">
     <a href="http://localhost:3000/pages/userspace/profile.php">Profil</a>
-    <a href="http://localhost:3000/pages/userspace/historyLocations.php">Mes locations</a>
-    <a href="http://localhost:3000/pages/userspace/billings.php">Mes Factures</a>
+
+    <?php if ($_SESSION['statut'] == 'Logistique' || $_SESSION['statut'] == 'Menage'): ?>
+        <a href="http://localhost:3000/pages/company/employee/menu.php">Logistique</a>
+    <?php endif; ?>
+
+    <?php if ($_SESSION['statut'] == 'Client'): ?>
+        <a href="http://localhost:3000/pages/userspace/historyLocations.php">Mes locations</a>
+        <a href="http://localhost:3000/pages/userspace/billings.php">Mes Factures</a>
+    <?php endif; ?>
+
     <?php if ($apartment): ?>
-    <a href="http://localhost:3000/pages/userspace/message.php">Messages</a>
+        <a href="http://localhost:3000/pages/userspace/message.php">Messages</a>
     <?php endif ?>
+
     <a href="http://localhost:4000/user/logout">Déconnexion</a>
     <a href="#">Désactiver le compte</a>
     <a href="#">Supprimer le compte</a>

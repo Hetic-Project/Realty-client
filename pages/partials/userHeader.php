@@ -58,3 +58,33 @@
         <img src="../../images/burgerSVG.svg" class="burgerMenu"></img>
         <script src='../../javascript/search.js'></script>
     </header>
+
+    <?php if (isset($_GET['validate'])) : ?>
+
+        <div class='validate-message'>
+            <p class='close-message'>X</p>
+            <p><?= $_GET['validate'] ?></p>
+        </div>    
+    
+    <?php endif; ?>
+
+    <?php if (isset($_GET['error'])) : ?>
+
+        <div class='error-message'>
+            <p class='close-message'>X</p>
+            <p><?= $_GET['error'] ?></p>
+
+        </div>    
+
+    <?php endif; ?>
+
+    <?php if (isset($_GET['message'])) : ?>
+
+    <div class='message-bar'>
+        <p class='close-message'>X</p>
+        <p><?= $_GET['message'] ?></p>
+    </div>    
+
+    <?php endif; ?>
+
+
