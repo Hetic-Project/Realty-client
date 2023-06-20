@@ -42,10 +42,10 @@ canvas {
     background-color: white;
     border-radius: 10px;
     padding: 10px 15px 10px 15px;
-    top: 470px;
+    bottom: 2%;
     border: 1px;
     color: black;
-    margin-left: 2%;
+    left: 2%;
 }
 
 @media screen and (max-width: 820px) {
@@ -63,6 +63,8 @@ canvas {
 
 .containerImageDetailLocation {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: 20px;
     width: 70%;
 }
