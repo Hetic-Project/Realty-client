@@ -8,13 +8,12 @@
     border-top-left-radius: 55px;
 }
 
-.messageReport{
+.messagesReport{
     text-align: end ;
     margin-left: 60%;
 }
 
-.greenMessage{
-    background-color: #009E2F;
+.messageReport{
     text-align: start;
     margin-top: 25px;
     width: 60vh;
@@ -25,21 +24,14 @@
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     font-weight: bold;
-
 }
 
-.redMessage{
+.greenReport{
+    background-color: #009E2F;
+}
+
+.redReport{
     background-color: #E52937;
-    text-align: start;
-    margin-top: 25px;
-    width: 60vh;
-    height: 10vh;
-    padding: 15px;
-    right: 0;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    font-weight: bold;
 }
 
 .sendMessageReport{

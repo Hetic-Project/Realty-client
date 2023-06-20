@@ -5,22 +5,22 @@ include "../../partials/sider.php";
 ?>
     <div class="global-containerCompany">
         <div class="containerReport">
-            <h1 class="titleReport">Historique de vérification de (nom de l'appartement)</h1>
-            <div class="messageReport">
-                <p class="greenMessage"> Salle à manger vérifiée dans sa totalité,<br>
+            <h2 class="titleReport">Historique de vérification de (nom de l'appartement)</h2>
+            <div class="messagesReport">
+                <p class="messageReport greenReport"> Salle à manger vérifiée dans sa totalité,<br>
                                         aucun problème à signaler.
                 </p>
-                <p class="greenMessage"> Terrassse vérifiée dans sa totalité,<br>
+                <p class="messageReport greenReport"> Terrassse vérifiée dans sa totalité,<br>
                                         aucun problème à signaler.
                 </p>
-                <p class="redMessage">Le chauffage est en panne, il faut le<br>
+                <p class="messageReport redReport">Le chauffage est en panne, il faut le<br>
                                         réparer avant l'arrivée du prochain<br>
                                         client.
                 </p>
-                <p class="greenMessage">Salon vérifiée dans sa totalité<br>
+                <p class="messageReport greenReport">Salon vérifiée dans sa totalité<br>
                                         aucun problème à signaler.
                 </p>
-                <p class="greenMessage">Cuisine vérifiée dans sa totalité,<br>
+                <p class="messageReport greenReport">Cuisine vérifiée dans sa totalité,<br>
                                         aucun problème à signaler.
                 </p>
             </div>
