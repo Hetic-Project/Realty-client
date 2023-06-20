@@ -23,7 +23,7 @@
     gap: 10px;
 }
 
-.serch_button{
+.search_button{
     background-color: whitesmoke;
     border-radius: 15px;
     padding: 10px 15px 10px 15px;
@@ -39,11 +39,24 @@
 }
 
 @media screen and (max-width: 722px) {
-    .burgerMenu {
-        display: flex;
+    .search_form {
+        display: grid;
     }
-}
 
-.burgerMenu {
-     display: none;
+    .search_input{
+        width: 100px;
+        padding: 5px;
+    }
+
+    .realtyLogo {
+        left: 10px;
+    }
+    
+    .zipCode {
+        justify-content: left;
+        width: 200px;
+    }
+    .search_option {
+        display: none;
+    }
 }
