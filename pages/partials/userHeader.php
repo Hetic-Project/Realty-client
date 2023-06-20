@@ -33,10 +33,10 @@
 
     <header class="global-userHeader">
         <!-- <p>zip: <?= $zipCode ?></p> -->
-        <a href="http://localhost:3000/pages/location/locations.php"><img src="../../images/RealtyIcon.svg" alt="Logo Realty"></a>
+        <a href="http://localhost:3000/pages/location/locations.php"><img src="../../images/RealtyIcon.svg" class="realtyLogo" alt="Logo Realty"></a>
         <form action="http://localhost:3000/pages/location/locations.php" method="POST" class="search_form">
             <div>
-                <div class="locationSelectContainer">
+                <div class="locationSelectContainer zipCode">
                     <label class="search_label" for="search_input">Code postal</label>
                     <input type="text" placeholder="75015" class="search_input" id='search_input' name='zip-code'>
                 </div>
@@ -51,10 +51,39 @@
                     <img src="../../images/returnSVG.svg" class="global-icon"></img>
                     <input type="date" class="inputDate" name='end-date'>
                 </div>
-                <button class="serch_button">Rechercher</button>
+                <button class="search_button">Rechercher</button>
             </div>
         </form>
         <a class="" href="http://localhost:3000/pages/userspace/profile.php"><img src="../../images/iconProfile.svg" alt="Icon Profile" class="global-iconProfile"></a>
-        <img src="../../images/burgerSVG.svg" class="burgerMenu"></img>
         <script src='../../javascript/search.js'></script>
     </header>
+
+    <?php if (isset($_GET['validate'])) : ?>
+
+        <div class='validate-message'>
+            <p class='close-message'>X</p>
+            <p><?= $_GET['validate'] ?></p>
+        </div>    
+    
+    <?php endif; ?>
+
+    <?php if (isset($_GET['error'])) : ?>
+
+        <div class='error-message'>
+            <p class='close-message'>X</p>
+            <p><?= $_GET['error'] ?></p>
+
+        </div>    
+
+    <?php endif; ?>
+
+    <?php if (isset($_GET['message'])) : ?>
+
+    <div class='message-bar'>
+        <p class='close-message'>X</p>
+        <p><?= $_GET['message'] ?></p>
+    </div>    
+
+    <?php endif; ?>
+
+
