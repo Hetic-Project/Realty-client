@@ -17,7 +17,7 @@
             </p>
             <div class="subTitleContainer">
             <p class="welcomePageSubTitle">
-                Vivez une expérience de location exceptionnel a paris 
+                Vivez une expérience de location exceptionnelle à Paris 
             </p>
             </div>
             <a class="welcomePageLink" href="http://localhost:3000/pages/location/locations.php">

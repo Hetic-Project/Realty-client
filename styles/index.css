@@ -36,23 +36,15 @@ video {
 
 @keyframes fade-in {
   from {
-    opacity: 0; /* Définit l'opacité initiale de l'élément à 0 */
+    opacity: 0;
   }
   to {
-    opacity: 1; /* Définit l'opacité finale de l'élément à 1 */
+    opacity: 1;
   }
 }
-  
-/* .welcomePageTitle {
-    display: grid;
-    justify-content: center;
-    font-size: 190px;
-    padding-top: 200px;
-} */
 
 .welcomePageTitle {
   font-size: 190px;
-  padding-top: 200px;
   text-align: center;
 }
 
@@ -60,13 +52,6 @@ video {
     background-color: black;
 }
 
-/* .welcomePageContainer {
-    cursor: default;
-    color: white;
-    user-select: none;
-    opacity: 0;
-    animation: fade-in 3s ease-in-out forwards;
-} */
 .welcomePageContainer {
   display: flex;
   flex-direction: column;
@@ -80,14 +65,6 @@ video {
   animation: fade-in 3s ease-in-out forwards;
 }
 
-/* .subTitleContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
-  margin: 0 auto;
-  text-align: center;
-} */
 .subTitleContainer {
   display: flex;
   justify-content: center;
@@ -98,12 +75,9 @@ video {
   word-wrap: break-word;
 }
 
-
 .welcomePageSubTitle {
   font-size: 50px;
-  /* white-space: nowrap; */
   overflow: hidden;
-  /* text-overflow: ellipsis; */
   word-wrap: break-word;
 }
 
@@ -118,24 +92,7 @@ video {
   transition: background-color 0.3s;
 }
 
-/* .welcomePageSubTitle {
-    display: grid;
-    justify-content: center;
-    font-size: 50px;
-} */
 
-/* .welcomePageLink {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    text-decoration: none;
-    border-radius: 15px;
-    padding: 15px 0px;
-    color: var(--primary-color);
-    cursor: pointer;
-} */
-
-/* Styles pour les écrans de taille moyenne */
 @media (max-width: 992px) {
   .welcomePage {
     background-color: black;
@@ -162,9 +119,7 @@ video {
     padding: 15px 30px;
     color: var(--primary-color);
     cursor: pointer;
-    transition: background-color 0.3s;
-    /* background: linear-gradient(#FF6064, #FF9867);
-    border-radius: 20px; */
+    transition: background-color 2s;
   }
   
   .welcomePageLink:hover {
@@ -201,8 +156,7 @@ video {
   
 }
 
-/* Styles pour les écrans de petite taille */
-@media (max-width: 365px) {
+@media (max-width: 500px) {
   .welcomePageTitle {
     font-size: 80px;
     padding-top: 100px;
