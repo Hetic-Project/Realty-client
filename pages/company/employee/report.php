@@ -18,20 +18,27 @@ include "../../partials/sider.php";
                                         client.
                 </p>
                 <p class="messageReport greenReport">Salon vérifiée dans sa totalité<br>
+                                        aucun problème à signaler.Salon vérifiée dans sa totalité<br>
+                                        aucun problème à signaler.Salon vérifiée dans sa totalité<br>
+                                        aucun problème à signaler.Salon vérifiée dans sa totalité<br>
+                                        aucun problème à signaler.Salon vérifiée dans sa totalité<br>
+                                        aucun problème à signaler.Salon vérifiée dans sa totalité<br>
+                                        aucun problème à signaler.Salon vérifiée dans sa totalité<br>
                                         aucun problème à signaler.
                 </p>
                 <p class="messageReport greenReport">Cuisine vérifiée dans sa totalité,<br>
                                         aucun problème à signaler.
                 </p>
             </div>
-            <form action="" class="">
                 <div class="reservationHr"></div>
-                <div class="sendMessageReport">
+                <form action="" class="sendMessageReport">
                     <input type="text" class="inputMessageReport" placeholder="Écrire un message...">
                     <div class="buttonsReport">
-                        <button class="redButtonReport" type="button"></button>
-                        <button class="greenButtonReport" type="button"></button>
-                        <button class="buttonSendReport" type="button">Envoyer</button>
+                        <div>
+                            <input class="redButtonReport radioReport" type="radio" id="redCheckbox" name="radioButton" value="redCheckbox">
+                            <input type="radio" class="greenButtonReport radioReport" id="greenCheckbox" name="radioButton">
+                        </div>
+                        <button class="buttonSendReport">Envoyer</button>
                     </div>
                 </div>
             </form>

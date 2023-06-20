@@ -1,3 +1,9 @@
+.containerReport{
+    overflow: hidden;
+    height: 100vh;
+
+}
+
 .titleReport{
     padding-left: 25px;
     margin-bottom: 10px;
@@ -11,13 +17,14 @@
 .messagesReport{
     text-align: end ;
     margin-left: 60%;
+    overflow-y: scroll;
+    height: calc(100vh - 270px);
 }
 
 .messageReport{
     text-align: start;
     margin-top: 25px;
-    width: 60vh;
-    height: 10vh;
+    width: calc(100% - 35px);
     padding: 15px;
     right: 0;
     border-top-left-radius: 15px;
@@ -49,15 +56,42 @@
 
 .buttonsReport{
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+input[type="radio"].redButtonReport{
+    background-color: #E52937;
+}
+
+input[type="radio"].radioReport{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 35px;
+    cursor: pointer;
+}
+
+input[type="radio"].radioReport:checked{
+    border: 5px solid #000;
+}
+
+input[type="radio"].greenButtonReport{
+    background-color: #009E2F;
 }
 
 .redButtonReport{
     height: 45px;
     width: 45px;
-    border-radius: 10px;
     background-color: #E52937;
     border: none;
-}
+    margin-left: 35px;
+} 
+
 
 .greenButtonReport{
     height: 45px;
@@ -74,6 +108,7 @@
     height: 45px;
     width: 128px;
     border-radius: 10px;
-    margin-left: 900px;
     color: #fff;
+    margin-right: 35px;
+    cursor: pointer;
 }
