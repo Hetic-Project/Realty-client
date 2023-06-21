@@ -38,3 +38,4 @@
     <a href="#">Supprimer le compte</a>
     <script src="../../javascript/navBarreProfile.js"></script>
 </div>
+<script src="../../javascript/navBarreProfile.js"></script>
