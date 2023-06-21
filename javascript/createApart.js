@@ -14,19 +14,25 @@ fileInput.addEventListener('change', function() {
   reader.readAsDataURL(file);
 });
 
-listEquipement = getElementById("equipementJs");
+let listEquipement = document.getElementById("equipementJs");
 
 function equipement() {
   let nameEquipement = document.getElementById("textService").value;
   console.log(nameEquipement);
-  let oneEquipement = document.createElement("div")
-  oneEquipement.id
 
+  let oneEquipement = document.createElement("div");
+  oneEquipement.className = "listEquipement";
 
+  let inputOneEquipement = document.createElement("input");
+  inputOneEquipement.type = "checkbox";
+  inputOneEquipement.id = nameEquipement;
+  inputOneEquipement.name = nameEquipement;
+  oneEquipement.appendChild(inputOneEquipement);
+
+  let labelOneEquipement = document.createElement("label");
+  labelOneEquipement.for = nameEquipement;
+  labelOneEquipement.innerHTML = nameEquipement;
+  oneEquipement.appendChild(labelOneEquipement);
+
+  listEquipement.appendChild(oneEquipement);
 }
-
-                <div class="listEquipement">
-                    <input type="checkbox" id="kitchen" name="kitchen">
-                    <img class="kitchenPicture" src="../.././../images/kitchen.svg">
-                    <label for="kitchen" class="textKitchen">Cuisine complète</label>       
-                </div>
