@@ -11,7 +11,9 @@
                 <label class="buttonInput-File" for="file-input">Modifier</label>
             </div>
         </div>
-            
+        <div class="reservationHr"></div>
+        
+
     </form>
 </body>
 <script src="../../../javascript/createApart.js"></script>
