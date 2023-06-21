@@ -27,3 +27,18 @@
 .titleTimeHistory {
     margin-left: 30px;
 }
+
+.reviewButton {
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.reviewButton:hover {
+    background-color: white;
+    color: black;
+}

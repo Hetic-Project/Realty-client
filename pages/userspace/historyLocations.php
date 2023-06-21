@@ -9,7 +9,7 @@ $rentals = json_decode($user['rentals'], true);
 
     <div class="containerHistoryLocation">
         
-        <h2 class="firsthistory titleTimeHistory">Location passée:</h2>
+        <h2 class="firsthistory titleTimeHistory">Locations terminées :</h2>
 
         <?php foreach($rentals as $rental ): ?>
             <?php if ($currentDate > $rental['end-date']): ?>
@@ -21,7 +21,7 @@ $rentals = json_decode($user['rentals'], true);
                         <p class="global-subtitle"><?= $rental['apartment-city'] ?></p>
                         <p class="global-subtitle"><?= $rental['start-date'] ?></p>
                         <p class="global-subtitle"><?= $rental['end-date'] ?></p>
-                        <button>Donnée un avis</button>
+                        <a href="./comment.php" class="reviewButton">Donner un avis</a>
                     </div>
                     <hr class="reservationHr">
                 </div>

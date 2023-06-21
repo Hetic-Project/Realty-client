@@ -16,7 +16,7 @@ include "../partials/userHeader.php";
             <form action="http://localhost:4000/user/loginAccount" method="POST">
 
                 <div class="labelLogin">
-                    <label for='email' class="spanLogin">Email</label>
+                    <label for='email' class="spanLogin">E-mail</label>
                     <input class="inputLogin" type="mail" name="mail" id="email" required>
                 </div>
 
@@ -39,11 +39,11 @@ include "../partials/userHeader.php";
             <div class="img">
                 <div class="img-text m-up">
                     <h2 class="h2Login">Nouveau ici?</h2>
-                    <p class="pLogin">Inscrit-toi et découvre de nouvelle opportunitées!</p>
+                    <p class="pLogin">Inscris-toi et découvre de nouvelles opportunitées!</p>
                 </div>
                 <div class="img-text m-in">
                     <h2 class="h2Login">Déjà parmis nous ? </h2>
-                    <p class="pLogin">Si tu as déjà un compte, Connecte toi !</p>
+                    <p class="pLogin">Si tu as déjà un compte, connecte toi !</p>
                 </div>
                 <div class="img-btn">
                     <span class="m-up spanLogin">Inscription</span>
@@ -67,7 +67,7 @@ include "../partials/userHeader.php";
                         <input class="inputLogin" type="date" name="birthday" id="birthday" required>
                     </div>
                     <div class="labelLogin">
-                        <label for='Email' class="spanLogin">Email</label>
+                        <label for='Email' class="spanLogin">E-mail</label>
                         <input class="inputLogin" type="mail" name="mail" id="Email" required>
                     </div>
                     <div class="labelLogin">

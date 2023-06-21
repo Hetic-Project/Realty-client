@@ -19,12 +19,12 @@ include_once "../partials/navBarreProfile.php";
                     <p class="pProfile"><strong>Adresse Mail:</strong> <?= $user['user_mail'] ?></p>
                     <p class="pProfile"><strong>Adresse:</strong> <?= $user['user_address'] ?></p>
                 </div>
-                <button class="global-saveButton">Modifier le Profile</button>
+                <button class="global-saveButton">Modifier le profil</button>
             </div>
             <form action='http://localhost:4000/user/updateAccount' method='POST' class="backProfile">
 
                 <div class="containerinputProfile">
-                    <h2 class="titleProfile">Profile</h2>
+                    <h2 class="titleProfile">Profil</h2>
                     <div class="containerTwoInput">
                         <input type="hidden" value="<?= $user['user_id'] ?>" name="userId">
 
@@ -51,18 +51,18 @@ include_once "../partials/navBarreProfile.php";
                     </div>
                     <div class="containerTwoInput">
                         <div class="field">
-                            <input type="text"value=" <?= $user['user_city'] ?>" name="city">
+                            <input type="text" value=" <?= $user['user_city'] ?>" name="city">
                             <label for="city">Ville</label>
                         </div>
                         <div class="field">
                             <input type="text" value=" <?= $user['user_zip_code'] ?>" name="zipCode">
-		                    <label for="username">Code Postal</label>
+		                    <label for="username">Code postal</label>
                         </div>
                     </div>
 
                     <div class="field">
                         <input type="text" value=" <?= $user['user_address'] ?>" name="address">
-		                <label for="address">Adresse personnel</label>
+		                <label for="address">Adresse personnelle</label>
                     </div>
                     <div class="field">
                         <input type="mail" value=" <?= $user['user_mail'] ?>" name="mail">
@@ -70,7 +70,7 @@ include_once "../partials/navBarreProfile.php";
                     </div>
                     
 
-                    <button class="global-saveButton">Sauvegarder</button>
+                    <button class="global-saveButton">Enregistrer</button>
                 </div>
             </form>
         </div>

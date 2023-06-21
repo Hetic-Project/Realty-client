@@ -26,7 +26,7 @@
 
     <?php if ($_SESSION['statut'] == 'Client'): ?>
         <a href="http://localhost:3000/pages/userspace/historyLocations.php">Mes locations</a>
-        <a href="http://localhost:3000/pages/userspace/billings.php">Mes Factures</a>
+        <a href="http://localhost:3000/pages/userspace/billings.php">Mes factures</a>
     <?php endif; ?>
 
     <?php if ($apartment): ?>
@@ -38,3 +38,4 @@
     <a href="#">Supprimer le compte</a>
     <script src="../../javascript/navBarreProfile.js"></script>
 </div>
+<script src="../../javascript/navBarreProfile.js"></script>
