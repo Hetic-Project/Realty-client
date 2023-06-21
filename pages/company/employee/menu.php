@@ -3,10 +3,10 @@
 ?>
     <div class="global-containerCompany">
     <?php foreach($notifications as $notification): ?>
-        <div>
-            <p><?=$notification['notification_created_at'] ?></p>
+        <div class="notification_container">
+            <p class='notif-flex'><?=$notification['notification_created_at'] ?></p>
             <p><?=$notification['notification_message'] ?></p>
-            <p><?=$notification['notification_link'] ?></p>
+            <a href='#'><?=$notification['notification_link'] ?></a>
         </div>
     <?php endforeach; ?>
     </div>

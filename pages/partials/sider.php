@@ -31,7 +31,6 @@
     <div class="global-sider">
             <a href="#"><img src="../../../images/RealtyIcon.svg" alt="Logo Realty" class="global-logoSider"></a>
             <a href="../../company/employee/menu.php"><img src="../../../images/iconProfile.svg" alt="Photo Apartment" class="global-imgApart"></a>
-            <span><?= $notifications.length ?></span>
             <div>
                 <h3><?= $user_statut?></h3> 
                 <strong><?= $result['user_firstname'] ?> <?= $result['user_lastname'] ?></strong>
