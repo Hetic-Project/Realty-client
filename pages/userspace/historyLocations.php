@@ -6,10 +6,10 @@ $rentals = json_decode($user['rentals'], true);
 ?>
 
 <body class="bodyProfile">
-    
+
     <div class="containerHistoryLocation">
         
-        <h2 class="firsthistory titleTimeHistory">Location passée:</h2>
+        <h2 class="firsthistory titleTimeHistory">Locations terminées :</h2>
 
         <?php foreach($rentals as $rental ): ?>
             <?php if ($currentDate > $rental['end-date']): ?>
