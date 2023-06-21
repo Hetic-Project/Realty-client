@@ -315,8 +315,8 @@
     transition: 0.15s;
 }
 
-input:focus + label,
-input:focus:valid + label {
+.field input:focus + .field label,
+.field input:focus:valid + .field label {
     left: 7px;
     top: -8px;
     font-size: 0.8em;
@@ -329,7 +329,7 @@ input:focus:valid + label {
     background: white;
 }
 
-input:valid + label {
+.field input:valid + label {
     left: 5px;
     top: -7px;
     font-size: 0.7em;

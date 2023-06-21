@@ -51,7 +51,7 @@ include_once "../partials/navBarreProfile.php";
                     </div>
                     <div class="containerTwoInput">
                         <div class="field">
-                            <input type="text"value=" <?= $user['user_city'] ?>" name="city">
+                            <input type="text" value=" <?= $user['user_city'] ?>" name="city">
                             <label for="city">Ville</label>
                         </div>
                         <div class="field">
