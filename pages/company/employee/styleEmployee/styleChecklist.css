@@ -1,3 +1,45 @@
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #f5f5f5;
+    margin-bottom: 30px;
+}
+
+.search-bar input[type="text"] {
+    width: 50%;
+    height: 50px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+}
+
+.search-options {
+    display: flex;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.checkbox-option input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.search-button {
+    padding: 10px 40px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .checklist {
     width: 50%;
     height: 80vh;
@@ -15,25 +57,39 @@
     width: 100%;
 }
 
-.checkbox-rect {
+.slider {
+    padding: 50px;
+}
+
+.item {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
-    margin: 10px;
-}   
-
-.checkbox-rect input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #000 ;
-    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.checkbox-rect input[type="checkbox"]:checked {
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.user-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-name {
+    flex-grow: 1;
+}
+
+.modify-button {
+    padding: 15px 60px;
     background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
-
