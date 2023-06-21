@@ -21,7 +21,7 @@ $rentals = json_decode($user['rentals'], true);
                         <p class="global-subtitle"><?= $rental['apartment-city'] ?></p>
                         <p class="global-subtitle"><?= $rental['start-date'] ?></p>
                         <p class="global-subtitle"><?= $rental['end-date'] ?></p>
-                        <a href="./comment.php" class="reviewButton">Donner un avis</a>
+                        <a href="./comment.php?id=<?= $rental['apartment-id'] ?>" class="reviewButton">Donner un avis</a>
                     </div>
                     <hr class="reservationHr">
                 </div>

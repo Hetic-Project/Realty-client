@@ -36,6 +36,6 @@
     <a href="http://localhost:4000/user/logout">Déconnexion</a>
     <a href="#">Désactiver le compte</a>
     <a href="#">Supprimer le compte</a>
-    <script src="../../javascript/navBarreProfile.js"></script>
+    <script src="../../javascript/navBarreProfile.js"></script>   
 </div>
 <script src="../../javascript/navBarreProfile.js"></script>
