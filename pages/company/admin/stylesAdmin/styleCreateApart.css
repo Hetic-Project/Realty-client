@@ -67,6 +67,13 @@
     margin-top: 20px;
 }
 
+.containerAddPicture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .buttonInput-File:hover{
     background-color:#CCAD00;
     cursor: pointer;
@@ -81,7 +88,7 @@
     display: flex;
     flex-direction: column;
     /* top: 0px; */
-    text-align: center;
+    /* text-align: center; */
 }
 
 .iconPlusCreateApart{
@@ -136,7 +143,8 @@
     margin: auto;
     box-shadow: var(--box-shadow);
     width: 330px;
-    height: 140px;
+    height: auto;
+    padding-bottom: 10px;
     border-radius: 15px;
     text-align: center;
     margin-bottom: 20px;
@@ -153,16 +161,20 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    margin-left: 10px;
+    background-color: pink;
+    width: 50%;
+    height: 100px;
 }
 
-.listEquipement{
+/* .listEquipement{
     display: flex;
     align-items: center;
     width: 45%;
     margin: auto;
-}
+} */
 
-.kitchenPicture{
+/* .kitchenPicture{
     height: 13px;
     width: 18px;
 }
@@ -286,7 +298,7 @@
 
 .interior{
     text-align: center;
-}
+} */
 
 .inputInterior{
     width: 330px;
@@ -298,10 +310,6 @@
     border-radius: 8px;
     margin: auto;
     margin-bottom: 20px;
-}
-
-.security{
-    text-align: center;
 }
 
 .inputSecurity{
@@ -394,7 +402,6 @@
         text-align: right;
         margin-bottom: 20px;
         margin-top: 20px;
-        margin-right: 155px;
     }
 
     .inputTypeOfAccommodation{
@@ -440,7 +447,7 @@
         left: 12%; */
         box-shadow: var(--box-shadow);
         width: 500px;
-        height: 170px;
+        height: auto;
         border-radius: 15px;
         text-align: center;
         margin: auto;
@@ -459,15 +466,16 @@
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
+        margin-left: 10px;
     }
     
     .listEquipement{
         display: flex;
         align-items: center;
+        gap: 10px;
         padding: 2px;
-
         width: 45%;
-        margin: auto;
+        
     }
     
     .kitchenPicture{
@@ -656,4 +664,10 @@
         margin: auto;
         margin-bottom: 20px;
     }
+}
+
+.appendEquipement {
+    position: absolute;
+    top: 700px;
+    left: 100px;
 }

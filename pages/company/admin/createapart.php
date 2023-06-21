@@ -24,7 +24,8 @@
         <div class="equipementCreateApart">
             <h1 id="textEquipement">Équipement :</h1> 
             <div class="equipementList" id="equipementJs">
-                <div class="listEquipement">
+
+                <!-- <div class="listEquipement">
                     <input type="checkbox" id="kitchen" name="kitchen">
                     <img class="kitchenPicture" src="../.././../images/kitchen.svg">
                     <label for="kitchen" class="textKitchen">Cuisine complète</label>       
@@ -64,21 +65,21 @@
                 <div class="listEquipement">
                     <input type="checkbox" id="heating" name="heating">
                     <label for="heating" class="textHeating">Chauffage</label>
-                </div>
+                </div> -->
 
                 
             </div> 
+            <input type="text">
         </div>
         <input class="inputInterior" type="text" placeholder="Intérieur" id="interior" name="interior" required>
         <input class="inputSecurity" type="text" placeholder="Sécuriter" id="security" name="interior" required>
         <textarea class="cancellationConditionCreateApart" name="description" rows="15" cols="36" placeholder="Condition d'annulation"></textarea>
-        <a href="../../location/locations.php"><button class="buttonSave" type="button">Enregistrer</button></a>
-        </section>
+        <button class="buttonSave" type="button">Enregistrer</button>
     </form>
-    <form action="">
-        <input class="addService" type="text" placeholder="Ajouter un service...." id="textService" name="name" required>
-        <input type="button" onclick="equipement()">
-    </form>
+    <!-- <form action="" class="appendEquipement">
+        <input class="addService" type="text" placeholder="Ajouter un service   " id="textService" name="name" required>
+        <input type="button" onclick="equipement()" value="Ajouter">
+    </form> -->
+    <script src="../../../javascript/createApart.js"></script>
 </body>
-<script src="../../../javascript/createApart.js"></script>
 </html>
