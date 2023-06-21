@@ -13,3 +13,20 @@ fileInput.addEventListener('change', function() {
 
   reader.readAsDataURL(file);
 });
+
+listEquipement = getElementById("equipementJs");
+
+function equipement() {
+  let nameEquipement = document.getElementById("textService").value;
+  console.log(nameEquipement);
+  let oneEquipement = document.createElement("div")
+  oneEquipement.id
+
+
+}
+
+                <div class="listEquipement">
+                    <input type="checkbox" id="kitchen" name="kitchen">
+                    <img class="kitchenPicture" src="../.././../images/kitchen.svg">
+                    <label for="kitchen" class="textKitchen">Cuisine complète</label>       
+                </div>
