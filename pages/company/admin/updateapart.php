@@ -1,4 +1,5 @@
 <?php include "../../partials/sider.php" ?>
+<div class="global-containerCompany">
     <form class="formUpdateApart">
         <div class="blabla">
             <h2>Rue d'Orset</h2>
@@ -34,6 +35,7 @@
             </div>
         </div>
     </form>
+</div>
 </body>
 <script src="../../../javascript/createApart.js"></script>
 </html>
