@@ -28,7 +28,7 @@ $apartment = json_decode($json, true);
                 <h2 class="locationReservation">Choisir une période</h2>
                 <input type="hidden" name="user_id" value="<?= $user_id ?>">
                 <input type="hidden" id='apartment_id' name="apartment_id" value="<?= $apartment_id ?>">
-                <input type="text" id='total_price' name='amount'>
+                <input type="hidden" id='total_price' name='amount'>
                 <div class="containerDateLocationDetails">
                     <div class="dateSelectContainer">
                         <img src="../../images/departSVG.svg" class="global-icon"></img>
