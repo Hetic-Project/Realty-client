@@ -90,10 +90,19 @@
     width: 90%;
 }
 
-.formUpdateApart {
+.formUpdateApart{
     width: 70%;
     height: auto;
     min-height: 100vh;
-    background-color: pink;
     margin-left: 30%;
+}
+
+.agathaaaaa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.containerComment{
+    
 }
