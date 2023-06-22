@@ -7,8 +7,9 @@
     $url = "http://localhost:4000/user/get/apartmentEmployee/" . $user_id . '/' . $user_statut;
     $json = file_get_contents($url);
     $result = json_decode($json, true);
-
+    
     $apartments = json_decode($result['apartments'], true);
+
 
     $url='http://localhost:4000/notification/getAll/' . $user_id;
     $json = file_get_contents($url);
