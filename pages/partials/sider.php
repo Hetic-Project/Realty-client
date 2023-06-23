@@ -10,7 +10,6 @@
     
     $apartments = json_decode($result['apartments'], true);
 
-
     $url='http://localhost:4000/notification/getAll/' . $user_id;
     $json = file_get_contents($url);
     $notifications = json_decode($json, true);
@@ -34,12 +33,6 @@
     <div class="global-sider">
             <a href="../../location/locations.php"><img src="../../../images/RealtyIcon.svg" alt="Logo Realty" class="global-logoSider"></a>
             <a href="../../company/employee/menu.php"><img src="../../../images/iconProfile.svg" alt="Photo Apartment" class="global-imgApart"></a>
-            <?php foreach($notifications as $notification): 
-                $count = $count + 1;
-            ?>
-
-            <span><?= $count ?></span>
-            <?php endforeach; ?>
             <div>
                 <h3><?= $user_statut?></h3> 
                 <strong><?= $result['user_firstname'] ?> <?= $result['user_lastname'] ?></strong>
