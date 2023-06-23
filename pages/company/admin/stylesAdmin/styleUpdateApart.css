@@ -162,7 +162,8 @@
 .employeUpdateApart{
     display: flex;
     justify-content: space-between;
-    margin: 15px 30px;
+    /* margin: 15px 30px; */
+    padding: 10%;
 }
 
 .employeUpdateApart a{
@@ -207,4 +208,30 @@
 
 .planningName{
     margin-left: 30px;
+}
+
+/* ----------------------------------------------------------------------------- */
+.containerAddService{
+   display: flex;
+   justify-content: space-between;
+   padding: 1%;
+}
+.allServicesContainer{
+    margin: 2%;
+    width: 30%;
+    text-align: start;
+}
+.serviceSubTitle{
+    margin-bottom: 2%;
+}
+.allServicesOfApartment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 1%;
+}
+
+.oneServiceOfApartment{
+    margin: 1%;
 }

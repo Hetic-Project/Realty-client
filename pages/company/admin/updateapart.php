@@ -1,72 +1,88 @@
-<?php include "../../partials/sider.php" ?>
+<?php include "../../partials/sider.php";
+if(isset($_GET['id'])){
+    $apartment_id = $_GET['id'];
+};
+$urlApartment = 'http://localhost:4000/apartment/logistic/get/oneApartment/' . $apartment_id;
+$jsonApartment = file_get_contents($urlApartment);
+$resultApartment = json_decode($jsonApartment, true);
+$services = json_decode($resultApartment['servicesOfApartment'], true);
+$comments = json_decode($resultApartment['commentProgress'], true);
+?>
 <div class="global-containerCompany">
     <div class="containerUpdateApart">
         <div class="blabla">
-            <h2>Rue d'Orset</h2>
-            <h2>75001</h2>
+            <h2><?= $resultApartment['apartment_adress'] ?></h2>
+            <h2><?= $resultApartment['apartment_zip_code'] ?></h2>
         </div>
         <form class="containerAddPicture">
-            <div id="image-container"></div>
+            <img src="<?= $resultApartment['apartment_main_picture'] ?>" alt="Photo appartement <?= $resultApartment['apartment_adress'] ?>" id="image-container"/>
             <div class="buttonInput-FileUpdateApart">
                 <input class="buttonInputUpdateApart" type="file" id="file-input"> 
                 <label class="buttonInput-File" for="file-input">Modifier</label>
             </div>
         </form>
         <hr class="reservationHr">
-        <form class="containerAddService">
-            <div class='Ratio42OUUUU?'></div>
-            <div class="buttonInput-FileUpdateApart">
-                <h3>Créer un service</h3>
-                <input class="buttonInputUpdateApart" type="file" id="file-input">
-                <label class="buttonInput-File" for="file-input">Modifier</label>
-            </div>
-        </form>
+        <h2>Services:</h2>
+        <div class="containerAddService">
+                <div class="allServicesContainer">
+                    <h3 class="serviceSubTitle">Services actuelles</h3>
+                    <?php foreach($services as $service): ?>
+                        <div class="allServicesOfApartment"> 
+                            <p class="oneServiceOfApartment"><?= $service['service_name'] ?></p>
+                            <form action="">
+                                <button>supprimer</button>
+                            </form>  
+                        </div>
+                    <?php endforeach; ?>
+                </div> 
+            <div>
+                <div>
+                    <form action="">
+                        <h3 class="serviceSubTitle">Ajouter un service</h3>
+                        <select name="">
+                            <option value="Choix">
+                                Choisir un service a ajouter
+                            </option>
+                            <option value="">
+                                
+                            </option>
+                        </select>
+
+                        <button>Ajouter</button>
+                    </form>
+
+                    <form action="">
+                        <h3 class="serviceSubTitle">créer un service</h3>
+                        <input type="text">
+                        <button>Créer</button>
+                    </form>
+                </div>
+            </div>   
+        </div>
         <hr class="reservationHr">
         <div class="updateComment">
-            <h3>Commentaire :</h3>
+            <h2>Commentaire :</h2>
             <a href="#" class="moreComment">Plus de commantaire</a>
         </div>
         <div class="containerComment">
-            <form class="oneComment">
-                <div class="contentOneComment">
-                    <strong>Sauver Willi</strong>
-                    <p>Mon commentaire...</p>
+            <?php if ($comments): ?>
+                <div class="oneComment">
+                    <?php foreach($comments as $comment): ?>  
+                        <div class="contentOneComment">
+                            <strong><?= $comment['firstname'] ?> <?= $comment['lastname'] ?></strong>
+                            <p><?= $comment['comment'] ?></p>
+                        </div>
+                    <?php endforeach; ?>
+                    <div class="buttonOneComment">
+                        <form action="">
+                            <button class="greenButtonOneComment">Valider</button>
+                        </form>
+                        <form action="">
+                            <button class="redButtonOneComment">Supprimer</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="buttonOneComment">
-                    <button class="greenButtonOneComment">Valider</button>
-                    <button class="redButtonOneComment">Supprimer</button>
-                </div>
-            </form>
-            <form class="oneComment">
-                <div class="contentOneComment">
-                    <strong>Sauver Willi</strong>
-                    <p>Mon commentaire...</p>
-                </div>
-                <div class="buttonOneComment">
-                    <button class="greenButtonOneComment">Valider</button>
-                    <button class="redButtonOneComment">Supprimer</button>
-                </div>
-            </form>
-            <form class="oneComment">
-                <div class="contentOneComment">
-                    <strong>Sauver Willi</strong>
-                    <p>Mon commentaire...</p>
-                </div>
-                <div class="buttonOneComment">
-                    <button class="greenButtonOneComment">Valider</button>
-                    <button class="redButtonOneComment">Supprimer</button>
-                </div>
-            </form>
-            <form class="oneComment">
-                <div class="contentOneComment">
-                    <strong>Sauver Willi</strong>
-                    <p>Mon commentaire...</p>
-                </div>
-                <div class="buttonOneComment">
-                    <button class="greenButtonOneComment">Valider</button>
-                    <button class="redButtonOneComment">Supprimer</button>
-                </div>
-            </form>
+            <?php endif; ?>
         </div>
         <hr class="reservationHr">
         <h3 class="planningName">Planning ménage :</h3>
